@@ -11,6 +11,7 @@ const COOKIE_CONFIG: Cookies.CookieAttributes = {
 export const COOKIES_KEY_NAME = {
   ACCESS_TOKEN: 'accessToken',
   USER_UUID: 'userUid',
+  REFRESH_TOKEN: 'refreshToken',
 } as const;
 
 type TCookieNameValue = typeof COOKIES_KEY_NAME;
@@ -30,6 +31,7 @@ export type TCookieName = TCookieNameValue[keyof TCookieNameValue];
 export type TCookieValue = {
   [COOKIES_KEY_NAME.ACCESS_TOKEN]: string;
   [COOKIES_KEY_NAME.USER_UUID]: string;
+  [COOKIES_KEY_NAME.REFRESH_TOKEN]: string;
 };
 
 export default COOKIE_CONFIG;

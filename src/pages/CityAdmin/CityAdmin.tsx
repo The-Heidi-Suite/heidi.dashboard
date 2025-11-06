@@ -1,11 +1,54 @@
-import { Plus } from 'lucide-react';
+import { useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
+
+import { useGetAdminListings } from '@/api/queries/cityAdminList';
+import { useCreateAdmin } from '@/api/queries/cityAdminList';
 import { useTypedTranslation } from '@/hooks';
+import { TABLE_PAGE_SIZE } from '@/lib/constant';
 import AdminTable from '@/pages/CityAdmin/AdminTable';
-
+import { PopUp } from '@/pages/CityAdmin/Popup';
+import Pagination from '@/shared/Pagination';
 function CityAdmin() {
   const { t } = useTypedTranslation();
+  const [currentPage, setCurrentPage] = useState(1);
+  const {
+    data: adminListings,
+    isLoading,
+    isFetching,
+  } = useGetAdminListings({
+    pageNo: currentPage,
+    pageSize: TABLE_PAGE_SIZE,
+    statusId: 0,
+  });
+  const rowData = adminListings?.success ? adminListings.data.data : [];
+  const createAdmin = useCreateAdmin();
+  function HandleCreateAdmin({
+    email,
+    cities,
+  }: {
+    email: string;
+    cities: string[];
+  }) {
+    createAdmin.mutate(
+      {
+        email,
+        cities,
+      },
+      {
+        onSuccess: (data) => {
+          if (data.success) {
+            toast.success(data.message);
+          } else {
+            toast.error(data.error);
+          }
+        },
+        onError: (error) => {
+          console.warn(error.message);
+        },
+      }
+    );
+  }
   return (
     <div className="p-4">
       {/* Page Header */}
@@ -18,14 +61,24 @@ function CityAdmin() {
             {t('cityAdministration.description')}
           </p>
         </div>
-        <Button type="button">
+        <PopUp HandleCreateAdmin={HandleCreateAdmin} />
+        {/* <Button type="button" onClick={() => setPopupVisible(true)}>
           <Plus className="w-4 h-4 mr-2" />
           {t('cityAdministration.createAdmin')}
-        </Button>
+        </Button> */}
       </div>
       <div className="mt-8">
-        <AdminTable loading={false} />
+        <AdminTable loading={isLoading || isFetching} tableRows={rowData} />
       </div>
+      <Pagination
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={
+          adminListings?.success && !isLoading
+            ? adminListings.data?.totalPages || 0
+            : 0
+        }
+      />
     </div>
   );
 }

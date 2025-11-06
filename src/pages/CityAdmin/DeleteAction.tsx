@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { toast } from 'sonner';
 
-import { useDeleteTileListing } from '@/api/queries';
+import { useDeleteAdminListing } from '@/api/queries/cityAdminList';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -29,7 +29,7 @@ function DeleteAction({
   itemId,
 }: DeleteActionProps) {
   const { t } = useTypedTranslation();
-  const deleteTile = useDeleteTileListing();
+  const deleteTile = useDeleteAdminListing();
 
   const [openHelpDialog, setOpenHelpDialog] = useState(false);
 
