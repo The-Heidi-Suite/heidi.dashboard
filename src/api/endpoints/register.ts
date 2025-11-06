@@ -2,6 +2,8 @@ import { RoleValue } from '@/lib/constant';
 
 import apiRequest from '../apiRequest';
 
+export const REGISTER_ENDPOINT = 'users/register';
+
 export type RegisterUserResponse = {
   userId: number;
   id: number;
@@ -13,15 +15,15 @@ export type RegisterUserResponse = {
 
 type RegisterForm = {
   email: string;
-  userName: string;
+  username: string;
+  firstName: string;
+  lastName: string;
   password: string;
-  confirmPassword: string;
-  acceptPolicy: boolean;
 };
 
 export const registerUser = async (userFormData: RegisterForm) => {
   return await apiRequest<RegisterUserResponse, RegisterForm>({
-    url: 'register',
+    url: REGISTER_ENDPOINT,
     method: 'POST',
     data: userFormData,
   });

@@ -30,10 +30,12 @@ function Register() {
     resolver: zodResolver(registerSchema),
     defaultValues: {
       email: '',
+      username: '',
+      firstName: '',
+      lastName: '',
       password: '',
       confirmPassword: '',
       acceptPolicy: false,
-      userName: '',
     },
   });
 
@@ -42,7 +44,9 @@ function Register() {
   const onSubmit = async (values: RegisterForm) => {
     setLoading(true);
     try {
-      const registerResponse = await registerUser(values);
+      const { email, username, firstName, lastName, password } = values;
+      const payload = { email, username, firstName, lastName, password };
+      const registerResponse = await registerUser(payload);
       if (registerResponse.success) {
         const token = registerResponse.data.accessToken;
         await saveDataInCookie('accessToken', token);
@@ -52,7 +56,7 @@ function Register() {
           role: registerResponse.data.role,
         });
         toast.success(registerResponse.message);
-        navigate('/tiles/listing');
+        navigate('/login');
       } else {
         toast.error(registerResponse.error);
       }
@@ -76,25 +80,41 @@ function Register() {
 
         <TextInputField
           control={form.control}
-          name="userName"
-          label={t('usernameLabel')}
-          placeholder={t('usernamePlaceholder')}
+          name="username"
+          label={t('registration.form.username.label')}
+          placeholder={t('registration.form.username.placeholder')}
+          required
+        />
+
+        <TextInputField
+          control={form.control}
+          name="firstName"
+          label={t('registration.form.firstName.label')}
+          placeholder={t('registration.form.firstName.placeholder')}
+          required
+        />
+
+        <TextInputField
+          control={form.control}
+          name="lastName"
+          label={t('registration.form.lastName.label')}
+          placeholder={t('registration.form.lastName.placeholder')}
           required
         />
 
         <PasswordField
           control={form.control}
           name="password"
-          label={t('password')}
-          placeholder={t('pleaseEnterPassword')}
+          label={t('registration.form.password.label')}
+          placeholder={t('registration.form.password.placeholder')}
           required
         />
 
         <PasswordField
           control={form.control}
           name="confirmPassword"
-          label={t('confirmPassword')}
-          placeholder={t('pleaseEnterConfirmPassword')}
+          label={t('registration.form.confirmPassword.label')}
+          placeholder={t('registration.form.confirmPassword.placeholder')}
           required
         />
 
@@ -104,19 +124,19 @@ function Register() {
             name="acceptPolicy"
             label={
               <div>
-                {t('acceptPolicy')}{' '}
+                {t('registration.general.acceptPolicy')}{' '}
                 <Link
                   to="/privacy"
                   className="text-red-600 hover:opacity-70 transition-opacity duration-200"
                 >
-                  {t('privacy')}
+                  {t('registration.general.privacy')}
                 </Link>{' '}
-                {t('and')}{' '}
+                {t('registration.general.and')}{' '}
                 <Link
                   to="/terms"
                   className="text-red-600 hover:opacity-70 transition-opacity duration-200"
                 >
-                  {t('terms')}
+                  {t('registration.general.terms')}
                 </Link>
               </div>
             }
@@ -132,12 +152,12 @@ function Register() {
 
         <div className="flex justify-between mt-3">
           <div className="text-sm">
-            {t('alreadyHaveAccount')}
+            {t('registration.general.alreadyHaveAccount')}
             <Link
               to={'/login'}
               className=" hover:text-purple-500 ml-1 text-blue-600"
             >
-              {t('login')}
+              {t('registration.general.login')}
             </Link>
           </div>
 

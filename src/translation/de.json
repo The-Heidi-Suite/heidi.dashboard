@@ -245,5 +245,60 @@
         }
       }
     }
+  },
+  "registration": {
+    "general": {
+      "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+      "login": "Bitte melden Sie sich hier an.",
+      "acceptPolicy": "Ich akzeptiere hiermit die",
+      "privacy": "Datenschutzrichtlinie*",
+      "and": "und",
+      "terms": "allgemeinen Geschäftsbedingungen.*",
+      "mustAcceptTermsAndPrivacy": "Bitte stimmen Sie den Allgemeinen Geschäftsbedingungen zu, um fortzufahren."
+    },
+    "form": {
+      "username": {
+        "label": "Benutzername",
+        "placeholder": "Geben Sie Ihren Benutzernamen ein",
+        "error": {
+          "minContent": "Der Benutzername muss mindestens 3 Zeichen lang sein",
+          "maxContent": "Der Benutzername darf höchstens 30 Zeichen lang sein"
+        }
+      },
+      "password": {
+        "label": "Passwort",
+        "placeholder": "Bitte geben Sie das Passwort ein",
+        "error": {
+          "minContent": "Das Passwort muss mindestens 8 Zeichen lang sein",
+          "maxContent": "Das Passwort darf höchstens 20 Zeichen lang sein"
+        }
+      },
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Bitte geben Sie Ihren Vornamen ein",
+        "error": {
+          "required": "Der Vorname ist erforderlich",
+          "minContent": "Der Vorname muss mindestens 2 Zeichen lang sein",
+          "maxContent": "Der Vorname darf höchstens 30 Zeichen lang sein"
+        }
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Bitte geben Sie Ihren Nachnamen ein",
+        "error": {
+          "required": "Der Nachname ist erforderlich",
+          "minContent": "Der Nachname muss mindestens 2 Zeichen lang sein",
+          "maxContent": "Der Nachname darf höchstens 30 Zeichen lang sein"
+        }
+      },
+      "confirmPassword": {
+        "label": "Passwort bestätigen",
+        "placeholder": "Bitte bestätigen Sie das Passwort",
+        "error": {
+          "required": "Die Bestätigung des Passworts ist erforderlich",
+          "mismatch": "Passwort und Bestätigungspasswort stimmen nicht überein"
+        }
+      }
+    }
   }
 }

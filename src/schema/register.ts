@@ -11,23 +11,33 @@ export const registerSchema = z
           .min(3, 'minContainInMail')
           .max(50, 'maxContentInMail')
       ),
-    userName: z
+    username: z
       .string()
-      .min(3, 'usernameMinLength')
-      .max(30, 'usernameMaxLength'),
+      .min(3, 'registration.form.username.error.minContent')
+      .max(30, 'registration.form.username.error.maxContent'),
+    firstName: z
+      .string()
+      .min(2, 'registration.form.firstName.error.minContent')
+      .max(50, 'registration.form.firstName.error.maxContent'),
+    lastName: z
+      .string()
+      .min(2, 'registration.form.lastName.error.minContent')
+      .max(50, 'registration.form.lastName.error.maxContent'),
     password: z
       .string()
-      .min(6, 'passwordMinLength')
-      .max(50, 'passwordMaxLength'),
-    confirmPassword: z.string().min(1, 'confirmPasswordRequired'),
+      .min(6, 'registration.form.password.error.minContent')
+      .max(50, 'registration.form.password.error.maxContent'),
+    confirmPassword: z
+      .string()
+      .min(1, 'registration.form.confirmPassword.error.required'),
     acceptPolicy: z.boolean(),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: 'passwordsDoNotMatch',
+    message: 'registration.form.confirmPassword.error.mismatch',
     path: ['confirmPassword'],
   })
   .refine((data) => data.acceptPolicy === true, {
-    message: 'mustAcceptTermsAndPrivacy',
+    message: 'registration.general.mustAcceptTermsAndPrivacy',
     path: ['acceptPolicy'],
   });
 
