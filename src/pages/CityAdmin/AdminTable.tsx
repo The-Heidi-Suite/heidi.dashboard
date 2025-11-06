@@ -13,7 +13,10 @@ import {
 } from '@/components/ui/table';
 import { useTypedTranslation } from '@/hooks';
 import { ROLE_USER_MAP, RoleValue, USER_ROLE_MAP } from '@/lib/constant';
-import DeleteAction from '@/pages/Tiles/DeleteAction';
+import DeleteAction from '@/pages/CityAdmin/DeleteAction';
+import { PermissionsMap } from '@/shared/RoleBasedPermission';
+import { selectUserRole } from '@/store/slices/userSlice';
+import { useGlobalStore } from '@/store/useGlobalStore';
 type TableRows = {
   id: number;
   email: string;
@@ -72,6 +75,7 @@ type AdminTableProps = {
 
 function AdminTable({ tableRows = DUMMY_DATA, loading }: AdminTableProps) {
   const { t } = useTypedTranslation();
+  const userRole = useGlobalStore(selectUserRole);
   return (
     <ShacnTable className="border-2 my-4">
       <TableHeader className="bg-secondary rounded-full">
@@ -134,9 +138,12 @@ function AdminTable({ tableRows = DUMMY_DATA, loading }: AdminTableProps) {
 
               <TableCell className="text-center">
                 <div className="flex items-center justify-center gap-8">
-                  {/* TODO: Add Navigation on Click to Edit */}
-                  <Pencil className="cursor-pointer text-green-500 hover:fill-green-500 hover:text-green-500 transition-colors" />
-                  <DeleteAction itemId={rowData.id} />
+                  {PermissionsMap[userRole ?? USER_ROLE_MAP.CITIZEN]
+                    .canEdit && (
+                    <Pencil className="cursor-pointer text-green-500 hover:fill-green-500 hover:text-green-500 transition-colors" />
+                  )}
+                  {PermissionsMap[userRole ?? USER_ROLE_MAP.CITIZEN]
+                    .canDelete && <DeleteAction itemId={rowData.id} />}
                 </div>
               </TableCell>
             </TableRow>

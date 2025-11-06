@@ -49,11 +49,15 @@ function SignIn() {
       const signedInResponse = await signInUser(values);
       if (signedInResponse.success) {
         const token = signedInResponse.data.accessToken;
+        const refreshToken = signedInResponse.data.refreshToken;
+        // const expiresIn = signedInResponse.data.expiresIn;
+        await saveDataInCookie('refreshToken', refreshToken);
         await saveDataInCookie('accessToken', token);
         dispatchUserData({
           name: signedInResponse.data.firstName,
           lastName: signedInResponse.data.lastName,
-          role: signedInResponse.data.role,
+          // role: signedInResponse.data.role,
+          role: 1,
         });
         toast.success(signedInResponse.message);
         navigate('/tiles/listing');

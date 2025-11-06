@@ -68,22 +68,24 @@ function DashboardWrapper() {
         } as React.CSSProperties & Record<string, string>
       }
     >
-      <main className="flex h-screen w-full">
+      <main className="flex w-full h-full">
         {/* Sidebar on the left */}
         {/* TODO: ADD SIDEBAR FOOTER CONTENT */}
-        <Sidebar
-          sidebarData={sidebarData}
-          sidebarHeader={SidebarHeader}
-          footerChildren={<SidebarFooter />}
-        />
+        <div className="z-20">
+          <Sidebar
+            sidebarData={sidebarData}
+            sidebarHeader={SidebarHeader}
+            footerChildren={<SidebarFooter />}
+          />
+        </div>
 
         {/* Right side (Header + Content) */}
         <div className="flex flex-col flex-1">
           <Header />
           {/* Main content area */}
-          <div className="flex-1 mt-16 p-2 custom-scrollbar">
-            <Outlet />
-          </div>
+        </div>
+        <div className="w-full mt-16 p-2 custom-scrollbar">
+          <Outlet />
         </div>
       </main>
     </SidebarProvider>

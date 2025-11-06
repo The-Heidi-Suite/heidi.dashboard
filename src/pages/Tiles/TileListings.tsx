@@ -1,5 +1,5 @@
 import { CircleX, Search } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { debounce } from 'lodash';
 
@@ -19,6 +19,7 @@ function TileListings() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTab, setSelectedTab] = useState(TILE_TABS[0]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const {
     data: tileListings,
@@ -30,12 +31,20 @@ function TileListings() {
     search: searchInput,
     statusId: selectedTab.id,
   });
-
-  // TODO: FIx Debounce
-  const handleChangeSearch = debounce(
-    (value: string) => setSearchInput(value),
-    500
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((...args: unknown[]) => {
+        const val = args[0] as string;
+        setCurrentPage(1);
+        setSearchInput(val);
+      }, 500),
+    []
   );
+  useEffect(() => {
+    if (searchTerm.trim()) {
+      debouncedSearch(searchTerm);
+    }
+  }, [searchTerm, debouncedSearch]);
 
   return (
     <div className="w-full px-1">
@@ -58,14 +67,14 @@ function TileListings() {
           <Input
             type="text"
             placeholder="Search"
-            value={searchInput}
-            onChange={({ target: { value } }) => handleChangeSearch(value)}
+            value={searchTerm}
+            onChange={({ target: { value } }) => setSearchTerm(value)}
             className="w-full rounded-lg pl-10 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <button
             type="button"
-            onClick={() => setSearchInput('')}
+            onClick={() => setSearchTerm('')}
             className="absolute inset-y-0 right-3 flex items-center text-red-500 hover:text-red-600"
           >
             <CircleX size={18} />

@@ -2,6 +2,11 @@ import {
   ProfileSuccessData,
   UpdateProfileSuccess,
 } from '@/mocks/responses/account';
+import {
+  AdminDeleteSuccessResponse,
+  AdminListingsResponse,
+} from '@/mocks/responses/adminListings';
+import { CreateAdminResponse } from '@/mocks/responses/createAdmin';
 import { RefreshSuccess } from '@/mocks/responses/refreshToken';
 import {
   RegisterErrorResponse,
@@ -23,8 +28,17 @@ export const handlers = [
   fetchApi('signin', 'post', SuccessUserResponse, 'success'),
   fetchApi('signin/error', 'post', ErrorUserResponse, 'error'),
   fetchApi('register', 'post', RegisterSuccessResponse, 'success'),
+  fetchApi('create-admin', 'post', CreateAdminResponse, 'success'),
   fetchApi('register/error', 'post', RegisterErrorResponse, 'error'),
   fetchApi('tileListings', 'get', TileListingsResponse, 'success', 1500),
+  fetchApi('adminListings', 'get', AdminListingsResponse, 'success', 1500),
+  fetchApi(
+    'adminListings/:id',
+    'delete',
+    AdminDeleteSuccessResponse,
+    'success',
+    3000
+  ),
   fetchApi(
     'tileListings/:id',
     'delete',
