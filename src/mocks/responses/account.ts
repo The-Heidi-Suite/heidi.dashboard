@@ -1,0 +1,42 @@
+import { ApiErrorResponse, ApiSuccessResponse } from '@/api/api.type';
+import { GetUserProfileResponse } from '@/api/endpoints';
+
+type SuccessResponse = ApiSuccessResponse<GetUserProfileResponse>;
+
+const ProfileSuccessData: SuccessResponse = {
+  success: true,
+  data: {
+    id: 1,
+    name: 'John Doe',
+    username: 'johndoe',
+    email: 'johndoe@example.com',
+    phoneNumber: '1234567890',
+    description: 'This is a sample description',
+    website: '',
+    metadata: [
+      {
+        link: 'https://example.com',
+        name: 'google',
+        id: 1,
+      },
+    ],
+  },
+  message: 'Successfully Retrieved User Profile',
+};
+
+const ProfileErrorResponse: ApiErrorResponse = {
+  success: false,
+  error: 'Failed to retrieve user profile',
+  code: 'INTERNAL_SERVER_ERROR',
+  status: 500,
+};
+
+type UpdateProfileSuccessResponse = ApiSuccessResponse<unknown>;
+const UpdateProfileSuccess: UpdateProfileSuccessResponse = {
+  data: undefined,
+  message: 'Successfully Updated',
+  success: true,
+  status: 200,
+};
+
+export { ProfileErrorResponse, ProfileSuccessData, UpdateProfileSuccess };

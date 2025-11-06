@@ -1,0 +1,151 @@
+import { useState } from 'react';
+
+import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'sonner';
+
+import { registerUser } from '@/api/endpoints/register';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { saveDataInCookie } from '@/lib/cookieStorage';
+import { RegisterForm, registerSchema } from '@/schema/register';
+import {
+  CheckboxField,
+  PasswordField,
+  TextInputField,
+} from '@/shared/FormField';
+import HelpDialog from '@/shared/HelpDialog';
+import { setUserDataAction } from '@/store/slices/userSlice';
+import { useGlobalStore } from '@/store/useGlobalStore';
+
+function Register() {
+  const { t } = useTranslation();
+
+  const navigate = useNavigate();
+  const dispatchUserData = useGlobalStore(setUserDataAction);
+
+  const form = useForm<RegisterForm>({
+    resolver: zodResolver(registerSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+      confirmPassword: '',
+      acceptPolicy: false,
+      userName: '',
+    },
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (values: RegisterForm) => {
+    setLoading(true);
+    try {
+      const registerResponse = await registerUser(values);
+      if (registerResponse.success) {
+        const token = registerResponse.data.accessToken;
+        await saveDataInCookie('accessToken', token);
+        dispatchUserData({
+          name: registerResponse.data.firstName,
+          lastName: registerResponse.data.lastName,
+          role: registerResponse.data.role,
+        });
+        toast.success(registerResponse.message);
+        navigate('/tiles/listing');
+      } else {
+        toast.error(registerResponse.error);
+      }
+    } catch (err: unknown) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+        <TextInputField
+          control={form.control}
+          name="email"
+          label={t('email')}
+          placeholder={t('usernameOrEmail')}
+          required
+        />
+
+        <TextInputField
+          control={form.control}
+          name="userName"
+          label={t('usernameLabel')}
+          placeholder={t('usernamePlaceholder')}
+          required
+        />
+
+        <PasswordField
+          control={form.control}
+          name="password"
+          label={t('password')}
+          placeholder={t('pleaseEnterPassword')}
+          required
+        />
+
+        <PasswordField
+          control={form.control}
+          name="confirmPassword"
+          label={t('confirmPassword')}
+          placeholder={t('pleaseEnterConfirmPassword')}
+          required
+        />
+
+        <div className="flex items-center justify-between">
+          <CheckboxField
+            control={form.control}
+            name="acceptPolicy"
+            label={
+              <div>
+                {t('acceptPolicy')}{' '}
+                <Link
+                  to="/privacy"
+                  className="text-red-600 hover:opacity-70 transition-opacity duration-200"
+                >
+                  {t('privacy')}
+                </Link>{' '}
+                {t('and')}{' '}
+                <Link
+                  to="/terms"
+                  className="text-red-600 hover:opacity-70 transition-opacity duration-200"
+                >
+                  {t('terms')}
+                </Link>
+              </div>
+            }
+          />
+        </div>
+        <Button
+          loading={loading}
+          type="submit"
+          className="w-full bg-primary text-base text-primary-foreground py-2 rounded-md hover:bg-primary-dark transition duration-300 ease-in-out"
+        >
+          {t('register')}
+        </Button>
+
+        <div className="flex justify-between mt-3">
+          <div className="text-sm">
+            {t('alreadyHaveAccount')}
+            <Link
+              to={'/login'}
+              className=" hover:text-purple-500 ml-1 text-blue-600"
+            >
+              {t('login')}
+            </Link>
+          </div>
+
+          <HelpDialog btnName={t('signInHelp')} />
+        </div>
+      </form>
+    </Form>
+  );
+}
+
+export default Register;

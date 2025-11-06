@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 🌞 Light Mode */
+    --background: 0 0% 100%; /* white */
+    --foreground: 0 0% 0%; /* black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* 🟩 Primary (Grayish Mint from env: VITE_PRIMARY_HSL=220 9% 46%) */
+    --primary: 220 9% 46%; /* gray-600 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Supporting tones */
+    --secondary: 0 0% 87%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 87%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 220 9% 46%; /* teal-like highlight */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* System */
+    --border: 0 0% 87%;
+    --input: 0 0% 87%;
+    --ring: 220 9% 46%;
+
+    /* Shapes */
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* 🌙 Dark Mode (updated) */
+    --background: 222 20% 12%; /* dark slate → #1E242D */
+    --foreground: 210 20% 92%; /* soft off-white → #E5EAF1 */
+
+    --card: 222 18% 15%; /* slightly lighter card */
+    --card-foreground: 210 20% 92%;
+
+    --popover: 222 18% 15%;
+    --popover-foreground: 210 20% 92%;
+
+    /* 🔹 Updated Primary → off-white tone */
+    --primary: 0 0% 95%; /* #f3f3f3ff */
+    --primary-foreground: 222 20% 12%; /* dark text on light primary */
+
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 12% 25%;
+    --muted-foreground: 215 10% 70%;
+
+    --accent: 220 15% 22%;
+    --accent-foreground: 210 20% 92%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 210 20% 92%;
+
+    --border: 220 12% 25%;
+    --input: 220 12% 18%;
+    --ring: 0 0% 95%; /* match primary tone */
+
+    /* 🧭 Sidebar */
+    --sidebar-background: 222 20% 12%; /* consistent with page background */
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 0 0% 95%; /* match new primary */
+    --sidebar-primary-foreground: 222 20% 12%;
+    --sidebar-accent: 220 15% 22%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 220 12% 25%;
+    --sidebar-ring: 0 0% 95%;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar {
+    @apply overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-inherit
+      scrollbar-thumb-rounded-full scrollbar-w-6
+      dark:scrollbar-thumb-muted dark:scrollbar-track-background;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "heading": "World Hello",
+  "toggleTheme": "Theme Toggle",
+  "signIntoAccount": "Bei deinem Konto anmelden",
+  "email": "E-Mail",
+  "emailOrUsernameLabel": "Email Adresse or Username",
+  "usernameOrEmail": "Email Adresse",
+  "password": "Passwort",
+  "pleaseEnterPassword": "Bitte Passwort eingeben",
+  "rememberMe": "Erinnere dich",
+  "forgotYourPassword": "Hast du dein Passwort vergessen?",
+  "resetPassword": "Setze dein Passwort zurück",
+  "signIn": "Anmelden",
+  "notMember": "Noch keinen Konto ?",
+  "register": "registrieren",
+  "signInHelp": "Hilfe ?",
+  "invalidMail": "Geben Sie eine gültige E-Mail ein",
+  "minContainInMail": "Die E-Mail muss mindestens 3 Zeichen enthalten",
+  "maxContentInMail": "Die E-Mail darf höchstens 50 Zeichen enthalten",
+  "passwordRequired": "Passwort ist erforderlich",
+  "sendLink": "Link senden",
+  "cancel": "Abbrechen",
+  "addMore": "Mehr hinzufügen",
+  "deleteAccount": "Konto löschen",
+  "anleitung": "Anleitung",
+  "subtitle": "Registrieren in der App",
+  "step1": "Schritt 1: Nutzername und Passwort festlegen",
+  "step2": "Schritt 2: Es wird eine E-Mail gesendet an die E-Mail-Adresse, die du eingegeben hast",
+  "step3": "Schritt 3: Bitte verifiziere die E-Mail, indem du in dein Postfach gehst und den Bestätigungslink anklickst",
+  "step4": "Schritt 4: Dein Konto ist verifiziert und du kannst dich mit deinen Login-Daten einloggen",
+  "thankYou": "Danke!!",
+  "sidebar": {
+    "tileManagement": {
+      "title": "Kachelverwaltung",
+      "upload": "Kachel-Upload",
+      "listing": "Kachelliste"
+    },
+    "accounts": {
+      "title": "Konten"
+    },
+    "cityAdmin": {
+      "title": "Stadtverwaltung"
+    }
+  },
+  "createAccount": "Konto erstellen",
+  "tile": {
+    "upload": {
+      "heading": "Kachel-Upload",
+      "description": "Laden Sie hier Ihre Kachel hoch",
+      "form": {
+        "uploadLabel": "Bild hochladen",
+        "uploadBtnLabel": "Bild auswählen",
+        "uploadPlaceholder": "Per Drag & Drop hochladen oder klicken",
+        "errorName": {
+          "maxFileSize": "Die Dateigröße darf maximal 1 MB betragen",
+          "supportedExtension": "Nicht unterstützte Datei ausgewählt, unterstützte Formate sind:",
+          "invalidFile": "Bitte laden Sie eine gültige Bilddatei hoch."
+        }
+      },
+      "previewHeading": "Vorschau",
+      "previewDescription": "Vorschau deiner Kachel hier"
+    },
+    "listingHeading": "Kachelübersicht",
+    "listingDescription": "Liste aller registrierten Kacheln",
+    "tabs": {
+      "allTiles": "Alle Kacheln",
+      "pendingTiles": "Ausstehend",
+      "inactiveTiles": "Inaktiv",
+      "hiddenTiles": "Ausgeblendet"
+    },
+    "table": {
+      "head": {
+        "tile": "Kachel",
+        "status": "Status",
+        "description": "Beschreibung",
+        "actions": "Aktionen"
+      },
+      "noData": "Keine Daten gefunden"
+    },
+    "confirmDelete": {
+      "heading": "Bist du dir sicher?",
+      "message": "Möchten Sie diesen Eintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmMessage": "Löschen",
+      "cancelMessage": "Abbrechen"
+    }
+  },
+  "formMessages": {
+    "uploadField": {
+      "label": "Bild hochladen",
+      "btnLabel": "Bild auswahlen",
+      "placeholder": "Per Drag & Drop hochladen oder klicken",
+      "errorName": {
+        "maxFileSize": "Die Dateigröße darf maximal ",
+        "supportedExtension": "Nicht unterstuetzte Datei ausgewaehlt, unterstuetzte Formate sind:",
+        "invalidFile": "Bitte laden Sie eine gueltige Bilddatei hoch.",
+        "minLength": "Bitte geben Sie einen gueltigen Kachelnamen ein",
+        "maxLength": "Der Kachelname darf 50 Zeichen nicht ueberschreiten",
+        "titleColor": "Bitte waehlen Sie eine Titel Farbe",
+        "tileIcon": "Kachel Symbol ist erforderlich",
+        "tileDescription": "Die Beschreibung muss mindestens 10 Zeichen lang sein",
+        "titleDescriptionColor": "Bitte waehlen Sie eine Beschreibungsfarbe",
+        "tileImage": "Kachelbild ist erforderlich"
+      }
+    }
+  },
+  "cityAdministration": {
+    "heading": "Stadtverwaltung",
+    "description": "Liste aller registrierten Städte",
+    "createAdmin": "Stadt erstellen Admin",
+    "table": {
+      "head": {
+        "email": "E-Mail",
+        "role": "Benutzerrolle",
+        "status": "Status",
+        "createdAt": "Erstellt am",
+        "cities": "Städte",
+        "actions": "Aktionen",
+        "registered": "Registriert"
+      },
+      "noData": "Keine Daten gefunden"
+    },
+    "confirmDelete": {
+      "heading": "Sind Sie sicher?",
+      "message": "Sind Sie sicher, dass Sie dieses Element löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmMessage": "Löschen",
+      "cancelMessage": "Abbrechen"
+    }
+  },
+  "accountSetting": {
+    "heading": "Kontoeinstellungen",
+    "description": "Aktualisieren Sie Ihre Kontodaten",
+    "section": {
+      "personalInfo": {
+        "heading": "Persönliche Informationen",
+        "description": "Aktualisieren Sie Ihre persönlichen Informationen"
+      },
+      "accountInfo": {
+        "heading": "Kontoinformationen",
+        "description": "Aktualisieren Sie Ihre Kontoinformationen"
+      },
+      "metadata": {
+        "heading": "Metadaten",
+        "description": "+ Fügen Sie hier Ihre Social-Media-Konten hinzu."
+      },
+      "password": {
+        "heading": "Passwort",
+        "description": "Aktualisiere dein Passwort"
+      }
+    },
+
+    "form": {
+      "maxSocialLinks": "Sie können maximal 3 Social-Links hinzufügen",
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+        "error": {
+          "required": "Geben Sie eine gültige E-Mail-Adresse ein",
+          "minContent": "Die E-Mail-Adresse muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Die E-Mail-Adresse darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "username": {
+        "label": "Benutzername",
+        "placeholder": "Geben Sie Ihren Benutzernamen ein",
+        "error": {
+          "required": "Geben Sie einen gültigen Benutzernamen ein",
+          "minContent": "Der Benutzername muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Der Benutzername darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "currentPassword": {
+        "label": "Passwort",
+        "placeholder": "Geben Sie Ihr Passwort ein",
+        "error": {
+          "required": "Geben Sie ein gültiges Passwort ein",
+          "minContent": "Das Passwort muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Das Passwort darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "newPassword": {
+        "label": "Neues Passwort",
+        "placeholder": "Geben Sie Ihr neues Passwort ein",
+        "error": {
+          "required": "Geben Sie ein gültiges Passwort ein",
+          "minContent": "Das Passwort muss mindestens 6 Zeichen enthalten",
+          "maxContent": "Das Passwort darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "confirmPassword": {
+        "label": "Passwort bestätigen",
+        "placeholder": "Bestätigen Sie Ihr Passwort",
+        "error": {
+          "required": "Geben Sie ein gültiges Passwort ein",
+          "minContent": "Das Passwort muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Das Passwort darf höchstens 50 Zeichen enthalten",
+          "passwordMismatch": "Das Passwort stimmt nicht überein"
+        }
+      },
+      "yourName": {
+        "label": "Ihr Name",
+        "placeholder": "Geben Sie Ihren Namen ein",
+        "error": {
+          "required": "Geben Sie einen gültigen Namen ein",
+          "minContent": "Der Name muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Der Name darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "phoneNumber": {
+        "label": "Telefonnummer",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein",
+        "error": {
+          "required": "Geben Sie eine gültige Telefonnummer ein",
+          "minContent": "Die Telefonnummer muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Die Telefonnummer darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "description": {
+        "label": "Beschreibung",
+        "placeholder": "Geben Sie Ihre Beschreibung ein",
+        "error": {
+          "required": "Geben Sie eine gültige Beschreibung ein",
+          "minContent": "Die Beschreibung muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Die Beschreibung darf höchstens 50 Zeichen enthalten"
+        }
+      },
+      "website": {
+        "label": "Webseite",
+        "placeholder": "Geben Sie Ihre Webseite ein",
+        "error": {
+          "required": "Geben Sie eine gültige Webseite ein",
+          "minContent": "Die Webseite muss mindestens 3 Zeichen enthalten",
+          "maxContent": "Die Webseite darf höchstens 50 Zeichen enthalten",
+          "duplicateWebsite": "Doppelte Websites sind nicht erlaubt"
+        }
+      },
+      "websiteLink": {
+        "label": "Webseitenlink",
+        "placeholder": "Geben Sie Ihren Webseitenlink ein",
+        "error": {
+          "required": "Geben Sie einen gültigen Webseitenlink ein",
+          "minContent": "Der Webseitenlink muss mindestens 3 Zeichen enthalten",
+          "invalidLink": "Ungültiger Link",
+          "maxContent": "Der Webseitenlink darf höchstens 50 Zeichen enthalten",
+          "duplicateLink": "Doppelte Links sind nicht erlaubt"
+        }
+      }
+    }
+  }
+}
