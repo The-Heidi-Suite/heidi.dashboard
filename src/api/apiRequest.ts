@@ -15,6 +15,8 @@ import { getDataFromCookie } from '@/lib/cookieUtils';
 
 import { ApiErrorResponse, ApiResponse, ApiSuccessResponse } from './/api.type';
 
+const refreshTokePath = '/auth/refresh';
+
 const VALID_STATUS = [SUCCESS_STATUS, USER_CREATED];
 
 let isRefreshing = false;
@@ -28,8 +30,10 @@ axios.interceptors.request.use(
   (config) => {
     const initialHeader = config.headers['Content-Type'];
     const configCopy = { ...config };
-    const accessToken = getDataFromCookie(COOKIES_KEY_NAME.ACCESS_TOKEN);
+    let accessToken = getDataFromCookie(COOKIES_KEY_NAME.ACCESS_TOKEN);
     if (accessToken) {
+      // Remove any surrounding quotes from the token
+      accessToken = accessToken.replace(/^"(.*)"$/, '$1');
       configCopy.headers.Authorization = `Bearer ${accessToken}`;
     }
     configCopy.headers.Accept = '*/*';
@@ -60,9 +64,14 @@ axios.interceptors.response.use(
         return Promise.reject(error);
       }
       isRefreshing = true;
-
-      const res =
-        await axios<ApiSuccessResponse<{ newToken: string }>>('refresh-token');
+      let refreshToken =
+        getDataFromCookie(COOKIES_KEY_NAME.REFRESH_TOKEN) ?? '';
+      // Remove any surrounding quotes from the token
+      refreshToken = refreshToken.replace(/^"(.*)"$/, '$1');
+      const res = await axios.post<ApiSuccessResponse<{ newToken: string }>>(
+        refreshTokePath,
+        { refreshToken }
+      );
       const newToken = res?.data?.data?.newToken;
       if (newToken) {
         // Retry the failed request with the new token

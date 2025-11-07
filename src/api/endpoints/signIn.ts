@@ -20,10 +20,9 @@ type LoginForm = {
 };
 
 export const signInUser = async (userFormData: LoginForm) => {
-  const { rememberMe, ...formData } = userFormData;
-  return await apiRequest<SignInUserResponse, Omit<LoginForm, 'rememberMe'>>({
+  return await apiRequest<SignInUserResponse, LoginForm>({
     url: signInUserPath,
     method: 'POST',
-    data: formData,
+    data: userFormData,
   });
 };

@@ -1,8 +1,9 @@
 import apiRequest from '@/api/apiRequest';
+const verifyResetPassTokenPath = '/auth/validate';
 
-export const verifyResetPassToken = async (token: string) => {
+export const verifyResetPassToken = async () => {
   return await apiRequest({
-    url: 'verify-reset-token',
-    params: { token },
+    url: verifyResetPassTokenPath,
+    method: 'POST',
   });
 };
