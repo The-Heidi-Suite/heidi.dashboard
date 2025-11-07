@@ -244,5 +244,58 @@
         }
       }
     }
+  },
+  "registration": {
+    "general": {
+      "alreadyHaveAccount": "Do you already have an account?",
+      "login": "Please log in here.",
+      "acceptPolicy": "I hereby accept the",
+      "privacy": "privacy policy*",
+      "and": "and",
+      "terms": "general terms and conditions.*",
+      "mustAcceptTermsAndPrivacy": "Please agree to the Terms and Conditions to proceed."
+    },
+    "form": {
+      "username": {
+        "label": "Username",
+        "placeholder": "Enter your username",
+        "error": {
+          "minContent": "Username must be at least 3 characters",
+          "maxContent": "Username must be at most 30 characters"
+        }
+      },
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Please enter first name",
+        "error": {
+          "minContent": "First Name must be at least 2 characters",
+          "maxContent": "First Name must be at most 30 characters"
+        }
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Please enter last name",
+        "error": {
+          "minContent": "Last Name must be at least 2 characters",
+          "maxContent": "Last Name must be at most 30 characters"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Please enter password",
+        "error": {
+          "minContent": "Password must be at least 8 characters",
+          "maxContent": "Password must be at most 20 characters"
+        }
+      },
+      "confirmPassword": {
+        "label": "Confirm Password",
+        "placeholder": "Please enter confirm password",
+        "error": {
+          "required": "Confirm Password is required",
+          "mismatch": "Password and confirmation password do not match"
+        }
+      }
+    }
   }
 }

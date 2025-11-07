@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import Dummy from '@/pages/Dummy';
 import { UnauthorizedPage } from '@/pages/Unauthorized';
@@ -13,6 +13,7 @@ const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'));
 export default function AppRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/login" replace />} />
       {/* ELEMENT: Auth Routes */}
       {AuthRoutes}
       <Route path="/unauthorized" element={<UnauthorizedPage />} />

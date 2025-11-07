@@ -23,6 +23,13 @@ import {
 } from '@/mocks/responses/tileListings';
 import { fetchApi } from '@/mocks/utils/fetchApi';
 
+import {
+  TileUploadCreateErrorResponse,
+  TileUploadCreateSuccessResponse,
+  TileUploadEditErrorResponse,
+  TileUploadEditSuccessResponse,
+} from './responses/tileUpload';
+
 // ✅ Handlers
 export const handlers = [
   fetchApi('signin', 'post', SuccessUserResponse, 'success'),
@@ -45,6 +52,34 @@ export const handlers = [
     TileDeleteSuccessResponse,
     'success',
     3000
+  ),
+  fetchApi(
+    'tileUploads',
+    'post',
+    TileUploadCreateSuccessResponse,
+    'success',
+    1500
+  ),
+  fetchApi(
+    'tileUploads/error',
+    'post',
+    TileUploadCreateErrorResponse,
+    'error',
+    1500
+  ),
+  fetchApi(
+    'tileUploads/:id',
+    'put',
+    TileUploadEditSuccessResponse,
+    'success',
+    1500
+  ),
+  fetchApi(
+    'tileUploads/:id/error',
+    'put',
+    TileUploadEditErrorResponse,
+    'error',
+    1500
   ),
   fetchApi('logout', 'get', LogoutUserResponse, 'success'),
   fetchApi('profile', 'get', ProfileSuccessData, 'success', 1000),
