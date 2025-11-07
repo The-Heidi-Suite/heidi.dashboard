@@ -68,6 +68,12 @@ axios.interceptors.response.use(
         getDataFromCookie(COOKIES_KEY_NAME.REFRESH_TOKEN) ?? '';
       // Remove any surrounding quotes from the token
       refreshToken = refreshToken.replace(/^"(.*)"$/, '$1');
+      if (!refreshToken) {
+        console.warn('No refresh token available, logging out user.');
+        localStorage.clear();
+        sessionStorage.clear();
+        return Promise.reject(error);
+      }
       const res = await axios.post<ApiSuccessResponse<{ newToken: string }>>(
         refreshTokePath,
         { refreshToken }
