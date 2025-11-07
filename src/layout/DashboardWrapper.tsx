@@ -11,7 +11,9 @@ import {
   SidebarMenuItem,
   SidebarProvider,
 } from '@/components/ui/sidebar';
+import { COOKIES_KEY_NAME } from '@/config/cookie';
 import useSidebarConfig from '@/hooks/useSidebarConfig';
+import { deleteCookies } from '@/lib/cookieStorage';
 import { Header, Sidebar } from '@/shared/DashboardLayout';
 import { useGlobalStore } from '@/store/useGlobalStore';
 
@@ -33,6 +35,11 @@ const SidebarFooter = () => {
       if (res.success) {
         resetStore();
         queryClient.clear();
+        deleteCookies([
+          COOKIES_KEY_NAME.ACCESS_TOKEN,
+          COOKIES_KEY_NAME.ACCESS_TOKEN,
+          COOKIES_KEY_NAME.USER_UUID,
+        ]);
         navigate('/login');
       }
     } catch (err) {
