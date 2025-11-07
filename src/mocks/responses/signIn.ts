@@ -13,6 +13,8 @@ const SuccessUserResponse: SuccessResponse = {
     lastName: 'Doe',
     role: USER_ROLE_MAP.SUPER_ADMIN,
     accessToken: 'accessToken',
+    refreshToken: 'refreshToken',
+    expiresIn: 3600,
   },
   message: 'Successfully Signed In',
 };
