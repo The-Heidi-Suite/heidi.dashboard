@@ -60,7 +60,7 @@ function Sidebar<
           {footerChildren && (
             <>
               <SidebarSeparator />
-              <SidebarFooter className="w-full">
+              <SidebarFooter className="fixed bottom-0 rounded-lg">
                 <ShadCnSidebarMenu>{footerChildren}</ShadCnSidebarMenu>
               </SidebarFooter>
             </>
