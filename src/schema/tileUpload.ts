@@ -21,11 +21,9 @@ export const tileUploadSchema = z.object({
     .string()
     .min(10, { message: 'formMessages.uploadField.errorName.tileDescription' }),
 
-  tileDescriptionColor: z
-    .string()
-    .min(1, {
-      message: 'formMessages.uploadField.errorName.titleDescriptionColor',
-    }),
+  tileDescriptionColor: z.string().min(1, {
+    message: 'formMessages.uploadField.errorName.titleDescriptionColor',
+  }),
 
   tileImage: z
     .instanceof(File)
