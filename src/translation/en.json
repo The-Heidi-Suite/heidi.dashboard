@@ -256,12 +256,18 @@
       "mustAcceptTermsAndPrivacy": "Please agree to the Terms and Conditions to proceed."
     },
     "form": {
+      "email": {
+        "error": {
+          "invalidMail": "Please enter a valid email address"
+        }
+      },
       "username": {
         "label": "Username",
         "placeholder": "Enter your username",
         "error": {
           "minContent": "Username must be at least 3 characters",
-          "maxContent": "Username must be at most 30 characters"
+          "maxContent": "Username must be at most 30 characters",
+          "noSpaces": "Username must not contain spaces"
         }
       },
       "firstName": {
@@ -269,7 +275,8 @@
         "placeholder": "Please enter first name",
         "error": {
           "minContent": "First Name must be at least 2 characters",
-          "maxContent": "First Name must be at most 30 characters"
+          "maxContent": "First Name must be at most 30 characters",
+          "noSpaces": "First Name must not contain spaces"
         }
       },
       "lastName": {
@@ -277,7 +284,8 @@
         "placeholder": "Please enter last name",
         "error": {
           "minContent": "Last Name must be at least 2 characters",
-          "maxContent": "Last Name must be at most 30 characters"
+          "maxContent": "Last Name must be at most 30 characters",
+          "noSpaces": "Last Name must not contain spaces"
         }
       },
       "password": {
@@ -285,7 +293,8 @@
         "placeholder": "Please enter password",
         "error": {
           "minContent": "Password must be at least 8 characters",
-          "maxContent": "Password must be at most 20 characters"
+          "maxContent": "Password must be at most 20 characters",
+          "noSpaces": "Password must not contain spaces"
         }
       },
       "confirmPassword": {

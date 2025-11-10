@@ -69,9 +69,9 @@ export function PasswordField<FormType extends FieldValues>({
                 onClick={togglePasswordVisibility}
               >
                 {showPassword ? (
-                  <EyeOff aria-label={'Hide password'.concat(name)} size={24} />
-                ) : (
                   <Eye aria-label={'Show password'.concat(name)} size={24} />
+                ) : (
+                  <EyeOff aria-label={'Hide password'.concat(name)} size={24} />
                 )}
               </button>
             </div>

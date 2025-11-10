@@ -59,6 +59,9 @@ function Register() {
         navigate('/login');
       } else {
         toast.error(registerResponse.error);
+        if (registerResponse.status === 409) {
+          navigate('/login');
+        }
       }
     } catch (err: unknown) {
       console.error(err);
@@ -76,6 +79,8 @@ function Register() {
           label={t('email')}
           placeholder={t('usernameOrEmail')}
           required
+          minLength={3}
+          maxLength={50}
         />
 
         <TextInputField
@@ -84,6 +89,8 @@ function Register() {
           label={t('registration.form.username.label')}
           placeholder={t('registration.form.username.placeholder')}
           required
+          minLength={3}
+          maxLength={50}
         />
 
         <TextInputField
@@ -92,6 +99,8 @@ function Register() {
           label={t('registration.form.firstName.label')}
           placeholder={t('registration.form.firstName.placeholder')}
           required
+          minLength={2}
+          maxLength={50}
         />
 
         <TextInputField
@@ -100,6 +109,8 @@ function Register() {
           label={t('registration.form.lastName.label')}
           placeholder={t('registration.form.lastName.placeholder')}
           required
+          minLength={2}
+          maxLength={50}
         />
 
         <PasswordField
