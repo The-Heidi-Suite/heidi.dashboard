@@ -80,6 +80,8 @@ function SignIn() {
             name="email"
             label={t('emailOrUsernameLabel')}
             placeholder={t('usernameOrEmail')}
+            maxLength={50}
+            minLength={3}
             required
           />
 
