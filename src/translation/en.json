@@ -276,7 +276,8 @@
         "error": {
           "minContent": "First Name must be at least 2 characters",
           "maxContent": "First Name must be at most 30 characters",
-          "noSpaces": "First Name must not contain spaces"
+          "noSpaces": "First Name must not contain spaces",
+          "invalidChars": "First Name must contain only alphabetic characters"
         }
       },
       "lastName": {
@@ -285,7 +286,8 @@
         "error": {
           "minContent": "Last Name must be at least 2 characters",
           "maxContent": "Last Name must be at most 30 characters",
-          "noSpaces": "Last Name must not contain spaces"
+          "noSpaces": "Last Name must not contain spaces",
+          "invalidChars": "Last Name must contain only alphabetic characters"
         }
       },
       "password": {
