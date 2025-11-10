@@ -60,19 +60,35 @@ function HelpDialog({ btnName, btnClassName }: HelpDialogProps) {
             <DialogDescription asChild>
               <div>
                 <p
-                  className="mb-6 text-gray-800"
+                  className={cn(
+                    'mb-6',
+                    'text-gray-800',
+                    'dark:text-foreground'
+                  )}
                   dangerouslySetInnerHTML={{ __html: t('step1') }}
                 ></p>
                 <p
-                  className="mb-6 text-gray-800"
+                  className={cn(
+                    'mb-6',
+                    'text-gray-800',
+                    'dark:text-foreground'
+                  )}
                   dangerouslySetInnerHTML={{ __html: t('step2') }}
                 ></p>
                 <p
-                  className="mb-6 text-gray-800"
+                  className={cn(
+                    'mb-6',
+                    'text-gray-800',
+                    'dark:text-foreground'
+                  )}
                   dangerouslySetInnerHTML={{ __html: t('step3') }}
                 ></p>
                 <p
-                  className="mb-6 text-gray-800"
+                  className={cn(
+                    'mb-6',
+                    'text-gray-800',
+                    'dark:text-foreground'
+                  )}
                   dangerouslySetInnerHTML={{ __html: t('step4') }}
                 ></p>
                 <p className="font-bold text-blue-600 text-lg text-center mb-6">
