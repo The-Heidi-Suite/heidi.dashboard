@@ -5,13 +5,19 @@ export const registerSchema = z
     email: z
       .string()
       .min(3, 'invalidMail')
-      .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'registration.form.email.error.invalidMail')
+      .regex(
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        'registration.form.email.error.invalidMail'
+      )
       .or(
         z
           .email('invalidMail')
           .min(3, 'minContainInMail')
           .max(50, 'maxContentInMail')
-          .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'registration.form.email.error.invalidMail')
+          .regex(
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+            'registration.form.email.error.invalidMail'
+          )
       ),
     username: z
       .string()
@@ -22,15 +28,17 @@ export const registerSchema = z
       .string()
       .min(2, 'registration.form.firstName.error.minContent')
       .max(50, 'registration.form.firstName.error.maxContent')
+      .regex(/^[A-Za-z]+$/, 'registration.form.firstName.error.invalidChars')
       .regex(/^\S+$/, 'registration.form.firstName.error.noSpaces'),
     lastName: z
       .string()
       .min(2, 'registration.form.lastName.error.minContent')
       .max(50, 'registration.form.lastName.error.maxContent')
+      .regex(/^[A-Za-z]+$/, 'registration.form.lastName.error.invalidChars')
       .regex(/^\S+$/, 'registration.form.lastName.error.noSpaces'),
     password: z
       .string()
-      .min(6, 'registration.form.password.error.minContent')
+      .min(8, 'registration.form.password.error.minContent')
       .max(50, 'registration.form.password.error.maxContent')
       .regex(/^\S+$/, 'registration.form.password.error.noSpaces'),
     confirmPassword: z

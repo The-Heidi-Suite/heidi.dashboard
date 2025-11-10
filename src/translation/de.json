@@ -278,7 +278,8 @@
           "required": "Der Vorname ist erforderlich",
           "minContent": "Der Vorname muss mindestens 2 Zeichen lang sein",
           "maxContent": "Der Vorname darf höchstens 30 Zeichen lang sein",
-          "noSpaces": "Der Vorname darf keine Leerzeichen enthalten"
+          "noSpaces": "Der Vorname darf keine Leerzeichen enthalten",
+          "invalidChars": "Der Vorname darf nur alphabetische Zeichen enthalten"
         }
       },
       "lastName": {
@@ -288,7 +289,8 @@
           "required": "Der Nachname ist erforderlich",
           "minContent": "Der Nachname muss mindestens 2 Zeichen lang sein",
           "maxContent": "Der Nachname darf höchstens 30 Zeichen lang sein",
-          "noSpaces": "Der Nachname darf keine Leerzeichen enthalten"
+          "noSpaces": "Der Nachname darf keine Leerzeichen enthalten",
+          "invalidChars": "Der Nachname darf nur alphabetische Zeichen enthalten"
         }
       },
       "password": {
