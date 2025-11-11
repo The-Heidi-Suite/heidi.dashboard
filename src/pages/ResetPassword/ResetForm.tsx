@@ -9,6 +9,7 @@ import { useUpdateUserPassword } from '@/api/queries';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { useTypedTranslation } from '@/hooks';
+import ROUTES from '@/route/routesConstant';
 import { PasswordFormType, passwordSchema } from '@/schema/profile';
 import { PasswordField } from '@/shared/FormField';
 
@@ -33,7 +34,7 @@ function ResetForm() {
       onSuccess: (data) => {
         if (data.success) {
           toast.success(data.message);
-          navigate('/login');
+          navigate(ROUTES.LogIn);
         } else {
           toast.error(data.error);
         }

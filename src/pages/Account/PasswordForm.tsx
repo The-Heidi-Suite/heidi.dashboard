@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/card';
 import { Form } from '@/components/ui/form';
 import { useTypedTranslation } from '@/hooks';
+import ROUTES from '@/route/routesConstant';
 import { PasswordFormType, passwordSchema } from '@/schema/profile';
 import { PasswordField } from '@/shared/FormField';
 import { useGlobalStore } from '@/store/useGlobalStore';
@@ -42,7 +43,7 @@ function PasswordForm() {
         if (data.success) {
           resetStore();
           toast.success(data.message);
-          navigate('/login');
+          navigate(ROUTES.LogIn);
         } else {
           toast.error(data.error);
         }

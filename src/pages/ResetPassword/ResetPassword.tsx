@@ -3,6 +3,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useVerifyPasswordToken } from '@/api/queries';
 import { Spinner } from '@/components/ui/spinner';
 import { useTypedTranslation } from '@/hooks';
+import ROUTES from '@/route/routesConstant';
 
 import ResetForm from './ResetForm';
 
@@ -15,9 +16,9 @@ function ResetPassword() {
     isLoading,
   } = useVerifyPasswordToken(token ?? '');
 
-  if (!token) return <Navigate to={'/unauthorized'} />;
+  if (!token) return <Navigate to={ROUTES.Unauthorized} />;
   if (isFetching || isLoading) return <Spinner className="size-8" />;
-  
+
   if (verifyToken?.success) {
     return <ResetForm />;
   }
