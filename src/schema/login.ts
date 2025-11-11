@@ -8,8 +8,8 @@ export const loginSchema = z.object({
     .regex(/^\S+$/, 'Email or Username must not contain spaces'), // Allows either valid email or username pattern
   password: z
     .string()
-    .min(3, 'minContentInPassword')
-    .max(50, 'maxContentInPassword')
+    .min(6, 'registration.form.password.error.minContent')
+    .max(50, 'registration.form.password.error.maxContent')
     .regex(/^\S+$/, 'Password must not contain spaces'), // Allows either valid email or username pattern
   rememberMe: z.boolean(),
 });

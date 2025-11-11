@@ -1,8 +1,9 @@
 import apiRequest from '@/api/apiRequest';
-const logoutUserPath = '/auth/logout';
+import API_URLS from '@/api/apiURl';
+
 export const logoutUser = async () => {
   return await apiRequest({
-    url: logoutUserPath,
+    url: API_URLS.LogOut,
     method: 'POST',
   });
 };

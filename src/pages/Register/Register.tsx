@@ -9,7 +9,6 @@ import { toast } from 'sonner';
 import { registerUser } from '@/api/endpoints/register';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
-import { saveDataInCookie } from '@/lib/cookieStorage';
 import { RegisterForm, registerSchema } from '@/schema/register';
 import {
   CheckboxField,
@@ -48,20 +47,13 @@ function Register() {
       const payload = { email, username, firstName, lastName, password };
       const registerResponse = await registerUser(payload);
       if (registerResponse.success) {
-        const token = registerResponse.data.accessToken;
-        await saveDataInCookie('accessToken', token);
         dispatchUserData({
-          name: registerResponse.data.firstName,
-          lastName: registerResponse.data.lastName,
-          role: registerResponse.data.role,
+          ...registerResponse.data,
         });
         toast.success(registerResponse.message);
         navigate('/login');
       } else {
         toast.error(registerResponse.error);
-        if (registerResponse.status === 409) {
-          navigate('/login');
-        }
       }
     } catch (err: unknown) {
       console.error(err);

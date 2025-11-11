@@ -5,13 +5,19 @@ export const registerSchema = z
     email: z
       .string()
       .min(3, 'invalidMail')
-      .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'registration.form.email.error.invalidMail')
+      .regex(
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        'registration.form.email.error.invalidMail'
+      )
       .or(
         z
           .email('invalidMail')
           .min(3, 'minContainInMail')
           .max(50, 'maxContentInMail')
-          .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'registration.form.email.error.invalidMail')
+          .regex(
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            'registration.form.email.error.invalidMail'
+          )
       ),
     username: z
       .string()
