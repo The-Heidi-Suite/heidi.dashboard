@@ -37,7 +37,7 @@ const SidebarFooter = () => {
         queryClient.clear();
         deleteCookies([
           COOKIES_KEY_NAME.ACCESS_TOKEN,
-          COOKIES_KEY_NAME.ACCESS_TOKEN,
+          COOKIES_KEY_NAME.REFRESH_TOKEN,
           COOKIES_KEY_NAME.USER_UUID,
         ]);
         navigate('/login');

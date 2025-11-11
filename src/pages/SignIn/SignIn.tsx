@@ -9,6 +9,7 @@ import { toast } from 'sonner';
 import { signInUser } from '@/api/endpoints';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
+import { USER_ROLE_MAP } from '@/lib/constant';
 import { saveDataInCookie } from '@/lib/cookieStorage';
 import SendVerificationLink from '@/pages/SignIn/SendVerificationLink';
 import { LoginForm, loginSchema } from '@/schema/login';
@@ -54,10 +55,9 @@ function SignIn() {
         await saveDataInCookie('refreshToken', refreshToken);
         await saveDataInCookie('accessToken', token);
         dispatchUserData({
-          name: signedInResponse.data.firstName,
-          lastName: signedInResponse.data.lastName,
-          // role: signedInResponse.data.role,
-          role: 1,
+          ...signedInResponse.data.user,
+          // TODO: Update role based on backend value
+          role: USER_ROLE_MAP.SUPER_ADMIN,
         });
         toast.success(signedInResponse.message);
         navigate('/tiles/listing');
@@ -80,6 +80,8 @@ function SignIn() {
             name="email"
             label={t('emailOrUsernameLabel')}
             placeholder={t('usernameOrEmail')}
+            maxLength={50}
+            minLength={3}
             required
           />
 

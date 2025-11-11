@@ -3,9 +3,13 @@ import { StateCreator } from 'zustand';
 import { RoleValue } from '@/lib/constant';
 
 type UserSliceState = {
-  name: string;
-  lastName: string;
+  id: string;
+  email: string;
+  username: string;
   role?: RoleValue;
+  userType?: string;
+  firstName: string;
+  lastName: string;
 };
 
 type UserSliceActions = {
@@ -16,9 +20,13 @@ type UserSliceActions = {
 export type UserSlice = UserSliceState & UserSliceActions;
 
 const INITIAL_DATA: UserSliceState = {
-  lastName: '',
-  name: '',
+  id: '',
+  email: '',
+  username: '',
   role: undefined,
+  userType: '',
+  firstName: '',
+  lastName: '',
 };
 const createUserSlice: StateCreator<UserSlice> = (set) => ({
   ...INITIAL_DATA,
@@ -31,9 +39,13 @@ const createUserSlice: StateCreator<UserSlice> = (set) => ({
 });
 
 // Selectors
-export const selectUserName = (state: UserSlice) => state.name;
-export const selectLastName = (state: UserSlice) => state.lastName;
+export const selectUserId = (state: UserSlice) => state.id;
+export const selectUserEmail = (state: UserSlice) => state.email;
+export const selectUserUsername = (state: UserSlice) => state.username;
 export const selectUserRole = (state: UserSlice) => state.role;
+export const selectUserType = (state: UserSlice) => state.userType;
+export const selectUserFirstName = (state: UserSlice) => state.firstName;
+export const selectUserLastName = (state: UserSlice) => state.lastName;
 
 // Actions
 export const resetUserDataAction = (state: UserSlice) => state.resetUserData;

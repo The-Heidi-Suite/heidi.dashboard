@@ -21,7 +21,14 @@ export const setDataInCookie = (
  */
 export const getDataFromCookie = (key: string): undefined | string => {
   if (!key) return undefined;
-  return Cookies.get(key);
+  const value = Cookies.get(key);
+  if (!value) return undefined;
+
+  try {
+    return JSON.parse(value);
+  } catch {
+    return value;
+  }
 };
 
 /**
