@@ -1,0 +1,313 @@
+{
+  "heading": "Hej världen",
+  "toggleTheme": "Växla tema",
+  "signIntoAccount": "Logga in på ditt konto",
+  "email": "E-post",
+  "emailOrUsernameLabel": "E-post eller användarnamn",
+  "usernameOrEmail": "Ange din e-postadress",
+  "password": "Lösenord",
+  "pleaseEnterPassword": "Ange lösenord",
+  "rememberMe": "Kom ihåg mig",
+  "forgotYourPassword": "Glömt ditt lösenord?",
+  "resetPassword": "Återställ ditt lösenord",
+  "signIn": "Logga in",
+  "notMember": "Inte medlem?",
+  "register": "Registrera dig",
+  "signInHelp": "Hjälp?",
+  "invalidMail": "Ange en giltig e-postadress",
+  "invalidMailOrUsername": "Ange en giltig e-postadress eller användarnamn",
+  "minContainInMail": "E-post måste innehålla minst 3 tecken",
+  "maxContentInMail": "E-post får innehålla högst 50 tecken",
+  "passwordRequired": "Lösenord krävs",
+  "sendLink": "Skicka länk",
+  "cancel": "Avbryt",
+  "addMore": "Lägg till fler",
+  "deleteAccount": "Radera konto",
+  "anleitung": "Instruktioner",
+  "subtitle": "Registrera dig i appen",
+  "step1": "<strong>Steg 1:</strong> Ange användarnamn och lösenord",
+  "step2": "<strong>Steg 2:</strong> Ett e-postmeddelande skickas till den adress du angav",
+  "step3": "<strong>Steg 3:</strong> Bekräfta e-posten genom att klicka på länken i inkorgen",
+  "step4": "<strong>Steg 4:</strong> Ditt konto är verifierat, och du kan logga in med dina uppgifter",
+  "thankYou": "Tack!!",
+  "sidebar": {
+    "tileManagement": {
+      "title": "Rutthantering",
+      "upload": "Ladda upp ruta",
+      "listing": "Rutlista"
+    },
+    "accounts": {
+      "title": "Konton"
+    },
+    "cityAdmin": {
+      "title": "Stadsadministratör"
+    }
+  },
+  "createAccount": "Skapa ditt nya konto",
+  "tile": {
+    "upload": {
+      "heading": "Ladda upp ruta",
+      "description": "Ladda upp din ruta här",
+      "form": {
+        "uploadLabel": "Ladda upp bild",
+        "uploadBtnLabel": "Välj bild",
+        "uploadPlaceholder": "Dra och släpp eller klicka för att ladda upp",
+        "errorName": {
+          "maxFileSize": "Filstorleken får vara högst 1 MB",
+          "supportedExtension": "Fel fil vald, tillåtna format är:",
+          "invalidFile": "Ladda upp en giltig bildfil."
+        }
+      },
+      "previewHeading": "Förhandsvisning",
+      "previewDescription": "Förhandsgranska din ruta här"
+    },
+    "listingHeading": "Rutlista",
+    "listingDescription": "Lista över alla registrerade rutor",
+    "tabs": {
+      "allTiles": "Alla rutor",
+      "pendingTiles": "Väntande",
+      "inactiveTiles": "Inaktiva",
+      "hiddenTiles": "Dolda"
+    },
+    "table": {
+      "head": {
+        "tile": "Ruta",
+        "status": "Status",
+        "description": "Beskrivning",
+        "actions": "Åtgärder"
+      },
+      "noData": "Inga data hittades"
+    },
+    "confirmDelete": {
+      "heading": "Är du säker?",
+      "message": "Är du säker på att du vill ta bort detta objekt? Denna åtgärd kan inte ångras.",
+      "confirmMessage": "Radera",
+      "cancelMessage": "Avbryt"
+    }
+  },
+  "formMessages": {
+    "uploadField": {
+      "label": "Ladda upp bild",
+      "btnLabel": "Välj bild",
+      "placeholder": "Dra och släpp eller klicka för att ladda upp",
+      "errorName": {
+        "maxFileSize": "Filstorleken får vara högst 1 MB",
+        "supportedExtension": "Fel fil vald, tillåtna format är:",
+        "invalidFile": "Ladda upp en giltig bildfil.",
+        "minLength": "Ange ett giltigt ruttnamn",
+        "maxLength": "Ruttnamnet får inte överstiga 50 tecken",
+        "titleColor": "Välj en titel färg",
+        "tileIcon": "Rutikon krävs",
+        "tileDescription": "Beskrivningen måste vara minst 10 tecken lång",
+        "titleDescriptionColor": "Välj en beskrivningsfärg",
+        "tileImage": "Rutbild krävs"
+      }
+    }
+  },
+  "cityAdministration": {
+    "heading": "Stadsadministration",
+    "description": "Lista över alla registrerade städer",
+    "createAdmin": "Skapa administratör",
+    "table": {
+      "head": {
+        "email": "E-post",
+        "role": "Användarroll",
+        "status": "Status",
+        "createdAt": "Skapad den",
+        "cities": "Städer",
+        "actions": "Åtgärder",
+        "registered": "Registrerad"
+      },
+      "noData": "Inga data hittades"
+    },
+    "confirmDelete": {
+      "heading": "Är du säker?",
+      "message": "Är du säker på att du vill ta bort detta objekt? Denna åtgärd kan inte ångras.",
+      "confirmMessage": "Radera",
+      "cancelMessage": "Avbryt"
+    }
+  },
+  "accountSetting": {
+    "heading": "Kontoinställningar",
+    "description": "Uppdatera dina kontouppgifter",
+    "section": {
+      "personalInfo": {
+        "heading": "Personlig information",
+        "description": "Uppdatera din personliga information"
+      },
+      "accountInfo": {
+        "heading": "Kontoinformation",
+        "description": "Uppdatera din kontoinformation"
+      },
+      "metadata": {
+        "heading": "Metadata",
+        "description": "+Lägg till dina sociala medier här."
+      },
+      "password": {
+        "heading": "Lösenord",
+        "description": "Uppdatera ditt lösenord"
+      }
+    },
+    "form": {
+      "maxSocialLinks": "Du kan lägga till högst 3 sociala länkar",
+      "email": {
+        "label": "E-post",
+        "placeholder": "Ange din e-postadress",
+        "error": {
+          "required": "Ange en giltig e-postadress",
+          "minContent": "E-post måste innehålla minst 3 tecken",
+          "maxContent": "E-post får innehålla högst 50 tecken"
+        }
+      },
+      "username": {
+        "label": "Användarnamn",
+        "placeholder": "Ange ditt användarnamn",
+        "error": {
+          "required": "Ange ett giltigt användarnamn",
+          "minContent": "Användarnamn måste innehålla minst 3 tecken",
+          "maxContent": "Användarnamn får innehålla högst 50 tecken"
+        }
+      },
+      "currentPassword": {
+        "label": "Lösenord",
+        "placeholder": "Ange ditt lösenord",
+        "error": {
+          "required": "Ange ett giltigt lösenord",
+          "minContent": "Lösenord måste innehålla minst 3 tecken",
+          "maxContent": "Lösenord får innehålla högst 50 tecken"
+        }
+      },
+      "newPassword": {
+        "label": "Nytt lösenord",
+        "placeholder": "Ange ditt nya lösenord",
+        "error": {
+          "required": "Ange ett giltigt lösenord",
+          "minContent": "Lösenordet måste innehålla minst 6 tecken",
+          "maxContent": "Lösenordet får innehålla högst 50 tecken"
+        }
+      },
+      "confirmPassword": {
+        "label": "Bekräfta lösenord",
+        "placeholder": "Ange ditt lösenord igen",
+        "error": {
+          "required": "Ange ett giltigt lösenord",
+          "minContent": "Lösenord måste innehålla minst 3 tecken",
+          "maxContent": "Lösenord får innehålla högst 50 tecken",
+          "passwordMismatch": "Lösenorden matchar inte"
+        }
+      },
+      "yourName": {
+        "label": "Ditt namn",
+        "placeholder": "Ange ditt namn",
+        "error": {
+          "required": "Ange ett giltigt namn",
+          "minContent": "Namnet måste innehålla minst 3 tecken",
+          "maxContent": "Namnet får innehålla högst 50 tecken"
+        }
+      },
+      "phoneNumber": {
+        "label": "Telefonnummer",
+        "placeholder": "Ange ditt telefonnummer",
+        "error": {
+          "required": "Ange ett giltigt telefonnummer",
+          "minContent": "Telefonnummer måste innehålla minst 3 tecken",
+          "maxContent": "Telefonnummer får innehålla högst 50 tecken"
+        }
+      },
+      "description": {
+        "label": "Beskrivning",
+        "placeholder": "Ange din beskrivning",
+        "error": {
+          "required": "Ange en giltig beskrivning",
+          "minContent": "Beskrivningen måste innehålla minst 3 tecken",
+          "maxContent": "Beskrivningen får innehålla högst 200 tecken"
+        }
+      },
+      "website": {
+        "label": "Webbplats",
+        "placeholder": "Ange din webbplats",
+        "error": {
+          "required": "Ange en giltig webbplats",
+          "minContent": "Webbplatsen måste innehålla minst 3 tecken",
+          "maxContent": "Webbplatsen får innehålla högst 50 tecken",
+          "duplicateWebsite": "Dubbletter av webbplatser är inte tillåtna"
+        }
+      },
+      "websiteLink": {
+        "label": "Webbplatslänk",
+        "placeholder": "Ange din webbplatslänk",
+        "error": {
+          "required": "Ange en giltig webbplatslänk",
+          "minContent": "Webbplatslänken måste innehålla minst 3 tecken",
+          "maxContent": "Webbplatslänken får innehålla högst 50 tecken",
+          "invalidLink": "Ogiltig länk",
+          "duplicateLink": "Dubbletter av länkar är inte tillåtna"
+        }
+      }
+    }
+  },
+  "registration": {
+    "general": {
+      "alreadyHaveAccount": "Har du redan ett konto?",
+      "login": "Logga in här.",
+      "acceptPolicy": "Jag accepterar härmed",
+      "privacy": "sekretesspolicyn*",
+      "and": "och",
+      "terms": "allmänna villkor.*",
+      "mustAcceptTermsAndPrivacy": "Du måste godkänna villkoren och sekretesspolicyn för att fortsätta."
+    },
+    "form": {
+      "email": {
+        "error": {
+          "invalidMail": "Ange en giltig e-postadress"
+        }
+      },
+      "username": {
+        "label": "Användarnamn",
+        "placeholder": "Ange ditt användarnamn",
+        "error": {
+          "minContent": "Användarnamn måste innehålla minst 3 tecken",
+          "maxContent": "Användarnamn får innehålla högst 30 tecken",
+          "noSpaces": "Användarnamn får inte innehålla mellanslag"
+        }
+      },
+      "firstName": {
+        "label": "Förnamn",
+        "placeholder": "Ange förnamn",
+        "error": {
+          "minContent": "Förnamn måste innehålla minst 2 tecken",
+          "maxContent": "Förnamn får innehålla högst 30 tecken",
+          "noSpaces": "Förnamn får inte innehålla mellanslag",
+          "invalidChars": "Förnamn får endast innehålla bokstäver"
+        }
+      },
+      "lastName": {
+        "label": "Efternamn",
+        "placeholder": "Ange efternamn",
+        "error": {
+          "minContent": "Efternamn måste innehålla minst 2 tecken",
+          "maxContent": "Efternamn får innehålla högst 30 tecken",
+          "noSpaces": "Efternamn får inte innehålla mellanslag",
+          "invalidChars": "Efternamn får endast innehålla bokstäver"
+        }
+      },
+      "password": {
+        "label": "Lösenord",
+        "placeholder": "Ange lösenord",
+        "error": {
+          "minContent": "Lösenord måste vara minst 8 tecken",
+          "maxContent": "Lösenord får vara högst 20 tecken",
+          "noSpaces": "Lösenord får inte innehålla mellanslag"
+        }
+      },
+      "confirmPassword": {
+        "label": "Bekräfta lösenord",
+        "placeholder": "Ange bekräftelselösenord",
+        "error": {
+          "required": "Bekräftelselösenord krävs",
+          "mismatch": "Lösenorden matchar inte"
+        }
+      }
+    }
+  }
+}

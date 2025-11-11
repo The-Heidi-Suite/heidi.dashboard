@@ -1,0 +1,313 @@
+{
+  "heading": "Hei Verden",
+  "toggleTheme": "Bytt tema",
+  "signIntoAccount": "Logg inn på kontoen din",
+  "email": "E-post",
+  "emailOrUsernameLabel": "E-post eller brukernavn",
+  "usernameOrEmail": "Skriv inn e-posten din",
+  "password": "Passord",
+  "pleaseEnterPassword": "Vennligst skriv inn passord",
+  "rememberMe": "Husk meg",
+  "forgotYourPassword": "Glemt passordet ditt?",
+  "resetPassword": "Tilbakestill passordet ditt",
+  "signIn": "Logg inn",
+  "notMember": "Ikke medlem?",
+  "register": "Registrer deg",
+  "signInHelp": "Hjelp?",
+  "invalidMail": "Skriv inn en gyldig e-post",
+  "invalidMailOrUsername": "Skriv inn en gyldig e-post eller brukernavn",
+  "minContainInMail": "E-post må inneholde minst 3 tegn",
+  "maxContentInMail": "E-post kan maksimalt inneholde 50 tegn",
+  "passwordRequired": "Passord er påkrevd",
+  "sendLink": "Send lenke",
+  "cancel": "Avbryt",
+  "addMore": "Legg til mer",
+  "deleteAccount": "Slett konto",
+  "anleitung": "Instruksjoner",
+  "subtitle": "Registrering i appen",
+  "step1": "<strong>Trinn 1:</strong> Angi brukernavn og passord",
+  "step2": "<strong>Trinn 2:</strong> En e-post vil bli sendt til adressen du oppga",
+  "step3": "<strong>Trinn 3:</strong> Bekreft e-posten ved å gå til innboksen din og klikke på bekreftelseslenken",
+  "step4": "<strong>Trinn 4:</strong> Kontoen din er bekreftet, og du kan logge inn med innloggingsinformasjonen din",
+  "thankYou": "Tusen takk!!",
+  "sidebar": {
+    "tileManagement": {
+      "title": "Flisadministrasjon",
+      "upload": "Last opp flis",
+      "listing": "Flisliste"
+    },
+    "accounts": {
+      "title": "Kontoer"
+    },
+    "cityAdmin": {
+      "title": "Byadministrator"
+    }
+  },
+  "createAccount": "Opprett din nye konto",
+  "tile": {
+    "upload": {
+      "heading": "Last opp flis",
+      "description": "Last opp flisen din her",
+      "form": {
+        "uploadLabel": "Last opp bilde",
+        "uploadBtnLabel": "Velg bilde",
+        "uploadPlaceholder": "Dra og slipp eller klikk for å laste opp",
+        "errorName": {
+          "maxFileSize": "Filstørrelsen må være maks 1 MB",
+          "supportedExtension": "Ugyldig fil valgt. Støttede formater er:",
+          "invalidFile": "Vennligst last opp en gyldig bildefil."
+        }
+      },
+      "previewHeading": "Forhåndsvisning",
+      "previewDescription": "Forhåndsvis flisen din her"
+    },
+    "listingHeading": "Flisliste",
+    "listingDescription": "Liste over alle registrerte fliser",
+    "tabs": {
+      "allTiles": "Alle fliser",
+      "pendingTiles": "Venter",
+      "inactiveTiles": "Inaktiv",
+      "hiddenTiles": "Skjult"
+    },
+    "table": {
+      "head": {
+        "tile": "Flis",
+        "status": "Status",
+        "description": "Beskrivelse",
+        "actions": "Handlinger"
+      },
+      "noData": "Ingen data funnet"
+    },
+    "confirmDelete": {
+      "heading": "Er du sikker?",
+      "message": "Er du sikker på at du vil slette dette elementet? Denne handlingen kan ikke angres.",
+      "confirmMessage": "Slett",
+      "cancelMessage": "Avbryt"
+    }
+  },
+  "formMessages": {
+    "uploadField": {
+      "label": "Last opp bilde",
+      "btnLabel": "Velg bilde",
+      "placeholder": "Dra og slipp eller klikk for å laste opp",
+      "errorName": {
+        "maxFileSize": "Filstørrelsen må være maks 1 MB",
+        "supportedExtension": "Ugyldig fil valgt. Støttede formater er:",
+        "invalidFile": "Vennligst last opp en gyldig bildefil.",
+        "minLength": "Vennligst skriv inn et gyldig flisnavn",
+        "maxLength": "Flisnavnet kan ikke overstige 50 tegn",
+        "titleColor": "Vennligst velg en tittel farge",
+        "tileIcon": "Flisikon er påkrevd",
+        "tileDescription": "Beskrivelsen må være minst 10 tegn lang",
+        "titleDescriptionColor": "Vennligst velg en beskrivelsesfarge",
+        "tileImage": "Flisbilde er påkrevd"
+      }
+    }
+  },
+  "cityAdministration": {
+    "heading": "Byadministrasjon",
+    "description": "Liste over alle registrerte byer",
+    "createAdmin": "Opprett administrator",
+    "table": {
+      "head": {
+        "email": "E-post",
+        "role": "Brukerrolle",
+        "status": "Status",
+        "createdAt": "Opprettet",
+        "cities": "Byer",
+        "actions": "Handlinger",
+        "registered": "Registrert"
+      },
+      "noData": "Ingen data funnet"
+    },
+    "confirmDelete": {
+      "heading": "Er du sikker?",
+      "message": "Er du sikker på at du vil slette dette elementet? Denne handlingen kan ikke angres.",
+      "confirmMessage": "Slett",
+      "cancelMessage": "Avbryt"
+    }
+  },
+  "accountSetting": {
+    "heading": "Kontoinnstillinger",
+    "description": "Oppdater kontodetaljene dine",
+    "section": {
+      "personalInfo": {
+        "heading": "Personlig informasjon",
+        "description": "Oppdater din personlige informasjon"
+      },
+      "accountInfo": {
+        "heading": "Kontoinformasjon",
+        "description": "Oppdater kontoinformasjonen din"
+      },
+      "metadata": {
+        "heading": "Metadata",
+        "description": "+Legg til dine sosiale medier-kontoer her."
+      },
+      "password": {
+        "heading": "Passord",
+        "description": "Oppdater passordet ditt"
+      }
+    },
+    "form": {
+      "maxSocialLinks": "Du kan legge til maks 3 sosiale lenker",
+      "email": {
+        "label": "E-post",
+        "placeholder": "Skriv inn e-posten din",
+        "error": {
+          "required": "Skriv inn en gyldig e-post",
+          "minContent": "E-post må inneholde minst 3 tegn",
+          "maxContent": "E-post kan maksimalt inneholde 50 tegn"
+        }
+      },
+      "username": {
+        "label": "Brukernavn",
+        "placeholder": "Skriv inn brukernavnet ditt",
+        "error": {
+          "required": "Skriv inn et gyldig brukernavn",
+          "minContent": "Brukernavn må inneholde minst 3 tegn",
+          "maxContent": "Brukernavn kan maksimalt inneholde 50 tegn"
+        }
+      },
+      "currentPassword": {
+        "label": "Passord",
+        "placeholder": "Skriv inn passordet ditt",
+        "error": {
+          "required": "Skriv inn et gyldig passord",
+          "minContent": "Passord må inneholde minst 3 tegn",
+          "maxContent": "Passord kan maksimalt inneholde 50 tegn"
+        }
+      },
+      "newPassword": {
+        "label": "Nytt passord",
+        "placeholder": "Skriv inn nytt passord",
+        "error": {
+          "required": "Skriv inn et gyldig passord",
+          "minContent": "Passord må være minst 6 tegn",
+          "maxContent": "Passord kan maksimalt være 50 tegn"
+        }
+      },
+      "confirmPassword": {
+        "label": "Bekreft passord",
+        "placeholder": "Skriv inn passordet ditt",
+        "error": {
+          "required": "Skriv inn et gyldig passord",
+          "minContent": "Passord må inneholde minst 3 tegn",
+          "maxContent": "Passord kan maksimalt inneholde 50 tegn",
+          "passwordMismatch": "Passordene stemmer ikke overens"
+        }
+      },
+      "yourName": {
+        "label": "Ditt navn",
+        "placeholder": "Skriv inn navnet ditt",
+        "error": {
+          "required": "Skriv inn et gyldig navn",
+          "minContent": "Navnet må inneholde minst 3 tegn",
+          "maxContent": "Navnet kan maksimalt inneholde 50 tegn"
+        }
+      },
+      "phoneNumber": {
+        "label": "Telefonnummer",
+        "placeholder": "Skriv inn telefonnummeret ditt",
+        "error": {
+          "required": "Skriv inn et gyldig telefonnummer",
+          "minContent": "Telefonnummer må inneholde minst 3 tegn",
+          "maxContent": "Telefonnummer kan maksimalt inneholde 50 tegn"
+        }
+      },
+      "description": {
+        "label": "Beskrivelse",
+        "placeholder": "Skriv inn beskrivelsen din",
+        "error": {
+          "required": "Skriv inn en gyldig beskrivelse",
+          "minContent": "Beskrivelse må inneholde minst 3 tegn",
+          "maxContent": "Beskrivelse kan maksimalt inneholde 200 tegn"
+        }
+      },
+      "website": {
+        "label": "Nettsted",
+        "placeholder": "Skriv inn nettstedet ditt",
+        "error": {
+          "required": "Skriv inn et gyldig nettsted",
+          "minContent": "Nettsted må inneholde minst 3 tegn",
+          "maxContent": "Nettsted kan maksimalt inneholde 50 tegn",
+          "duplicateWebsite": "Dupliserte nettsteder er ikke tillatt"
+        }
+      },
+      "websiteLink": {
+        "label": "Nettstedslenke",
+        "placeholder": "Skriv inn nettstedslenken din",
+        "error": {
+          "required": "Skriv inn en gyldig lenke",
+          "minContent": "Lenken må inneholde minst 3 tegn",
+          "maxContent": "Lenken kan maksimalt inneholde 50 tegn",
+          "invalidLink": "Ugyldig lenke",
+          "duplicateLink": "Dupliserte lenker er ikke tillatt"
+        }
+      }
+    }
+  },
+  "registration": {
+    "general": {
+      "alreadyHaveAccount": "Har du allerede en konto?",
+      "login": "Logg inn her.",
+      "acceptPolicy": "Jeg godtar herved",
+      "privacy": "personvernerklæringen*",
+      "and": "og",
+      "terms": "vilkår og betingelser.*",
+      "mustAcceptTermsAndPrivacy": "Vennligst godta vilkårene for å fortsette."
+    },
+    "form": {
+      "email": {
+        "error": {
+          "invalidMail": "Vennligst skriv inn en gyldig e-postadresse"
+        }
+      },
+      "username": {
+        "label": "Brukernavn",
+        "placeholder": "Skriv inn brukernavn",
+        "error": {
+          "minContent": "Brukernavn må være minst 3 tegn",
+          "maxContent": "Brukernavn kan være maksimalt 30 tegn",
+          "noSpaces": "Brukernavn må ikke inneholde mellomrom"
+        }
+      },
+      "firstName": {
+        "label": "Fornavn",
+        "placeholder": "Vennligst skriv inn fornavn",
+        "error": {
+          "minContent": "Fornavn må være minst 2 tegn",
+          "maxContent": "Fornavn kan være maksimalt 30 tegn",
+          "noSpaces": "Fornavn må ikke inneholde mellomrom",
+          "invalidChars": "Fornavn kan kun inneholde bokstaver"
+        }
+      },
+      "lastName": {
+        "label": "Etternavn",
+        "placeholder": "Vennligst skriv inn etternavn",
+        "error": {
+          "minContent": "Etternavn må være minst 2 tegn",
+          "maxContent": "Etternavn kan være maksimalt 30 tegn",
+          "noSpaces": "Etternavn må ikke inneholde mellomrom",
+          "invalidChars": "Etternavn kan kun inneholde bokstaver"
+        }
+      },
+      "password": {
+        "label": "Passord",
+        "placeholder": "Vennligst skriv inn passord",
+        "error": {
+          "minContent": "Passord må være minst 8 tegn",
+          "maxContent": "Passord kan være maksimalt 20 tegn",
+          "noSpaces": "Passord må ikke inneholde mellomrom"
+        }
+      },
+      "confirmPassword": {
+        "label": "Bekreft passord",
+        "placeholder": "Vennligst skriv inn bekreftelsespassord",
+        "error": {
+          "required": "Bekreftelsespassord er påkrevd",
+          "mismatch": "Passordene stemmer ikke overens"
+        }
+      }
+    }
+  }
+}
