@@ -20,7 +20,10 @@ function Dummy() {
   const updateUserRole = (userRole: RoleName) => {
     dispatchUserData({
       lastName: '',
-      name: '',
+      email: '',
+      firstName: '',
+      id: '',
+      username: '',
       role: USER_ROLE_MAP[userRole],
     });
   };

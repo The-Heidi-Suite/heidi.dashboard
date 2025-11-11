@@ -17,7 +17,7 @@ function ResetPassword() {
 
   if (!token) return <Navigate to={'/unauthorized'} />;
   if (isFetching || isLoading) return <Spinner className="size-8" />;
-  
+
   if (verifyToken?.success) {
     return <ResetForm />;
   }
