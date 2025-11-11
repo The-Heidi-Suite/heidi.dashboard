@@ -18,6 +18,7 @@ export interface TranslationSchema {
   register: string;
   signInHelp: string;
   invalidMail: string;
+  invalidMailOrUsername: string;
   minContainInMail: string;
   maxContentInMail: string;
   passwordRequired: string;
@@ -259,12 +260,18 @@ export interface TranslationSchema {
       mustAcceptTermsAndPrivacy: string;
     };
     form: {
+      email: {
+        error: {
+          invalidMail: string;
+        };
+      };
       username: {
         label: string;
         placeholder: string;
         error: {
           minContent: string;
           maxContent: string;
+          noSpaces: string;
         };
       };
       firstName: {
@@ -273,6 +280,8 @@ export interface TranslationSchema {
         error: {
           minContent: string;
           maxContent: string;
+          noSpaces: string;
+          invalidChars: string;
         };
       };
       lastName: {
@@ -281,6 +290,8 @@ export interface TranslationSchema {
         error: {
           minContent: string;
           maxContent: string;
+          noSpaces: string;
+          invalidChars: string;
         };
       };
       password: {
@@ -289,6 +300,7 @@ export interface TranslationSchema {
         error: {
           minContent: string;
           maxContent: string;
+          noSpaces: string;
         };
       };
       confirmPassword: {
@@ -320,6 +332,7 @@ export type TranslationKey =
   | 'register'
   | 'signInHelp'
   | 'invalidMail'
+  | 'invalidMailOrUsername'
   | 'minContainInMail'
   | 'maxContentInMail'
   | 'passwordRequired'
@@ -465,22 +478,29 @@ export type TranslationKey =
   | 'registration.general.and'
   | 'registration.general.terms'
   | 'registration.general.mustAcceptTermsAndPrivacy'
+  | 'registration.form.email.error.invalidMail'
   | 'registration.form.username.label'
   | 'registration.form.username.placeholder'
   | 'registration.form.username.error.minContent'
   | 'registration.form.username.error.maxContent'
+  | 'registration.form.username.error.noSpaces'
   | 'registration.form.firstName.label'
   | 'registration.form.firstName.placeholder'
   | 'registration.form.firstName.error.minContent'
   | 'registration.form.firstName.error.maxContent'
+  | 'registration.form.firstName.error.noSpaces'
+  | 'registration.form.firstName.error.invalidChars'
   | 'registration.form.lastName.label'
   | 'registration.form.lastName.placeholder'
   | 'registration.form.lastName.error.minContent'
   | 'registration.form.lastName.error.maxContent'
+  | 'registration.form.lastName.error.noSpaces'
+  | 'registration.form.lastName.error.invalidChars'
   | 'registration.form.password.label'
   | 'registration.form.password.placeholder'
   | 'registration.form.password.error.minContent'
   | 'registration.form.password.error.maxContent'
+  | 'registration.form.password.error.noSpaces'
   | 'registration.form.confirmPassword.label'
   | 'registration.form.confirmPassword.placeholder'
   | 'registration.form.confirmPassword.error.required'

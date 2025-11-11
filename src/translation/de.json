@@ -15,6 +15,7 @@
   "register": "registrieren",
   "signInHelp": "Hilfe ?",
   "invalidMail": "Geben Sie eine gültige E-Mail ein",
+  "invalidMailOrUsername": "Geben Sie eine gültige E-Mail oder einen gültigen Benutzernamen ein",
   "minContainInMail": "Die E-Mail muss mindestens 3 Zeichen enthalten",
   "maxContentInMail": "Die E-Mail darf höchstens 50 Zeichen enthalten",
   "passwordRequired": "Passwort ist erforderlich",
@@ -278,7 +279,8 @@
           "required": "Der Vorname ist erforderlich",
           "minContent": "Der Vorname muss mindestens 2 Zeichen lang sein",
           "maxContent": "Der Vorname darf höchstens 30 Zeichen lang sein",
-          "noSpaces": "Der Vorname darf keine Leerzeichen enthalten"
+          "noSpaces": "Der Vorname darf keine Leerzeichen enthalten",
+          "invalidChars": "Der Vorname darf nur alphabetische Zeichen enthalten"
         }
       },
       "lastName": {
@@ -288,7 +290,8 @@
           "required": "Der Nachname ist erforderlich",
           "minContent": "Der Nachname muss mindestens 2 Zeichen lang sein",
           "maxContent": "Der Nachname darf höchstens 30 Zeichen lang sein",
-          "noSpaces": "Der Nachname darf keine Leerzeichen enthalten"
+          "noSpaces": "Der Nachname darf keine Leerzeichen enthalten",
+          "invalidChars": "Der Nachname darf nur alphabetische Zeichen enthalten"
         }
       },
       "password": {

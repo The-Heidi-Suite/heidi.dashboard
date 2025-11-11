@@ -1,16 +1,24 @@
 import { z } from 'zod';
 
+import { REGEX } from '@/lib/regexConstant';
+
 export const loginSchema = z.object({
   email: z
     .string()
-    .min(3, 'minContentInMail')
-    .max(50, 'maxContentInMail')
-    .regex(/^\S+$/, 'Email or Username must not contain spaces'), // Allows either valid email or username pattern
+    .min(3, 'invalidMail')
+    .regex(REGEX.EMAIL_OR_USERNAME, 'invalidMailOrUsername')
+    .or(
+      z
+        .email('invalidMail')
+        .min(3, 'minContainInMail')
+        .max(50, 'maxContentInMail')
+        .regex(REGEX.EMAIL_OR_USERNAME, 'invalidMailOrUsername')
+    ),
   password: z
     .string()
-    .min(6, 'registration.form.password.error.minContent')
+    .min(8, 'registration.form.password.error.minContent')
     .max(50, 'registration.form.password.error.maxContent')
-    .regex(/^\S+$/, 'Password must not contain spaces'), // Allows either valid email or username pattern
+    .regex(REGEX.NO_SPACES, 'registration.form.password.error.noSpaces'),
   rememberMe: z.boolean(),
 });
 

@@ -2,22 +2,22 @@
   "heading": "Hello World",
   "toggleTheme": "Toggle Theme",
   "signIntoAccount": "Sign in to your account",
-  "email": "E-Mail",
+  "email": "E-mail",
   "emailOrUsernameLabel": "E-mail or Username",
   "usernameOrEmail": "Enter your E-mail",
   "password": "Password",
-  "pleaseEnterPassword": "Please enter password",
+  "pleaseEnterPassword": "Please enter a password",
   "rememberMe": "Remember Me",
   "forgotYourPassword": "Forgot your password?",
   "resetPassword": "Reset Your Password",
   "signIn": "Sign In",
   "notMember": "Not a member?",
   "register": "Register",
-  "signInHelp": "Help ?",
-  "invalidMail": "Enter a valid email",
-  "invalidMailOrUsername": "Enter a valid email or username",
-  "minContainInMail": "Email must contain at least 3 characters",
-  "maxContentInMail": "Email must contain at most 50 characters",
+  "signInHelp": "Need help?",
+  "invalidMail": "Please enter a valid e-mail address",
+  "invalidMailOrUsername": "Please enter a valid e-mail or username",
+  "minContainInMail": "E-mail must contain at least 3 characters",
+  "maxContentInMail": "E-mail must contain at most 50 characters",
   "passwordRequired": "Password is required",
   "sendLink": "Send Link",
   "cancel": "Cancel",
@@ -25,11 +25,11 @@
   "deleteAccount": "Delete Account",
   "anleitung": "Instructions",
   "subtitle": "Registering in the App",
-  "step1": "<strong>Step 1:</strong> Set Username and Password",
-  "step2": "<strong>Step 2:</strong> An email will be sent to the email you provided",
-  "step3": "<strong>Step 3:</strong> Please verify the email by going to your inbox and clicking the confirmation link",
-  "step4": "<strong>Step 4:</strong> Your account is verified, and you can log in with your login credentials",
-  "thankYou": "Thank you!!",
+  "step1": "<strong>Step 1:</strong> Set a Username and Password",
+  "step2": "<strong>Step 2:</strong> An e-mail will be sent to the address you provided",
+  "step3": "<strong>Step 3:</strong> Please verify your e-mail by going to your inbox and clicking the confirmation link",
+  "step4": "<strong>Step 4:</strong> Your account is verified and you can log in using your credentials",
+  "thankYou": "Thank you!",
   "sidebar": {
     "tileManagement": {
       "title": "Tile Management",
@@ -53,8 +53,8 @@
         "uploadBtnLabel": "Select Image",
         "uploadPlaceholder": "Drag & Drop or click to upload",
         "errorName": {
-          "maxFileSize": "File size should be max 1 MB",
-          "supportedExtension": "Unsupported file selected, Supported formats are:",
+          "maxFileSize": "File size should be a maximum of 1 MB",
+          "supportedExtension": "Unsupported file selected. Supported formats are:",
           "invalidFile": "Please upload a valid image file."
         }
       },
@@ -62,7 +62,7 @@
       "previewDescription": "Preview your tile here"
     },
     "listingHeading": "Tile Listing",
-    "listingDescription": "List of all the tiles in registered",
+    "listingDescription": "List of all registered tiles",
     "tabs": {
       "allTiles": "All Tiles",
       "pendingTiles": "Pending",
@@ -76,7 +76,7 @@
         "description": "Description",
         "actions": "Actions"
       },
-      "noData": "No Data found"
+      "noData": "No data found"
     },
     "confirmDelete": {
       "heading": "Are you sure?",
@@ -91,15 +91,15 @@
       "btnLabel": "Select Image",
       "placeholder": "Drag & Drop or click to upload",
       "errorName": {
-        "maxFileSize": "File size should be max 1 MB",
-        "supportedExtension": "Unsupported file selected, Supported formats are:",
+        "maxFileSize": "File size should be a maximum of 1 MB",
+        "supportedExtension": "Unsupported file selected. Supported formats are:",
         "invalidFile": "Please upload a valid image file.",
         "minLength": "Please enter a valid tile name",
         "maxLength": "Tile name cannot exceed 50 characters",
-        "titleColor": "Please pick a title color",
+        "titleColor": "Please choose a title colour",
         "tileIcon": "Tile icon is required",
         "tileDescription": "Description must be at least 10 characters long",
-        "titleDescriptionColor": "Please pick a description color",
+        "titleDescriptionColor": "Please choose a description colour",
         "tileImage": "Tile image is required"
       }
     }
@@ -110,7 +110,7 @@
     "createAdmin": "Create Admin",
     "table": {
       "head": {
-        "email": "E-Mail",
+        "email": "E-mail",
         "role": "User Role",
         "status": "Status",
         "createdAt": "Created At",
@@ -118,7 +118,7 @@
         "actions": "Actions",
         "registered": "Registered"
       },
-      "noData": "No Data found"
+      "noData": "No data found"
     },
     "confirmDelete": {
       "heading": "Are you sure?",
@@ -128,7 +128,7 @@
     }
   },
   "accountSetting": {
-    "heading": "Account Setting",
+    "heading": "Account Settings",
     "description": "Update your account details",
     "section": {
       "personalInfo": {
@@ -141,7 +141,7 @@
       },
       "metadata": {
         "heading": "Metadata",
-        "description": "+Add your social media accounts here."
+        "description": "Add your social media accounts here."
       },
       "password": {
         "heading": "Password",
@@ -149,14 +149,14 @@
       }
     },
     "form": {
-      "maxSocialLinks": "You can add a maximum of 3 social links",
+      "maxSocialLinks": "You can add a maximum of three social links",
       "email": {
-        "label": "Email",
-        "placeholder": "Enter your email",
+        "label": "E-mail",
+        "placeholder": "Enter your e-mail",
         "error": {
-          "required": "Enter a valid email",
-          "minContent": "Email must contain at least 3 characters",
-          "maxContent": "Email must contain at most 50 characters"
+          "required": "Enter a valid e-mail",
+          "minContent": "E-mail must contain at least 3 characters",
+          "maxContent": "E-mail must contain at most 50 characters"
         }
       },
       "username": {
@@ -182,18 +182,18 @@
         "placeholder": "Enter your new password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must be at least 6 characters",
-          "maxContent": "Password must be at most 50 characters"
+          "minContent": "Password must be at least 6 characters long",
+          "maxContent": "Password must be at most 50 characters long"
         }
       },
       "confirmPassword": {
         "label": "Confirm Password",
-        "placeholder": "Enter your password",
+        "placeholder": "Enter your password again",
         "error": {
           "required": "Enter a valid password",
           "minContent": "Password must contain at least 3 characters",
           "maxContent": "Password must contain at most 50 characters",
-          "passwordMismatch": "Password does not match"
+          "passwordMismatch": "Passwords do not match"
         }
       },
       "yourName": {
@@ -248,18 +248,18 @@
   },
   "registration": {
     "general": {
-      "alreadyHaveAccount": "Do you already have an account?",
-      "login": "Please log in here.",
+      "alreadyHaveAccount": "Already have an account?",
+      "login": "Log in here.",
       "acceptPolicy": "I hereby accept the",
-      "privacy": "privacy policy*",
+      "privacy": "Privacy Policy*",
       "and": "and",
-      "terms": "general terms and conditions.*",
-      "mustAcceptTermsAndPrivacy": "Please agree to the Terms and Conditions to proceed."
+      "terms": "Terms and Conditions*",
+      "mustAcceptTermsAndPrivacy": "Please agree to the Terms and Conditions to continue."
     },
     "form": {
       "email": {
         "error": {
-          "invalidMail": "Please enter a valid email address"
+          "invalidMail": "Please enter a valid e-mail address"
         }
       },
       "username": {
@@ -273,39 +273,39 @@
       },
       "firstName": {
         "label": "First Name",
-        "placeholder": "Please enter first name",
+        "placeholder": "Please enter your first name",
         "error": {
-          "minContent": "First Name must be at least 2 characters",
-          "maxContent": "First Name must be at most 30 characters",
-          "noSpaces": "First Name must not contain spaces",
-          "invalidChars": "First Name must contain only alphabetic characters"
+          "minContent": "First name must be at least 2 characters",
+          "maxContent": "First name must be at most 30 characters",
+          "noSpaces": "First name must not contain spaces",
+          "invalidChars": "First name must contain only letters"
         }
       },
       "lastName": {
         "label": "Last Name",
-        "placeholder": "Please enter last name",
+        "placeholder": "Please enter your last name",
         "error": {
-          "minContent": "Last Name must be at least 2 characters",
-          "maxContent": "Last Name must be at most 30 characters",
-          "noSpaces": "Last Name must not contain spaces",
-          "invalidChars": "Last Name must contain only alphabetic characters"
+          "minContent": "Last name must be at least 2 characters",
+          "maxContent": "Last name must be at most 30 characters",
+          "noSpaces": "Last name must not contain spaces",
+          "invalidChars": "Last name must contain only letters"
         }
       },
       "password": {
         "label": "Password",
-        "placeholder": "Please enter password",
+        "placeholder": "Please enter a password",
         "error": {
-          "minContent": "Password must be at least 8 characters",
-          "maxContent": "Password must be at most 20 characters",
+          "minContent": "Password must be at least 8 characters long",
+          "maxContent": "Password must be at most 20 characters long",
           "noSpaces": "Password must not contain spaces"
         }
       },
       "confirmPassword": {
         "label": "Confirm Password",
-        "placeholder": "Please enter confirm password",
+        "placeholder": "Please confirm your password",
         "error": {
           "required": "Confirm Password is required",
-          "mismatch": "Password and confirmation password do not match"
+          "mismatch": "Passwords do not match"
         }
       }
     }

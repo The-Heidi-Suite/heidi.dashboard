@@ -99,6 +99,11 @@
       scrollbar-thumb-rounded-full scrollbar-w-6
       dark:scrollbar-thumb-muted dark:scrollbar-track-background;
   }
+
+  .hide-edge-eye::-ms-reveal,
+  .hide-edge-eye::-ms-clear {
+    display: none;
+  }
 }
 
 @layer base {

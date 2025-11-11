@@ -19,6 +19,14 @@ type AllLanguage = { code: SupportedLanguage; name: string; flag: string };
 const ALL_LANGUAGES: AllLanguage[] = [
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'dk', name: 'Dansk', flag: '' },
+  { code: 'no', name: 'Norsk', flag: '' },
+  { code: 'se', name: 'Svenska', flag: '' },
+  { code: 'ar', name: 'العربية', flag: '' },
+  { code: 'fa', name: 'فارسی', flag: '' },
+  { code: 'tr', name: 'Türkçe', flag: '' },
+  { code: 'ru', name: 'Русский', flag: '' },
+  { code: 'uk', name: 'Українська', flag: '' },
 ];
 
 const LanguageSelector = () => {

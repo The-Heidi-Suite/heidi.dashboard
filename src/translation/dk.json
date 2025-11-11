@@ -1,0 +1,313 @@
+{
+  "heading": "Hej Verden",
+  "toggleTheme": "Skift tema",
+  "signIntoAccount": "Log ind på din konto",
+  "email": "E-mail",
+  "emailOrUsernameLabel": "E-mail eller brugernavn",
+  "usernameOrEmail": "Indtast din e-mail",
+  "password": "Adgangskode",
+  "pleaseEnterPassword": "Indtast venligst adgangskode",
+  "rememberMe": "Husk mig",
+  "forgotYourPassword": "Glemt din adgangskode?",
+  "resetPassword": "Nulstil din adgangskode",
+  "signIn": "Log ind",
+  "notMember": "Ikke medlem?",
+  "register": "Registrér",
+  "signInHelp": "Hjælp?",
+  "invalidMail": "Indtast en gyldig e-mail",
+  "invalidMailOrUsername": "Indtast en gyldig e-mail eller brugernavn",
+  "minContainInMail": "E-mail skal indeholde mindst 3 tegn",
+  "maxContentInMail": "E-mail må maksimalt indeholde 50 tegn",
+  "passwordRequired": "Adgangskode er påkrævet",
+  "sendLink": "Send link",
+  "cancel": "Annullér",
+  "addMore": "Tilføj flere",
+  "deleteAccount": "Slet konto",
+  "anleitung": "Instruktioner",
+  "subtitle": "Registrering i appen",
+  "step1": "<strong>Trin 1:</strong> Vælg brugernavn og adgangskode",
+  "step2": "<strong>Trin 2:</strong> Der vil blive sendt en e-mail til den adresse, du opgav",
+  "step3": "<strong>Trin 3:</strong> Bekræft venligst e-mailen ved at gå til din indbakke og klikke på bekræftelseslinket",
+  "step4": "<strong>Trin 4:</strong> Din konto er bekræftet, og du kan nu logge ind med dine loginoplysninger",
+  "thankYou": "Tak!!",
+  "sidebar": {
+    "tileManagement": {
+      "title": "Flise­styring",
+      "upload": "Upload flise",
+      "listing": "Flise­oversigt"
+    },
+    "accounts": {
+      "title": "Konti"
+    },
+    "cityAdmin": {
+      "title": "Byadministrator"
+    }
+  },
+  "createAccount": "Opret din nye konto",
+  "tile": {
+    "upload": {
+      "heading": "Upload flise",
+      "description": "Upload din flise her",
+      "form": {
+        "uploadLabel": "Upload billede",
+        "uploadBtnLabel": "Vælg billede",
+        "uploadPlaceholder": "Træk & slip eller klik for at uploade",
+        "errorName": {
+          "maxFileSize": "Filstørrelse må maksimalt være 1 MB",
+          "supportedExtension": "Ukendt filtype valgt, understøttede formater er:",
+          "invalidFile": "Upload venligst en gyldig billedfil."
+        }
+      },
+      "previewHeading": "Forhåndsvisning",
+      "previewDescription": "Forhåndsvis din flise her"
+    },
+    "listingHeading": "Fliseoversigt",
+    "listingDescription": "Liste over alle registrerede fliser",
+    "tabs": {
+      "allTiles": "Alle fliser",
+      "pendingTiles": "Afventer",
+      "inactiveTiles": "Inaktive",
+      "hiddenTiles": "Skjulte"
+    },
+    "table": {
+      "head": {
+        "tile": "Flise",
+        "status": "Status",
+        "description": "Beskrivelse",
+        "actions": "Handlinger"
+      },
+      "noData": "Ingen data fundet"
+    },
+    "confirmDelete": {
+      "heading": "Er du sikker?",
+      "message": "Er du sikker på, at du vil slette dette element? Denne handling kan ikke fortrydes.",
+      "confirmMessage": "Slet",
+      "cancelMessage": "Annullér"
+    }
+  },
+  "formMessages": {
+    "uploadField": {
+      "label": "Upload billede",
+      "btnLabel": "Vælg billede",
+      "placeholder": "Træk & slip eller klik for at uploade",
+      "errorName": {
+        "maxFileSize": "Filstørrelse må maksimalt være 1 MB",
+        "supportedExtension": "Ukendt filtype valgt, understøttede formater er:",
+        "invalidFile": "Upload venligst en gyldig billedfil.",
+        "minLength": "Indtast venligst et gyldigt flisenavn",
+        "maxLength": "Flisenavn må ikke overstige 50 tegn",
+        "titleColor": "Vælg venligst en titel­farve",
+        "tileIcon": "Fliseikon er påkrævet",
+        "tileDescription": "Beskrivelsen skal mindst være 10 tegn lang",
+        "titleDescriptionColor": "Vælg venligst en farve til beskrivelsen",
+        "tileImage": "Flise­billedet er påkrævet"
+      }
+    }
+  },
+  "cityAdministration": {
+    "heading": "By­administration",
+    "description": "Liste over alle registrerede byer",
+    "createAdmin": "Opret administrator",
+    "table": {
+      "head": {
+        "email": "E-mail",
+        "role": "Brugerrolle",
+        "status": "Status",
+        "createdAt": "Oprettet den",
+        "cities": "Byer",
+        "actions": "Handlinger",
+        "registered": "Registreret"
+      },
+      "noData": "Ingen data fundet"
+    },
+    "confirmDelete": {
+      "heading": "Er du sikker?",
+      "message": "Er du sikker på, at du vil slette dette element? Denne handling kan ikke fortrydes.",
+      "confirmMessage": "Slet",
+      "cancelMessage": "Annullér"
+    }
+  },
+  "accountSetting": {
+    "heading": "Konto­indstillinger",
+    "description": "Opdatér dine kontooplysninger",
+    "section": {
+      "personalInfo": {
+        "heading": "Personlige oplysninger",
+        "description": "Opdatér dine personlige oplysninger"
+      },
+      "accountInfo": {
+        "heading": "Konto­oplysninger",
+        "description": "Opdatér dine konto­oplysninger"
+      },
+      "metadata": {
+        "heading": "Metadata",
+        "description": "+Tilføj dine sociale medie­konti her."
+      },
+      "password": {
+        "heading": "Adgangskode",
+        "description": "Opdatér din adgangskode"
+      }
+    },
+    "form": {
+      "maxSocialLinks": "Du kan tilføje maksimalt 3 sociale links",
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Indtast din e-mail",
+        "error": {
+          "required": "Indtast en gyldig e-mail",
+          "minContent": "E-mail skal indeholde mindst 3 tegn",
+          "maxContent": "E-mail må maksimalt indeholde 50 tegn"
+        }
+      },
+      "username": {
+        "label": "Brugernavn",
+        "placeholder": "Indtast dit brugernavn",
+        "error": {
+          "required": "Indtast et gyldigt brugernavn",
+          "minContent": "Brugernavn skal indeholde mindst 3 tegn",
+          "maxContent": "Brugernavn må maksimalt indeholde 50 tegn"
+        }
+      },
+      "currentPassword": {
+        "label": "Adgangskode",
+        "placeholder": "Indtast din adgangskode",
+        "error": {
+          "required": "Indtast en gyldig adgangskode",
+          "minContent": "Adgangskoden skal indeholde mindst 3 tegn",
+          "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn"
+        }
+      },
+      "newPassword": {
+        "label": "Ny adgangskode",
+        "placeholder": "Indtast din nye adgangskode",
+        "error": {
+          "required": "Indtast en gyldig adgangskode",
+          "minContent": "Adgangskoden skal være mindst 6 tegn",
+          "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn"
+        }
+      },
+      "confirmPassword": {
+        "label": "Bekræft adgangskode",
+        "placeholder": "Indtast din adgangskode igen",
+        "error": {
+          "required": "Bekræftelse af adgangskode er påkrævet",
+          "minContent": "Adgangskoden skal indeholde mindst 3 tegn",
+          "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn",
+          "passwordMismatch": "Adgangskoderne stemmer ikke overens"
+        }
+      },
+      "yourName": {
+        "label": "Dit navn",
+        "placeholder": "Indtast dit navn",
+        "error": {
+          "required": "Indtast et gyldigt navn",
+          "minContent": "Navnet skal indeholde mindst 3 tegn",
+          "maxContent": "Navnet må maksimalt indeholde 50 tegn"
+        }
+      },
+      "phoneNumber": {
+        "label": "Telefonnummer",
+        "placeholder": "Indtast dit telefonnummer",
+        "error": {
+          "required": "Indtast et gyldigt telefonnummer",
+          "minContent": "Telefonnummeret skal indeholde mindst 3 tegn",
+          "maxContent": "Telefonnummeret må maksimalt indeholde 50 tegn"
+        }
+      },
+      "description": {
+        "label": "Beskrivelse",
+        "placeholder": "Indtast din beskrivelse",
+        "error": {
+          "required": "Indtast en gyldig beskrivelse",
+          "minContent": "Beskrivelsen skal indeholde mindst 3 tegn",
+          "maxContent": "Beskrivelsen må maksimalt indeholde 200 tegn"
+        }
+      },
+      "website": {
+        "label": "Web­side",
+        "placeholder": "Indtast din web­side",
+        "error": {
+          "required": "Indtast en gyldig web­side",
+          "minContent": "Websiden skal indeholde mindst 3 tegn",
+          "maxContent": "Websiden må maksimalt indeholde 50 tegn",
+          "duplicateWebsite": "Dublerede websider er ikke tilladt"
+        }
+      },
+      "websiteLink": {
+        "label": "Web­side link",
+        "placeholder": "Indtast link til din web­side",
+        "error": {
+          "required": "Indtast et gyldigt link",
+          "minContent": "Linket skal indeholde mindst 3 tegn",
+          "maxContent": "Linket må maksimalt indeholde 50 tegn",
+          "invalidLink": "Linket er ugyldigt",
+          "duplicateLink": "Dublerede links er ikke tilladt"
+        }
+      }
+    }
+  },
+  "registration": {
+    "general": {
+      "alreadyHaveAccount": "Har du allerede en konto?",
+      "login": "Log ind her.",
+      "acceptPolicy": "Jeg accepterer hermed",
+      "privacy": "privatlivspolitikken*",
+      "and": "og",
+      "terms": "almindelige vilkår og betingelser.*",
+      "mustAcceptTermsAndPrivacy": "Vælg venligst Accepter Vilkår og Betingelser for at fortsætte."
+    },
+    "form": {
+      "email": {
+        "error": {
+          "invalidMail": "Indtast en gyldig e-mailadresse"
+        }
+      },
+      "username": {
+        "label": "Brugernavn",
+        "placeholder": "Indtast dit brugernavn",
+        "error": {
+          "minContent": "Brugernavn skal være mindst 3 tegn",
+          "maxContent": "Brugernavn må være maksimalt 30 tegn",
+          "noSpaces": "Brugernavn må ikke indeholde mellemrum"
+        }
+      },
+      "firstName": {
+        "label": "Fornavn",
+        "placeholder": "Indtast fornavn",
+        "error": {
+          "minContent": "Fornavn skal være mindst 2 tegn",
+          "maxContent": "Fornavn må være maksimalt 30 tegn",
+          "noSpaces": "Fornavn må ikke indeholde mellemrum",
+          "invalidChars": "Fornavn må kun indeholde bogstaver"
+        }
+      },
+      "lastName": {
+        "label": "Efternavn",
+        "placeholder": "Indtast efternavn",
+        "error": {
+          "minContent": "Efternavn skal være mindst 2 tegn",
+          "maxContent": "Efternavn må være maksimalt 30 tegn",
+          "noSpaces": "Efternavn må ikke indeholde mellemrum",
+          "invalidChars": "Efternavn må kun indeholde bogstaver"
+        }
+      },
+      "password": {
+        "label": "Adgangskode",
+        "placeholder": "Indtast adgangskode",
+        "error": {
+          "minContent": "Adgangskoden skal være mindst 8 tegn",
+          "maxContent": "Adgangskoden må være maksimalt 20 tegn",
+          "noSpaces": "Adgangskoden må ikke indeholde mellemrum"
+        }
+      },
+      "confirmPassword": {
+        "label": "Bekræft adgangskode",
+        "placeholder": "Indtast bekræft adgangskode",
+        "error": {
+          "required": "Bekræftelse af adgangskode er påkrævet",
+          "mismatch": "Adgangskode og bekræftelse stemmer ikke overens"
+        }
+      }
+    }
+  }
+}

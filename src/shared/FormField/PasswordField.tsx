@@ -56,7 +56,7 @@ export function PasswordField<FormType extends FieldValues>({
                 placeholder={placeholder}
                 {...field}
                 className={cn(
-                  'border p-3 h-12 text-base shadow-md duration-300 border-gray-300 rounded-lg focus:border-primary focus:ring-primary pr-10',
+                  'border p-3 h-12 text-base shadow-md duration-300 border-gray-300 rounded-lg focus:border-primary focus:ring-primary pr-10 hide-edge-eye',
                   inputClassName,
                   error?.message && 'border-red-500'
                 )}
