@@ -1,16 +1,24 @@
+import API_URLS from '@/api/apiURl';
 import { RoleValue } from '@/lib/constant';
 
 import apiRequest from '../apiRequest';
-const signInUserPath = '/auth/login';
 export type SignInUserResponse = {
-  userId: number;
-  id: number;
-  firstName: string;
-  lastName: string;
-  role: RoleValue;
+  user: {
+    id: string;
+    email: string;
+    username: string;
+    role: RoleValue;
+    userType: string;
+    firstName: string;
+    lastName: string;
+  };
   accessToken: string;
   refreshToken: string;
   expiresIn: number;
+  requiresTermsAcceptance: boolean;
+  termsId: string;
+  latestVersion: string;
+  gracePeriodEndsAt: string;
 };
 
 type LoginForm = {
@@ -21,7 +29,7 @@ type LoginForm = {
 
 export const signInUser = async (userFormData: LoginForm) => {
   return await apiRequest<SignInUserResponse, LoginForm>({
-    url: signInUserPath,
+    url: API_URLS.LogIn,
     method: 'POST',
     data: userFormData,
   });

@@ -60,6 +60,8 @@ export function PasswordField<FormType extends FieldValues>({
                   inputClassName,
                   error?.message && 'border-red-500'
                 )}
+                maxLength={50}
+                minLength={3}
               />
               <button
                 type="button"

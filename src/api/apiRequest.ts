@@ -14,8 +14,7 @@ import { saveDataInCookie } from '@/lib/cookieStorage';
 import { getDataFromCookie } from '@/lib/cookieUtils';
 
 import { ApiErrorResponse, ApiResponse, ApiSuccessResponse } from './/api.type';
-
-const refreshTokePath = '/auth/refresh';
+import API_URLS from './apiURl';
 
 const VALID_STATUS = [SUCCESS_STATUS, USER_CREATED];
 
@@ -30,10 +29,8 @@ axios.interceptors.request.use(
   (config) => {
     const initialHeader = config.headers['Content-Type'];
     const configCopy = { ...config };
-    let accessToken = getDataFromCookie(COOKIES_KEY_NAME.ACCESS_TOKEN);
+    const accessToken = getDataFromCookie(COOKIES_KEY_NAME.ACCESS_TOKEN);
     if (accessToken) {
-      // Remove any surrounding quotes from the token
-      accessToken = accessToken.replace(/^"(.*)"$/, '$1');
       configCopy.headers.Authorization = `Bearer ${accessToken}`;
     }
     configCopy.headers.Accept = '*/*';
@@ -64,10 +61,9 @@ axios.interceptors.response.use(
         return Promise.reject(error);
       }
       isRefreshing = true;
-      let refreshToken =
+      const refreshToken =
         getDataFromCookie(COOKIES_KEY_NAME.REFRESH_TOKEN) ?? '';
       // Remove any surrounding quotes from the token
-      refreshToken = refreshToken.replace(/^"(.*)"$/, '$1');
       if (!refreshToken) {
         console.warn('No refresh token available, logging out user.');
         localStorage.clear();
@@ -75,7 +71,7 @@ axios.interceptors.response.use(
         return Promise.reject(error);
       }
       const res = await axios.post<ApiSuccessResponse<{ newToken: string }>>(
-        refreshTokePath,
+        API_URLS.RefreshToken,
         { refreshToken }
       );
       const newToken = res?.data?.data?.newToken;
@@ -85,7 +81,7 @@ axios.interceptors.response.use(
         originalRequest.headers.Authorization = `Bearer ${newToken}`;
         saveDataInCookie(COOKIES_KEY_NAME.ACCESS_TOKEN, newToken);
         isRefreshing = false;
-        return axios('/login');
+        return axios(originalRequest);
       } else {
         console.warn('Token refresh failed, logging out user.');
         localStorage.clear();

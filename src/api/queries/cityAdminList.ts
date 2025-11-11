@@ -2,10 +2,10 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import {
   AdminListingsQueryParams,
+  createAdmin,
   deleteAdminListing,
   getAdminListings,
-} from '@/api/endpoints/cityAdminList';
-import { createAdmin } from '@/api/endpoints/createAdmin';
+} from '@/api/endpoints';
 import i18n from '@/i18n';
 
 export const useGetAdminListings = (queryParams: AdminListingsQueryParams) =>

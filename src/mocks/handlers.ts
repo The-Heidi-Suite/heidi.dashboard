@@ -1,3 +1,4 @@
+import API_URLS from '@/api/apiURl';
 import {
   ProfileSuccessData,
   UpdateProfileSuccess,
@@ -30,11 +31,13 @@ import {
   TileUploadEditSuccessResponse,
 } from './responses/tileUpload';
 
+const { LogIn, LogOut, Register, RefreshToken } = API_URLS;
+
 // ✅ Handlers
 export const handlers = [
-  fetchApi('signin', 'post', SuccessUserResponse, 'success'),
+  fetchApi(LogIn, 'post', SuccessUserResponse, 'success'),
   fetchApi('signin/error', 'post', ErrorUserResponse, 'error'),
-  fetchApi('register', 'post', RegisterSuccessResponse, 'success'),
+  fetchApi(Register, 'post', RegisterSuccessResponse, 'success'),
   fetchApi('create-admin', 'post', CreateAdminResponse, 'success'),
   fetchApi('register/error', 'post', RegisterErrorResponse, 'error'),
   fetchApi('tileListings', 'get', TileListingsResponse, 'success', 1500),
@@ -81,10 +84,10 @@ export const handlers = [
     'error',
     1500
   ),
-  fetchApi('logout', 'get', LogoutUserResponse, 'success'),
+  fetchApi(LogOut, 'post', LogoutUserResponse, 'success'),
   fetchApi('profile', 'get', ProfileSuccessData, 'success', 1000),
   // fetchApi('profile', 'get', ErrorUserResponse, 'error', 1000, 401),
-  fetchApi('refresh-token', 'get', RefreshSuccess, 'success'),
+  fetchApi(RefreshToken, 'get', RefreshSuccess, 'success'),
   fetchApi('profile', 'put', UpdateProfileSuccess, 'success', 1000),
   fetchApi('profile', 'delete', ProfileSuccessData, 'success', 2000),
   fetchApi('profile/password', 'put', UpdateProfileSuccess, 'success', 1000),
