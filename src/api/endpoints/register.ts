@@ -30,3 +30,16 @@ export const registerUser = async (userFormData: RegisterForm) => {
     data: userFormData,
   });
 };
+
+type PatchUserForm = {
+  userId: string;
+  userFormData: Partial<RegisterForm>;
+};
+
+export const patchUser = async ({ userId, userFormData }: PatchUserForm) => {
+  return await apiRequest<RegisterUserResponse, Partial<RegisterForm>>({
+    url: `${API_URLS.Account}/${userId}`,
+    method: 'PATCH',
+    data: userFormData,
+  });
+};

@@ -1,42 +1,66 @@
 import { z } from 'zod';
 
+import { REGEX } from '@/lib/regexConstant';
+
 export const personalInfoSchema = z
   .object({
-    name: z
+    email: z
       .string()
-      .min(1, 'accountSetting.form.yourName.error.required')
-      .max(50, 'accountSetting.form.yourName.error.maxContent'),
+      .min(3, 'invalidMail')
+      .regex(REGEX.EMAIL, 'registration.form.email.error.invalidMail')
+      .or(
+        z
+          .email('invalidMail')
+          .min(3, 'minContainInMail')
+          .max(50, 'maxContentInMail')
+          .regex(REGEX.EMAIL, 'registration.form.email.error.invalidMail')
+      ),
     username: z
       .string()
-      .min(1, 'accountSetting.form.username.error.maxContent')
-      .max(30, 'accountSetting.form.username.error.maxContent'),
-    email: z.email('accountSetting.form.email.error.required'),
-    phoneNumber: z
+      .min(3, 'registration.form.username.error.minContent')
+      .max(50, 'registration.form.username.error.maxContent')
+      .regex(REGEX.NO_SPACES, 'registration.form.username.error.noSpaces'),
+    firstName: z
       .string()
-      .optional()
-      .refine(
-        (val) => !val || /^\d{10}$/.test(val),
-        'accountSetting.form.phoneNumber.error.required'
-      ),
-    description: z
+      .min(2, 'registration.form.firstName.error.minContent')
+      .max(50, 'registration.form.firstName.error.maxContent')
+      .regex(/^[A-Za-z]+$/, 'registration.form.firstName.error.invalidChars')
+      .regex(REGEX.NO_SPACES, 'registration.form.firstName.error.noSpaces'),
+    lastName: z
       .string()
-      .max(200, 'accountSetting.form.description.error.maxContent')
-      .optional(),
-    website: z
-      .string()
-      .optional()
-      .refine(
-        (val) => {
-          if (!val) return true;
-          try {
-            new URL(val);
-            return true;
-          } catch {
-            return false;
-          }
-        },
-        { message: 'accountSetting.form.websiteLink.error.invalidLink' }
-      ),
+      .min(2, 'registration.form.lastName.error.minContent')
+      .max(50, 'registration.form.lastName.error.maxContent')
+      .regex(
+        REGEX.ONLY_LETTERS,
+        'registration.form.lastName.error.invalidChars'
+      )
+      .regex(REGEX.NO_SPACES, 'registration.form.lastName.error.noSpaces'),
+    // phoneNumber: z
+    //   .string()
+    //   .optional()
+    //   .refine(
+    //     (val) => !val || /^\d{10}$/.test(val),
+    //     'accountSetting.form.phoneNumber.error.required'
+    //   ),
+    // description: z
+    //   .string()
+    //   .max(200, 'accountSetting.form.description.error.maxContent')
+    //   .optional(),
+    // website: z
+    //   .string()
+    //   .optional()
+    //   .refine(
+    //     (val) => {
+    //       if (!val) return true;
+    //       try {
+    //         new URL(val);
+    //         return true;
+    //       } catch {
+    //         return false;
+    //       }
+    //     },
+    //     { message: 'accountSetting.form.websiteLink.error.invalidLink' }
+    //   ),
   })
   .partial();
 

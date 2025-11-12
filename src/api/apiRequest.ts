@@ -86,6 +86,8 @@ axios.interceptors.response.use(
         console.warn('Token refresh failed, logging out user.');
         localStorage.clear();
         sessionStorage.clear();
+        cookieStore.delete(COOKIES_KEY_NAME.ACCESS_TOKEN);
+        cookieStore.delete(COOKIES_KEY_NAME.REFRESH_TOKEN);
         window.location.href = '/login';
       }
     }

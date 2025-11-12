@@ -1,4 +1,5 @@
 import { RotateCcw, SaveAll } from 'lucide-react';
+import { useEffect } from 'react';
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -18,7 +19,9 @@ import { Separator } from '@/components/ui/separator';
 import { Spinner } from '@/components/ui/spinner';
 import { useTypedTranslation } from '@/hooks';
 import { PersonalInfoFormType, personalInfoSchema } from '@/schema/profile';
-import { TextAreaFormField, TextInputField } from '@/shared/FormField';
+import { TextInputField } from '@/shared/FormField';
+import { selectUserId } from '@/store/slices/userSlice';
+import { useGlobalStore } from '@/store/useGlobalStore';
 
 type PersonalInfoFormProps = {
   profileData?: PersonalInfoFormType;
@@ -27,32 +30,42 @@ type PersonalInfoFormProps = {
 
 function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
   const { t } = useTypedTranslation();
-
   const updatePersonalInfo = useProfileDataMutation();
-
+  const userId = useGlobalStore(selectUserId);
   const form = useForm<PersonalInfoFormType>({
     resolver: zodResolver(personalInfoSchema),
-    values: profileData || {},
     defaultValues: profileData || {
-      name: '',
+      firstName: '',
+      lastName: '',
       username: '',
       email: '',
-      phoneNumber: '',
-      description: '',
-      website: '',
     },
   });
-
+  useEffect(() => {
+    if (profileData) {
+      form.reset(profileData);
+    }
+  }, [profileData]);
   const onSubmit = (data: PersonalInfoFormType) => {
-    updatePersonalInfo.mutate(data, {
-      onSuccess: (data) => {
-        if (data.success) {
-          toast.success(data.message);
-        } else {
-          toast.error(data.error);
-        }
-      },
-    });
+    const {
+      username: _unusedUsername,
+      email: _unusedEmail,
+      ...userFormData
+    } = data;
+    void _unusedUsername;
+    void _unusedEmail;
+    updatePersonalInfo.mutate(
+      { userId: userId, userFormData },
+      {
+        onSuccess: (data) => {
+          if (data.success) {
+            toast.success(data.message);
+          } else {
+            toast.error(data.error);
+          }
+        },
+      }
+    );
   };
 
   return (
@@ -74,19 +87,24 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
               <div className="flex gap-5 flex-col md:flex-row mb-4">
                 <TextInputField
                   control={form.control}
-                  name="name"
-                  label={t('accountSetting.form.yourName.label')}
-                  placeholder={t('accountSetting.form.yourName.placeholder')}
+                  name="firstName"
+                  label={t('registration.form.firstName.placeholder')}
+                  placeholder={t('registration.form.firstName.placeholder')}
                 />
-
                 <TextInputField
                   control={form.control}
-                  name="username"
-                  label={t('accountSetting.form.username.label')}
-                  placeholder={t('accountSetting.form.username.placeholder')}
+                  name="lastName"
+                  label={t('registration.form.lastName.placeholder')}
+                  placeholder={t('registration.form.lastName.placeholder')}
                 />
               </div>
-
+              <TextInputField
+                control={form.control}
+                name="username"
+                label={t('accountSetting.form.username.label')}
+                placeholder={t('accountSetting.form.username.placeholder')}
+                disabled
+              />
               <div className="flex flex-col space-y-4">
                 <Separator />
                 <span className="text-muted-foreground">
@@ -103,17 +121,17 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
                   disabled
                 />
 
-                <TextInputField
+                {/* <TextInputField
                   control={form.control}
                   name="phoneNumber"
                   label={t('accountSetting.form.phoneNumber.label')}
                   placeholder={t('accountSetting.form.phoneNumber.placeholder')}
-                />
+                /> */}
               </div>
 
               <Separator />
 
-              <TextInputField
+              {/* <TextInputField
                 control={form.control}
                 name="website"
                 label={t('accountSetting.form.website.label')}
@@ -126,7 +144,7 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
                 label={t('accountSetting.form.description.label')}
                 placeholder={t('accountSetting.form.description.placeholder')}
                 rows={4}
-              />
+              /> */}
 
               <div className="flex gap-5 flex-col md:flex-row justify-center pt-4 items-center">
                 <Button type="submit" className="w-52">
@@ -136,6 +154,7 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
                   type="reset"
                   className="w-52 border-red-500"
                   variant="outline"
+                  onClick={() => form.reset()}
                 >
                   <RotateCcw /> Reset
                 </Button>

@@ -1,9 +1,14 @@
-import { Send, Undo2 } from 'lucide-react';
+import { RotateCcw, SaveAll } from 'lucide-react';
 import { useCallback } from 'react';
 
 import { useForm, useWatch } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+import {
+  useCreateTileUpload,
+  useEditTileUpload,
+} from '@/api/queries/tileUpload';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -25,7 +30,9 @@ import {
 
 function TileUpload() {
   const { t } = useTypedTranslation();
-
+  const { id } = useParams();
+  const { mutate: createTile } = useCreateTileUpload();
+  const { mutate: editTile } = useEditTileUpload();
   const form = useForm<TileUploadForm>({
     resolver: zodResolver(tileUploadSchema),
     defaultValues: {
@@ -51,10 +58,18 @@ function TileUpload() {
   const tileImage = useWatch({ control: form.control, name: 'tileImage' });
 
   // TODO: Fix type
-  const onSubmit = useCallback((data: unknown) => {
-    console.log('Sending notification:', data);
-    // Here would be the API call to send notification
-  }, []);
+  const onSubmit = useCallback(
+    (data: TileUploadForm) => {
+      if (id) {
+        // Edit API
+        editTile({ tileId: id, payload: data });
+      } else {
+        // Create API
+        createTile(data);
+      }
+    },
+    [id, createTile, editTile]
+  );
 
   return (
     <div className="w-full px-1">
@@ -117,16 +132,18 @@ function TileUpload() {
 
                 <div className="flex space-x-2">
                   <Button type="submit" className="flex-1">
-                    <Send className="w-4 h-4 mr-2" />
-                    Save
+                    <SaveAll className="size-7" /> Save
                   </Button>
                   {/* TODO: Fix hovering */}
                   <Button
                     variant="outline"
                     className="flex-1 border-red-500 text-red-500"
+                    onClick={() => {
+                      // form.reset();
+                      window.location.reload();
+                    }}
                   >
-                    <Undo2 className="w-4 h-4 mr-2" />
-                    Cancel
+                    <RotateCcw /> Reset
                   </Button>
                 </div>
               </form>
