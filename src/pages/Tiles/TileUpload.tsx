@@ -30,8 +30,10 @@ function TileUpload() {
     resolver: zodResolver(tileUploadSchema),
     defaultValues: {
       tileName: '',
+      redirectUrl: '',
       titleColor: '',
       tileIcon: null,
+      subHeader: '',
       tileDescription: '',
       tileDescriptionColor: '',
       tileImage: null,
@@ -40,6 +42,7 @@ function TileUpload() {
   const tileName = useWatch({ control: form.control, name: 'tileName' });
   const titleColor = useWatch({ control: form.control, name: 'titleColor' });
   const tileIcon = useWatch({ control: form.control, name: 'tileIcon' });
+  const subHeader = useWatch({ control: form.control, name: 'subHeader' });
   const tileDescription = useWatch({
     control: form.control,
     name: 'tileDescription',
@@ -81,6 +84,14 @@ function TileUpload() {
                   label="Tile Name"
                   placeholder="Enter Tile Name"
                 />
+
+                <TextInputField
+                  name="redirectUrl"
+                  control={form.control}
+                  label="Redirect URL"
+                  placeholder="Enter Redirect URL"
+                />
+
                 <ColorPickerField
                   control={form.control}
                   name="titleColor"
@@ -91,6 +102,13 @@ function TileUpload() {
                   control={form.control}
                   name="tileIcon"
                   required
+                />
+
+                <TextInputField
+                  name="subHeader"
+                  control={form.control}
+                  label="Sub Header"
+                  placeholder="Enter Sub Header"
                 />
 
                 <RichTextField
@@ -139,6 +157,7 @@ function TileUpload() {
             tileName,
             titleColor,
             tileIcon,
+            subHeader,
             tileDescription,
             tileDescriptionColor,
             tileImage,
