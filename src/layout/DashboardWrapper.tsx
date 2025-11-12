@@ -20,7 +20,7 @@ import { useGlobalStore } from '@/store/useGlobalStore';
 const SidebarHeader = (
   <div className="flex items-center gap-4 pt-16 pb-16 pl-8">
     <img src={KielLogo} alt="KielLogo" width={80} height={30} />
-    <span className="text-4xl font-bold text-foreground">Kiel</span>
+    <span className="text-4xl font-bold text-foreground">mein.Kiel</span>
   </div>
 );
 
@@ -57,7 +57,7 @@ const SidebarFooter = () => {
           <div className="p-2">
             <LogOut size={28} />
           </div>
-          <span className="p-2 text-lg">Logout</span>
+          <span className="p-2 text-lg">Log out</span>
         </div>
       </SidebarMenuButton>
     </SidebarMenuItem>

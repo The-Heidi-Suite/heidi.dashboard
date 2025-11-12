@@ -3,15 +3,14 @@
   "toggleTheme": "Toggle Theme",
   "signIntoAccount": "Sign in to your account",
   "email": "E-Mail",
-  "emailOrUsernameLabel": "E-mail or Username",
   "usernameOrEmail": "Enter your E-mail",
   "password": "Password",
   "pleaseEnterPassword": "Please enter password",
-  "rememberMe": "Remember Me",
+  "rememberMe": "Remember Password",
   "forgotYourPassword": "Forgot your password?",
   "resetPassword": "Reset Your Password",
   "signIn": "Sign In",
-  "notMember": "Not a member?",
+  "notMember": "No account yet?",
   "register": "Register",
   "signInHelp": "Help ?",
   "invalidMail": "Enter a valid email",
@@ -37,10 +36,10 @@
       "listing": "Tile Listing"
     },
     "accounts": {
-      "title": "Accounts"
+      "title": "Account Setting"
     },
     "cityAdmin": {
-      "title": "City Administrator"
+      "title": "User Management"
     }
   },
   "createAccount": "Create your new account",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Tile Listing",
     "listingDescription": "List of all the tiles in registered",
+    "searchPlaceholder": "Search",
     "tabs": {
       "allTiles": "All Tiles",
       "pendingTiles": "Pending",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "You can add a maximum of 3 social links",
+      "saveBtn": "Save",
+      "resetBtn": "Reset",
       "email": {
         "label": "Email",
         "placeholder": "Enter your email",

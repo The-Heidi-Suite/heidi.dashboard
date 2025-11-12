@@ -3,15 +3,14 @@
   "toggleTheme": "Växla tema",
   "signIntoAccount": "Logga in på ditt konto",
   "email": "E-post",
-  "emailOrUsernameLabel": "E-post eller användarnamn",
   "usernameOrEmail": "Ange din e-postadress",
   "password": "Lösenord",
   "pleaseEnterPassword": "Ange lösenord",
-  "rememberMe": "Kom ihåg mig",
+  "rememberMe": "Kom ihåg lösenord",
   "forgotYourPassword": "Glömt ditt lösenord?",
   "resetPassword": "Återställ ditt lösenord",
   "signIn": "Logga in",
-  "notMember": "Inte medlem?",
+  "notMember": "Inget konto än?",
   "register": "Registrera dig",
   "signInHelp": "Hjälp?",
   "invalidMail": "Ange en giltig e-postadress",
@@ -37,10 +36,10 @@
       "listing": "Rutlista"
     },
     "accounts": {
-      "title": "Konton"
+      "title": "Kontoinställningar"
     },
     "cityAdmin": {
-      "title": "Stadsadministratör"
+      "title": "Användaradministration"
     }
   },
   "createAccount": "Skapa ditt nya konto",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Rutlista",
     "listingDescription": "Lista över alla registrerade rutor",
+    "searchPlaceholder": "Sök",
     "tabs": {
       "allTiles": "Alla rutor",
       "pendingTiles": "Väntande",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "Du kan lägga till högst 3 sociala länkar",
+      "saveBtn": "Spara ändringar",
+      "resetBtn": "Återställ",
       "email": {
         "label": "E-post",
         "placeholder": "Ange din e-postadress",

@@ -6,7 +6,6 @@ export interface TranslationSchema {
   toggleTheme: string;
   signIntoAccount: string;
   email: string;
-  emailOrUsernameLabel: string;
   usernameOrEmail: string;
   password: string;
   pleaseEnterPassword: string;
@@ -66,6 +65,7 @@ export interface TranslationSchema {
     };
     listingHeading: string;
     listingDescription: string;
+    searchPlaceholder: string;
     tabs: {
       allTiles: string;
       pendingTiles: string;
@@ -153,6 +153,8 @@ export interface TranslationSchema {
     };
     form: {
       maxSocialLinks: string;
+      saveBtn: string;
+      resetBtn: string;
       email: {
         label: string;
         placeholder: string;
@@ -320,7 +322,6 @@ export type TranslationKey =
   | 'toggleTheme'
   | 'signIntoAccount'
   | 'email'
-  | 'emailOrUsernameLabel'
   | 'usernameOrEmail'
   | 'password'
   | 'pleaseEnterPassword'
@@ -365,6 +366,7 @@ export type TranslationKey =
   | 'tile.upload.previewDescription'
   | 'tile.listingHeading'
   | 'tile.listingDescription'
+  | 'tile.searchPlaceholder'
   | 'tile.tabs.allTiles'
   | 'tile.tabs.pendingTiles'
   | 'tile.tabs.inactiveTiles'
@@ -417,6 +419,8 @@ export type TranslationKey =
   | 'accountSetting.section.password.heading'
   | 'accountSetting.section.password.description'
   | 'accountSetting.form.maxSocialLinks'
+  | 'accountSetting.form.saveBtn'
+  | 'accountSetting.form.resetBtn'
   | 'accountSetting.form.email.label'
   | 'accountSetting.form.email.placeholder'
   | 'accountSetting.form.email.error.required'

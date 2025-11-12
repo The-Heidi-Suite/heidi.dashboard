@@ -3,15 +3,14 @@
   "toggleTheme": "تبديل النمط",
   "signIntoAccount": "تسجيل الدخول إلى حسابك",
   "email": "البريد الإلكتروني",
-  "emailOrUsernameLabel": "البريد الإلكتروني أو اسم المستخدم",
   "usernameOrEmail": "أدخل بريدك الإلكتروني",
   "password": "كلمة المرور",
   "pleaseEnterPassword": "يرجى إدخال كلمة المرور",
-  "rememberMe": "تذكرني",
+  "rememberMe": "تذكر كلمة المرور",
   "forgotYourPassword": "هل نسيت كلمة المرور؟",
   "resetPassword": "إعادة تعيين كلمة المرور الخاصة بك",
   "signIn": "تسجيل الدخول",
-  "notMember": "لست عضوا؟",
+  "notMember": "لا تملك حسابًا بعد؟",
   "register": "تسجيل",
   "signInHelp": "مساعدة؟",
   "invalidMail": "أدخل بريدًا إلكترونيًا صالحًا",
@@ -37,10 +36,10 @@
       "listing": "قائمة المربعات"
     },
     "accounts": {
-      "title": "الحسابات"
+      "title": "إعدادات الحساب"
     },
     "cityAdmin": {
-      "title": "مدير المدينة"
+      "title": "إدارة المستخدمين"
     }
   },
   "createAccount": "أنشئ حسابك الجديد",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "قائمة المربعات",
     "listingDescription": "قائمة بجميع المربعات المسجلة",
+    "searchPlaceholder": "بحث",
     "tabs": {
       "allTiles": "جميع المربعات",
       "pendingTiles": "قيد الانتظار",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "يمكنك إضافة 3 روابط اجتماعية كحد أقصى",
+      "saveBtn": "حفظ التغييرات",
+      "resetBtn": "إعادة تعيين",
       "email": {
         "label": "البريد الإلكتروني",
         "placeholder": "أدخل بريدك الإلكتروني",

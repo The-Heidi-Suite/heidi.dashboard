@@ -3,15 +3,14 @@
   "toggleTheme": "Переключить тему",
   "signIntoAccount": "Войдите в свой аккаунт",
   "email": "Эл. почта",
-  "emailOrUsernameLabel": "Эл. почта или имя пользователя",
   "usernameOrEmail": "Введите вашу эл. почту",
   "password": "Пароль",
   "pleaseEnterPassword": "Пожалуйста, введите пароль",
-  "rememberMe": "Запомнить меня",
+  "rememberMe": "Запомнить пароль",
   "forgotYourPassword": "Забыли пароль?",
   "resetPassword": "Сбросить пароль",
   "signIn": "Войти",
-  "notMember": "Не зарегистрированы?",
+  "notMember": "Нет аккаунта?",
   "register": "Регистрация",
   "signInHelp": "Помощь?",
   "invalidMail": "Введите корректный email",
@@ -37,10 +36,10 @@
       "listing": "Список плиток"
     },
     "accounts": {
-      "title": "Аккаунты"
+      "title": "Настройки аккаунта"
     },
     "cityAdmin": {
-      "title": "Администратор города"
+      "title": "Администрирование пользователей"
     }
   },
   "createAccount": "Создайте свой аккаунт",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Список плиток",
     "listingDescription": "Список всех зарегистрированных плиток",
+    "searchPlaceholder": "Поиск",
     "tabs": {
       "allTiles": "Все плитки",
       "pendingTiles": "Ожидающие",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "Вы можете добавить максимум 3 ссылки на социальные сети",
+      "saveBtn": "Сохранить изменения",
+      "resetBtn": "Сбросить",
       "email": {
         "label": "Эл. почта",
         "placeholder": "Введите вашу эл. почту",

@@ -3,15 +3,14 @@
   "toggleTheme": "تغییر تم",
   "signIntoAccount": "ورود به حساب کاربری",
   "email": "ایمیل",
-  "emailOrUsernameLabel": "ایمیل یا نام کاربری",
   "usernameOrEmail": "ایمیل خود را وارد کنید",
   "password": "رمز عبور",
   "pleaseEnterPassword": "لطفاً رمز عبور را وارد کنید",
-  "rememberMe": "مرا به خاطر بسپار",
+  "rememberMe": "به خاطر سپردن رمز عبور",
   "forgotYourPassword": "رمز عبور خود را فراموش کرده‌اید؟",
   "resetPassword": "بازیابی رمز عبور",
   "signIn": "ورود",
-  "notMember": "عضو نیستید؟",
+  "notMember": "حساب کاربری ندارید؟",
   "register": "ثبت نام",
   "signInHelp": "کمک؟",
   "invalidMail": "یک ایمیل معتبر وارد کنید",
@@ -37,10 +36,10 @@
       "listing": "فهرست کاشی‌ها"
     },
     "accounts": {
-      "title": "حساب‌ها"
+      "title": "تنظیمات حساب کاربری"
     },
     "cityAdmin": {
-      "title": "مدیر شهر"
+      "title": "مدیریت کاربران"
     }
   },
   "createAccount": "ایجاد حساب جدید",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "فهرست کاشی‌ها",
     "listingDescription": "فهرست همه کاشی‌های ثبت‌شده",
+    "searchPlaceholder": "جستجو",
     "tabs": {
       "allTiles": "همه کاشی‌ها",
       "pendingTiles": "در انتظار بررسی",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "حداکثر ۳ لینک اجتماعی می‌توانید اضافه کنید",
+      "saveBtn": "ذخیره تغییرات",
+      "resetBtn": "بازنشانی",
       "email": {
         "label": "ایمیل",
         "placeholder": "ایمیل خود را وارد کنید",

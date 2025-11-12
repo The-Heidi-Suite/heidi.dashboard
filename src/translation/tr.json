@@ -3,15 +3,14 @@
   "toggleTheme": "Temayı Değiştir",
   "signIntoAccount": "Hesabınıza giriş yapın",
   "email": "E-Posta",
-  "emailOrUsernameLabel": "E-posta veya Kullanıcı Adı",
   "usernameOrEmail": "E-postanızı girin",
   "password": "Şifre",
   "pleaseEnterPassword": "Lütfen şifre girin",
-  "rememberMe": "Beni Hatırla",
+  "rememberMe": "Şifreyi Hatırla",
   "forgotYourPassword": "Şifrenizi mi unuttunuz?",
   "resetPassword": "Şifrenizi Sıfırlayın",
   "signIn": "Giriş Yap",
-  "notMember": "Üye değil misiniz?",
+  "notMember": "Hesabınız yok mu?",
   "register": "Kayıt Ol",
   "signInHelp": "Yardım ?",
   "invalidMail": "Geçerli bir e-posta girin",
@@ -37,10 +36,10 @@
       "listing": "Döşeme Listesi"
     },
     "accounts": {
-      "title": "Hesaplar"
+      "title": "Hesap Ayarları"
     },
     "cityAdmin": {
-      "title": "Şehir Yöneticisi"
+      "title": "Şehir Yönetimi"
     }
   },
   "createAccount": "Yeni hesabınızı oluşturun",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Döşeme Listesi",
     "listingDescription": "Kayıtlı tüm döşemelerin listesi",
+    "searchPlaceholder": "Ara",
     "tabs": {
       "allTiles": "Tüm Döşemeler",
       "pendingTiles": "Beklemede",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "En fazla 3 sosyal bağlantı ekleyebilirsiniz",
+      "saveBtn": "Değişiklikleri Kaydet",
+      "resetBtn": "Sıfırla",
       "email": {
         "label": "E-Posta",
         "placeholder": "E-postanızı girin",

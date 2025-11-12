@@ -3,15 +3,14 @@
   "toggleTheme": "Skift tema",
   "signIntoAccount": "Log ind på din konto",
   "email": "E-mail",
-  "emailOrUsernameLabel": "E-mail eller brugernavn",
   "usernameOrEmail": "Indtast din e-mail",
   "password": "Adgangskode",
   "pleaseEnterPassword": "Indtast venligst adgangskode",
-  "rememberMe": "Husk mig",
+  "rememberMe": "Husk adgangskode",
   "forgotYourPassword": "Glemt din adgangskode?",
   "resetPassword": "Nulstil din adgangskode",
   "signIn": "Log ind",
-  "notMember": "Ikke medlem?",
+  "notMember": "Ingen konto endnu?",
   "register": "Registrér",
   "signInHelp": "Hjælp?",
   "invalidMail": "Indtast en gyldig e-mail",
@@ -37,10 +36,10 @@
       "listing": "Flise­oversigt"
     },
     "accounts": {
-      "title": "Konti"
+      "title": "Kontoeinstellungen"
     },
     "cityAdmin": {
-      "title": "Byadministrator"
+      "title": "Benutzerverwaltung"
     }
   },
   "createAccount": "Opret din nye konto",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Fliseoversigt",
     "listingDescription": "Liste over alle registrerede fliser",
+    "searchPlaceholder": "Søg",
     "tabs": {
       "allTiles": "Alle fliser",
       "pendingTiles": "Afventer",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "Du kan tilføje maksimalt 3 sociale links",
+      "saveBtn": "Gem ændringer",
+      "resetBtn": "Nulstil",
       "email": {
         "label": "E-mail",
         "placeholder": "Indtast din e-mail",

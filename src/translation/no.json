@@ -3,15 +3,14 @@
   "toggleTheme": "Bytt tema",
   "signIntoAccount": "Logg inn på kontoen din",
   "email": "E-post",
-  "emailOrUsernameLabel": "E-post eller brukernavn",
   "usernameOrEmail": "Skriv inn e-posten din",
   "password": "Passord",
   "pleaseEnterPassword": "Vennligst skriv inn passord",
-  "rememberMe": "Husk meg",
+  "rememberMe": "Husk passord",
   "forgotYourPassword": "Glemt passordet ditt?",
   "resetPassword": "Tilbakestill passordet ditt",
   "signIn": "Logg inn",
-  "notMember": "Ikke medlem?",
+  "notMember": "Ingen konto ennå?",
   "register": "Registrer deg",
   "signInHelp": "Hjelp?",
   "invalidMail": "Skriv inn en gyldig e-post",
@@ -37,10 +36,10 @@
       "listing": "Flisliste"
     },
     "accounts": {
-      "title": "Kontoer"
+      "title": "Kontoinnstillinger"
     },
     "cityAdmin": {
-      "title": "Byadministrator"
+      "title": "Brukeradministrasjon"
     }
   },
   "createAccount": "Opprett din nye konto",
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Flisliste",
     "listingDescription": "Liste over alle registrerte fliser",
+    "searchPlaceholder": "Søk",
     "tabs": {
       "allTiles": "Alle fliser",
       "pendingTiles": "Venter",
@@ -150,6 +150,8 @@
     },
     "form": {
       "maxSocialLinks": "Du kan legge til maks 3 sosiale lenker",
+      "saveBtn": "Lagre endringer",
+      "resetBtn": "Tilbakestill",
       "email": {
         "label": "E-post",
         "placeholder": "Skriv inn e-posten din",

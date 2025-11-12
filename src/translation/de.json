@@ -3,16 +3,15 @@
   "toggleTheme": "Theme Toggle",
   "signIntoAccount": "Bei deinem Konto anmelden",
   "email": "E-Mail",
-  "emailOrUsernameLabel": "Email Adresse or Username",
   "usernameOrEmail": "Email Adresse",
   "password": "Passwort",
   "pleaseEnterPassword": "Bitte Passwort eingeben",
-  "rememberMe": "Erinnere dich",
+  "rememberMe": "Passwort merken",
   "forgotYourPassword": "Hast du dein Passwort vergessen?",
   "resetPassword": "Setze dein Passwort zurück",
   "signIn": "Anmelden",
-  "notMember": "Noch keinen Konto ?",
-  "register": "registrieren",
+  "notMember": "Noch kein Konto?",
+  "register": "Registrieren",
   "signInHelp": "Hilfe ?",
   "invalidMail": "Geben Sie eine gültige E-Mail ein",
   "invalidMailOrUsername": "Geben Sie eine gültige E-Mail oder einen gültigen Benutzernamen ein",
@@ -37,7 +36,7 @@
       "listing": "Kachelliste"
     },
     "accounts": {
-      "title": "Konten"
+      "title": "Kontoeinstellungen"
     },
     "cityAdmin": {
       "title": "Stadtverwaltung"
@@ -63,6 +62,7 @@
     },
     "listingHeading": "Kachelübersicht",
     "listingDescription": "Liste aller registrierten Kacheln",
+    "searchPlaceholder": "Suchen",
     "tabs": {
       "allTiles": "Alle Kacheln",
       "pendingTiles": "Ausstehend",
@@ -88,7 +88,7 @@
   "formMessages": {
     "uploadField": {
       "label": "Bild hochladen",
-      "btnLabel": "Bild auswahlen",
+      "btnLabel": "Bild auswählen",
       "placeholder": "Per Drag & Drop hochladen oder klicken",
       "errorName": {
         "maxFileSize": "Die Dateigröße darf maximal ",
@@ -151,6 +151,8 @@
 
     "form": {
       "maxSocialLinks": "Sie können maximal 3 Social-Links hinzufügen",
+      "saveBtn": "Änderungen speichern",
+      "resetBtn": "Zurücksetzen",
       "email": {
         "label": "E-Mail",
         "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
@@ -249,8 +251,8 @@
   },
   "registration": {
     "general": {
-      "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
-      "login": "Bitte melden Sie sich hier an.",
+      "alreadyHaveAccount": "Hast Du schon ein Konto?",
+      "login": "Hier anmelden",
       "acceptPolicy": "Ich akzeptiere hiermit die",
       "privacy": "Datenschutzrichtlinie*",
       "and": "und",
