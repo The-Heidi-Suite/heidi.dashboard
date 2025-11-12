@@ -6,6 +6,10 @@ export const tileUploadSchema = z.object({
     .min(2, { message: 'formMessages.uploadField.errorName.minLength' })
     .max(50, { message: 'formMessages.uploadField.errorName.maxLength' }),
 
+  redirectUrl: z
+    .string()
+    .min(2, { message: 'formMessages.uploadField.errorName.redirectUrl' }),
+
   titleColor: z
     .string()
     .min(1, { message: 'formMessages.uploadField.errorName.titleColor' }),
@@ -16,6 +20,11 @@ export const tileUploadSchema = z.object({
     .refine((file) => file !== null, {
       message: 'formMessages.uploadField.errorName.tileIcon',
     }),
+
+  subHeader: z
+    .string()
+    .min(2, { message: 'formMessages.uploadField.errorName.subHeader' })
+    .max(50, { message: 'formMessages.uploadField.errorName.subHeaderMax' }),
 
   tileDescription: z
     .string()
