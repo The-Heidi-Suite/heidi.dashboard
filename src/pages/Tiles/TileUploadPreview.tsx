@@ -11,7 +11,6 @@ import { useTypedTranslation } from '@/hooks';
 
 type TileUploadPreviewProps = {
   tileName?: string | undefined;
-  redirectUrl?: string | undefined;
   titleColor?: string | undefined;
   tileIcon?: null | File;
   subHeader?: string | undefined;
