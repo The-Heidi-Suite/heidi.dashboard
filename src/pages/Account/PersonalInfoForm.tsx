@@ -88,13 +88,13 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
                 <TextInputField
                   control={form.control}
                   name="firstName"
-                  label={t('registration.form.firstName.placeholder')}
+                  label={t('registration.form.firstName.label')}
                   placeholder={t('registration.form.firstName.placeholder')}
                 />
                 <TextInputField
                   control={form.control}
                   name="lastName"
-                  label={t('registration.form.lastName.placeholder')}
+                  label={t('registration.form.lastName.label')}
                   placeholder={t('registration.form.lastName.placeholder')}
                 />
               </div>

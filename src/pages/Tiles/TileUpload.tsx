@@ -137,10 +137,11 @@ function TileUpload() {
                   {/* TODO: Fix hovering */}
                   <Button
                     variant="outline"
+                    type="reset"
                     className="flex-1 border-red-500 text-red-500"
                     onClick={() => {
-                      // form.reset();
-                      window.location.reload();
+                      form.reset();
+                      // window.location.reload();
                     }}
                   >
                     <RotateCcw /> Reset
