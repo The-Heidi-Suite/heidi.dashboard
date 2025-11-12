@@ -51,6 +51,28 @@
         "uploadLabel": "Bild hochladen",
         "uploadBtnLabel": "Bild auswählen",
         "uploadPlaceholder": "Per Drag & Drop hochladen oder klicken",
+        "tileName": {
+          "label": "Kachelname",
+          "placeholder": "Geben Sie den Kachelnamen ein"
+        },
+        "redirectURL": {
+          "label": "Weiterleitungs-URL",
+          "placeholder": "Geben Sie die Weiterleitungs-URL ein"
+        },
+        "titleColor": {
+          "label": "Kachelfarbe"
+        },
+        "subHeader": {
+          "label": "Unterüberschrift",
+          "placeholder": "Geben Sie die Unterüberschrift ein"
+        },
+        "tileDescription": {
+          "label": "Beschreibung",
+          "placeholder": "Geben Sie Ihre HTML-Inhalte ein"
+        },
+        "titleDescriptionColor": {
+          "label": "Kachelbeschreibungsfarbe"
+        },
         "errorName": {
           "maxFileSize": "Die Dateigröße darf maximal 1 MB betragen",
           "supportedExtension": "Nicht unterstützte Datei ausgewählt, unterstützte Formate sind:",
@@ -58,7 +80,10 @@
         }
       },
       "previewHeading": "Vorschau",
-      "previewDescription": "Vorschau deiner Kachel hier"
+      "previewDescription": "Vorschau deiner Kachel hier",
+      "dummyText": "Beispiel Kachelname",
+      "defaultHeader": "Standard Unterüberschrift",
+      "tilePreviewDescription": "Beispiel-Beschreibungstext, um zu veranschaulichen, wie die Kachelbeschreibung innerhalb der Kachelvorschau angezeigt wird. Dieser Text soll lang genug sein, um das Überlaufen zu testen und sicherzustellen, dass er korrekt innerhalb des für die Kachelkomponente vorgesehenen Bereichs angezeigt wird."
     },
     "listingHeading": "Kachelübersicht",
     "listingDescription": "Liste aller registrierten Kacheln",

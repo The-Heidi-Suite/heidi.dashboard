@@ -51,6 +51,28 @@
         "uploadLabel": "Upload billede",
         "uploadBtnLabel": "Vælg billede",
         "uploadPlaceholder": "Træk & slip eller klik for at uploade",
+        "tileName": {
+          "label": "Flise navn",
+          "placeholder": "Indtast flise navn"
+        },
+        "redirectURL": {
+          "label": "Redirect URL",
+          "placeholder": "Indtast Redirect URL"
+        },
+        "titleColor": {
+          "label": "Flise farve"
+        },
+        "subHeader": {
+          "label": "Underoverskrift",
+          "placeholder": "Indtast underoverskrift"
+        },
+        "tileDescription": {
+          "label": "Beskrivelse",
+          "placeholder": "Indtast din HTML-indhold"
+        },
+        "titleDescriptionColor": {
+          "label": "Flise beskrivelse farve"
+        },
         "errorName": {
           "maxFileSize": "Filstørrelse må maksimalt være 1 MB",
           "supportedExtension": "Ukendt filtype valgt, understøttede formater er:",
@@ -58,7 +80,10 @@
         }
       },
       "previewHeading": "Forhåndsvisning",
-      "previewDescription": "Forhåndsvis din flise her"
+      "previewDescription": "Forhåndsvis din flise her",
+      "dummyText": "Eksempel flise navn",
+      "defaultHeader": "Standard underoverskrift",
+      "tilePreviewDescription": "Eksempel beskrivelse tekst for at illustrere, hvordan flise beskrivelsen vises inden for flise forhåndsvisningen. Denne tekst er designet til at være lang nok til at teste overløb og sikre, at den vises korrekt inden for det område, der er tildelt flise komponenten."
     },
     "listingHeading": "Fliseoversigt",
     "listingDescription": "Liste over alle registrerede fliser",

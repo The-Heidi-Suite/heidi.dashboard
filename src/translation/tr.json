@@ -51,6 +51,28 @@
         "uploadLabel": "Görsel Yükle",
         "uploadBtnLabel": "Görsel Seç",
         "uploadPlaceholder": "Sürükleyip bırakın veya yüklemek için tıklayın",
+        "tileName": {
+          "label": "Döşeme Adı",
+          "placeholder": "Döşeme Adını Girin"
+        },
+        "redirectURL": {
+          "label": "Yönlendirme URL'si",
+          "placeholder": "Yönlendirme URL'sini Girin"
+        },
+        "titleColor": {
+          "label": "Döşeme Rengi"
+        },
+        "subHeader": {
+          "label": "Alt Başlık",
+          "placeholder": "Alt Başlığı Girin"
+        },
+        "tileDescription": {
+          "label": "Açıklama",
+          "placeholder": "HTML içeriğinizi girin"
+        },
+        "titleDescriptionColor": {
+          "label": "Döşeme Açıklama Rengi"
+        },
         "errorName": {
           "maxFileSize": "Dosya boyutu en fazla 1 MB olmalıdır",
           "supportedExtension": "Desteklenmeyen dosya seçildi. Desteklenen formatlar:",
@@ -58,7 +80,10 @@
         }
       },
       "previewHeading": "Önizleme",
-      "previewDescription": "Döşemenizi burada önizleyin"
+      "previewDescription": "Döşemenizi burada önizleyin",
+      "dummyText": "Örnek Döşeme Adı",
+      "defaultHeader": "Varsayılan Alt Başlık",
+      "tilePreviewDescription": "Döşeme açıklamasının döşeme önizlemesi içinde nasıl göründüğünü göstermek için örnek açıklama metni. Bu metin, taşmayı test etmek ve döşeme bileşenine ayrılan alan içinde doğru şekilde görüntülendiğinden emin olmak için yeterince uzun olacak şekilde tasarlanmıştır."
     },
     "listingHeading": "Döşeme Listesi",
     "listingDescription": "Kayıtlı tüm döşemelerin listesi",

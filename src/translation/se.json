@@ -51,6 +51,28 @@
         "uploadLabel": "Ladda upp bild",
         "uploadBtnLabel": "Välj bild",
         "uploadPlaceholder": "Dra och släpp eller klicka för att ladda upp",
+        "tileName": {
+          "label": "Ruttnamn",
+          "placeholder": "Ange ruttnamn"
+        },
+        "redirectURL": {
+          "label": "Omdirigerings-URL",
+          "placeholder": "Ange omdirigerings-URL"
+        },
+        "titleColor": {
+          "label": "Rutfärg"
+        },
+        "subHeader": {
+          "label": "Under rubrik",
+          "placeholder": "Ange under rubrik"
+        },
+        "tileDescription": {
+          "label": "Beskrivning",
+          "placeholder": "Ange din beskrivning här"
+        },
+        "titleDescriptionColor": {
+          "label": "Rutfärgbeskrivning"
+        },
         "errorName": {
           "maxFileSize": "Filstorleken får vara högst 1 MB",
           "supportedExtension": "Fel fil vald, tillåtna format är:",
@@ -58,7 +80,10 @@
         }
       },
       "previewHeading": "Förhandsvisning",
-      "previewDescription": "Förhandsgranska din ruta här"
+      "previewDescription": "Förhandsgranska din ruta här",
+      "dummyText": "Exempel på ruttnamn",
+      "defaultHeader": "Standard under rubrik",
+      "tilePreviewDescription": "Exempel beskrivningstext för att illustrera hur rutbeskrivningen visas inom rutförhandsvisningen. Denna text är utformad för att vara tillräckligt lång för att testa överflöd och säkerställa att den visas korrekt inom det område som tilldelats rutkomponenten."
     },
     "listingHeading": "Rutlista",
     "listingDescription": "Lista över alla registrerade rutor",

@@ -51,6 +51,28 @@
         "uploadLabel": "Last opp bilde",
         "uploadBtnLabel": "Velg bilde",
         "uploadPlaceholder": "Dra og slipp eller klikk for å laste opp",
+        "tileName": {
+          "label": "Flisnavn",
+          "placeholder": "Skriv inn flisnavn"
+        },
+        "redirectURL": {
+          "label": "Omdirigerings-URL",
+          "placeholder": "Skriv inn omdirigerings-URL"
+        },
+        "titleColor": {
+          "label": "Flisfarge"
+        },
+        "subHeader": {
+          "label": "Underoverskrift",
+          "placeholder": "Skriv inn underoverskrift"
+        },
+        "tileDescription": {
+          "label": "Beskrivelse",
+          "placeholder": "Skriv inn beskrivelsen din"
+        },
+        "titleDescriptionColor": {
+          "label": "Flisbeskrivelsesfarge"
+        },
         "errorName": {
           "maxFileSize": "Filstørrelsen må være maks 1 MB",
           "supportedExtension": "Ugyldig fil valgt. Støttede formater er:",
@@ -58,7 +80,10 @@
         }
       },
       "previewHeading": "Forhåndsvisning",
-      "previewDescription": "Forhåndsvis flisen din her"
+      "previewDescription": "Forhåndsvis flisen din her",
+      "dummyText": "Eksempel flisenavn",
+      "defaultHeader": "Standard underoverskrift",
+      "tilePreviewDescription": "Eksempel beskrivelse tekst for å illustrere hvordan flisbeskrivelsen vises innenfor flisforhåndsvisningen. Denne teksten er designet for å være lang nok til å teste overløp og sikre at den vises korrekt innenfor det området som er tildelt fliskomponenten."
     },
     "listingHeading": "Flisliste",
     "listingDescription": "Liste over alle registrerte fliser",

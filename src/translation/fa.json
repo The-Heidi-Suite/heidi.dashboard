@@ -51,6 +51,28 @@
         "uploadLabel": "آپلود تصویر",
         "uploadBtnLabel": "انتخاب تصویر",
         "uploadPlaceholder": "برای آپلود، بکشید و رها کنید یا کلیک کنید",
+        "tileName": {
+          "label": "نام کاشی",
+          "placeholder": "نام کاشی خود را وارد کنید"
+        },
+        "redirectURL": {
+          "label": "آدرس بازگشت",
+          "placeholder": "آدرس بازگشت خود را وارد کنید"
+        },
+        "titleColor": {
+          "label": "رنگ عنوان کاشی"
+        },
+        "subHeader": {
+          "label": "زیرعنوان",
+          "placeholder": "زیرعنوان خود را وارد کنید"
+        },
+        "tileDescription": {
+          "label": "توضیحات کاشی",
+          "placeholder": "توضیحات کاشی خود را وارد کنید"
+        },
+        "titleDescriptionColor": {
+          "label": "رنگ توضیحات کاشی"
+        },
         "errorName": {
           "maxFileSize": "حداکثر اندازه فایل باید ۱ مگابایت باشد",
           "supportedExtension": "فرمت فایل پشتیبانی نمی‌شود، فرمت‌های پشتیبانی شده عبارتند از:",
@@ -58,7 +80,10 @@
         }
       },
       "previewHeading": "پیش‌نمایش",
-      "previewDescription": "کاشی خود را اینجا مشاهده کنید"
+      "previewDescription": "کاشی خود را اینجا مشاهده کنید",
+      "dummyText": "نام کاشی نمونه",
+      "defaultHeader": "زیرعنوان پیش‌فرض",
+      "tilePreviewDescription": "متن توضیحات نمونه برای نشان دادن نحوه نمایش توضیحات کاشی در پیش‌نمایش کاشی. این متن به اندازه کافی طولانی است تا سرریز شدن را آزمایش کند و اطمینان حاصل شود که به درستی در محدوده اختصاص داده شده به مؤلفه کاشی نمایش داده می‌شود."
     },
     "listingHeading": "فهرست کاشی‌ها",
     "listingDescription": "فهرست همه کاشی‌های ثبت‌شده",

@@ -54,6 +54,28 @@ export interface TranslationSchema {
         uploadLabel: string;
         uploadBtnLabel: string;
         uploadPlaceholder: string;
+        tileName: {
+          label: string;
+          placeholder: string;
+        };
+        redirectURL: {
+          label: string;
+          placeholder: string;
+        };
+        titleColor: {
+          label: string;
+        };
+        subHeader: {
+          label: string;
+          placeholder: string;
+        };
+        tileDescription: {
+          label: string;
+          placeholder: string;
+        };
+        titleDescriptionColor: {
+          label: string;
+        };
         errorName: {
           maxFileSize: string;
           supportedExtension: string;
@@ -62,6 +84,9 @@ export interface TranslationSchema {
       };
       previewHeading: string;
       previewDescription: string;
+      dummyText: string;
+      defaultHeader: string;
+      tilePreviewDescription: string;
     };
     listingHeading: string;
     listingDescription: string;
@@ -359,11 +384,24 @@ export type TranslationKey =
   | 'tile.upload.form.uploadLabel'
   | 'tile.upload.form.uploadBtnLabel'
   | 'tile.upload.form.uploadPlaceholder'
+  | 'tile.upload.form.tileName.label'
+  | 'tile.upload.form.tileName.placeholder'
+  | 'tile.upload.form.redirectURL.label'
+  | 'tile.upload.form.redirectURL.placeholder'
+  | 'tile.upload.form.titleColor.label'
+  | 'tile.upload.form.subHeader.label'
+  | 'tile.upload.form.subHeader.placeholder'
+  | 'tile.upload.form.tileDescription.label'
+  | 'tile.upload.form.tileDescription.placeholder'
+  | 'tile.upload.form.titleDescriptionColor.label'
   | 'tile.upload.form.errorName.maxFileSize'
   | 'tile.upload.form.errorName.supportedExtension'
   | 'tile.upload.form.errorName.invalidFile'
   | 'tile.upload.previewHeading'
   | 'tile.upload.previewDescription'
+  | 'tile.upload.dummyText'
+  | 'tile.upload.defaultHeader'
+  | 'tile.upload.tilePreviewDescription'
   | 'tile.listingHeading'
   | 'tile.listingDescription'
   | 'tile.searchPlaceholder'
