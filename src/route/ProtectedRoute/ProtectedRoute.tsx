@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
 import { RoleName, USER_ROLE_MAP } from '@/lib/constant';
+import ROUTES from '@/route/routesConstant';
 import { selectUserRole } from '@/store/slices/userSlice';
 import { useGlobalStore } from '@/store/useGlobalStore';
 
@@ -13,7 +14,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute = ({
   allowedRoles,
-  redirectTo = '/login',
+  redirectTo = ROUTES.LogIn,
 }: ProtectedRouteProps) => {
   const userRole = useGlobalStore(selectUserRole);
   const allowedRolesValues = useMemo(
@@ -25,7 +26,7 @@ const ProtectedRoute = ({
 
   const hasAccess = allowedRolesValues.includes(userRole);
 
-  if (!hasAccess) return <Navigate to="/unauthorized" replace />;
+  if (!hasAccess) return <Navigate to={ROUTES.Unauthorized} replace />;
 
   return <Outlet />;
 };

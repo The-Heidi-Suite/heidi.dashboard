@@ -7,6 +7,7 @@ import { useDeleteAccount, useGetUserProfile } from '@/api/queries';
 import { Button } from '@/components/ui/button';
 import { useTypedTranslation } from '@/hooks';
 import MetadataForm from '@/pages/Account/MetadataForm';
+import ROUTES from '@/route/routesConstant';
 import { useGlobalStore } from '@/store/useGlobalStore';
 
 import PasswordForm from './PasswordForm';
@@ -26,7 +27,7 @@ function Account() {
         if (data.success) {
           toast.success(data.message);
           resetStore();
-          navigate('/login');
+          navigate(ROUTES.LogIn);
         } else {
           toast.error(data.error);
         }

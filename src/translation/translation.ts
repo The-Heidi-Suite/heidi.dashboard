@@ -55,6 +55,28 @@ export interface TranslationSchema {
         uploadLabel: string;
         uploadBtnLabel: string;
         uploadPlaceholder: string;
+        tileName: {
+          label: string;
+          placeholder: string;
+        };
+        redirectURL: {
+          label: string;
+          placeholder: string;
+        };
+        titleColor: {
+          label: string;
+        };
+        subHeader: {
+          label: string;
+          placeholder: string;
+        };
+        tileDescription: {
+          label: string;
+          placeholder: string;
+        };
+        titleDescriptionColor: {
+          label: string;
+        };
         errorName: {
           maxFileSize: string;
           supportedExtension: string;
@@ -63,9 +85,13 @@ export interface TranslationSchema {
       };
       previewHeading: string;
       previewDescription: string;
+      dummyText: string;
+      defaultHeader: string;
+      tilePreviewDescription: string;
     };
     listingHeading: string;
     listingDescription: string;
+    searchPlaceholder: string;
     tabs: {
       allTiles: string;
       pendingTiles: string;
@@ -153,6 +179,8 @@ export interface TranslationSchema {
     };
     form: {
       maxSocialLinks: string;
+      saveBtn: string;
+      resetBtn: string;
       email: {
         label: string;
         placeholder: string;
@@ -358,13 +386,27 @@ export type TranslationKey =
   | 'tile.upload.form.uploadLabel'
   | 'tile.upload.form.uploadBtnLabel'
   | 'tile.upload.form.uploadPlaceholder'
+  | 'tile.upload.form.tileName.label'
+  | 'tile.upload.form.tileName.placeholder'
+  | 'tile.upload.form.redirectURL.label'
+  | 'tile.upload.form.redirectURL.placeholder'
+  | 'tile.upload.form.titleColor.label'
+  | 'tile.upload.form.subHeader.label'
+  | 'tile.upload.form.subHeader.placeholder'
+  | 'tile.upload.form.tileDescription.label'
+  | 'tile.upload.form.tileDescription.placeholder'
+  | 'tile.upload.form.titleDescriptionColor.label'
   | 'tile.upload.form.errorName.maxFileSize'
   | 'tile.upload.form.errorName.supportedExtension'
   | 'tile.upload.form.errorName.invalidFile'
   | 'tile.upload.previewHeading'
   | 'tile.upload.previewDescription'
+  | 'tile.upload.dummyText'
+  | 'tile.upload.defaultHeader'
+  | 'tile.upload.tilePreviewDescription'
   | 'tile.listingHeading'
   | 'tile.listingDescription'
+  | 'tile.searchPlaceholder'
   | 'tile.tabs.allTiles'
   | 'tile.tabs.pendingTiles'
   | 'tile.tabs.inactiveTiles'
@@ -417,6 +459,8 @@ export type TranslationKey =
   | 'accountSetting.section.password.heading'
   | 'accountSetting.section.password.description'
   | 'accountSetting.form.maxSocialLinks'
+  | 'accountSetting.form.saveBtn'
+  | 'accountSetting.form.resetBtn'
   | 'accountSetting.form.email.label'
   | 'accountSetting.form.email.placeholder'
   | 'accountSetting.form.email.error.required'

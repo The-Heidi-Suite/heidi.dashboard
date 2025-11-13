@@ -12,6 +12,7 @@ import { Form } from '@/components/ui/form';
 import { USER_ROLE_MAP } from '@/lib/constant';
 import { saveDataInCookie } from '@/lib/cookieStorage';
 import SendVerificationLink from '@/pages/SignIn/SendVerificationLink';
+import ROUTES from '@/route/routesConstant';
 import { LoginForm, loginSchema } from '@/schema/login';
 import {
   CheckboxField,
@@ -59,7 +60,7 @@ function SignIn() {
           role: USER_ROLE_MAP.SUPER_ADMIN,
         });
         toast.success(signedInResponse.message);
-        navigate('/tiles/listing');
+        navigate(`${ROUTES.Tiles}/${ROUTES.TileListing}`);
       } else {
         toast.error(signedInResponse.error);
       }

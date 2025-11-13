@@ -7,11 +7,11 @@
   "usernameOrEmail": "أدخل بريدك الإلكتروني",
   "password": "كلمة المرور",
   "pleaseEnterPassword": "يرجى إدخال كلمة المرور",
-  "rememberMe": "تذكرني",
+  "rememberMe": "تذكر كلمة المرور",
   "forgotYourPassword": "هل نسيت كلمة المرور؟",
   "resetPassword": "إعادة تعيين كلمة المرور الخاصة بك",
   "signIn": "تسجيل الدخول",
-  "notMember": "لست عضوا؟",
+  "notMember": "لا تملك حسابًا بعد؟",
   "register": "تسجيل",
   "signInHelp": "مساعدة؟",
   "invalidMail": "أدخل بريدًا إلكترونيًا صالحًا",
@@ -37,10 +37,10 @@
       "listing": "قائمة المربعات"
     },
     "accounts": {
-      "title": "الحسابات"
+      "title": "إعدادات الحساب"
     },
     "cityAdmin": {
-      "title": "مدير المدينة"
+      "title": "إدارة المستخدمين"
     }
   },
   "createAccount": "أنشئ حسابك الجديد",
@@ -52,6 +52,28 @@
         "uploadLabel": "تحميل الصورة",
         "uploadBtnLabel": "اختر الصورة",
         "uploadPlaceholder": "اسحب وأفلت أو انقر للتحميل",
+        "tileName": {
+          "label": "اسم المربع",
+          "placeholder": "أدخل اسم المربع"
+        },
+        "redirectURL": {
+          "label": "رابط إعادة التوجيه",
+          "placeholder": "أدخل رابط إعادة التوجيه"
+        },
+        "titleColor": {
+          "label": "لون العنوان"
+        },
+        "subHeader": {
+          "label": "العنوان الفرعي",
+          "placeholder": "أدخل العنوان الفرعي"
+        },
+        "tileDescription": {
+          "label": "وصف المربع",
+          "placeholder": "أدخل وصف المربع"
+        },
+        "titleDescriptionColor": {
+          "label": "لون وصف العنوان"
+        },
         "errorName": {
           "maxFileSize": "يجب ألا يتجاوز حجم الملف 1 ميغابايت",
           "supportedExtension": "تم تحديد ملف غير مدعوم، التنسيقات المدعومة هي:",
@@ -59,10 +81,14 @@
         }
       },
       "previewHeading": "معاينة",
-      "previewDescription": "معاينة المربع هنا"
+      "previewDescription": "معاينة المربع هنا",
+      "dummyText": "اسم المربع التجريبي",
+      "defaultHeader": "العنوان الفرعي الافتراضي",
+      "tilePreviewDescription": "نص وصف تجريبي لتوضيح كيفية ظهور وصف المربع داخل معاينة المربع. هذا النص يهدف إلى أن يكون طويلاً بما يكفي لاختبار التعامل مع الفائض والتأكد من أنه يعرض بشكل صحيح داخل المنطقة المخصصة لمكون المربع."
     },
     "listingHeading": "قائمة المربعات",
     "listingDescription": "قائمة بجميع المربعات المسجلة",
+    "searchPlaceholder": "بحث",
     "tabs": {
       "allTiles": "جميع المربعات",
       "pendingTiles": "قيد الانتظار",
@@ -150,6 +176,8 @@
     },
     "form": {
       "maxSocialLinks": "يمكنك إضافة 3 روابط اجتماعية كحد أقصى",
+      "saveBtn": "حفظ التغييرات",
+      "resetBtn": "إعادة تعيين",
       "email": {
         "label": "البريد الإلكتروني",
         "placeholder": "أدخل بريدك الإلكتروني",

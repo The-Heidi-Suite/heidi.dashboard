@@ -148,7 +148,8 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
 
               <div className="flex gap-5 flex-col md:flex-row justify-center pt-4 items-center">
                 <Button type="submit" className="w-52">
-                  <SaveAll className="size-7" /> Save
+                  <SaveAll className="size-7" />{' '}
+                  {t('accountSetting.form.saveBtn')}
                 </Button>
                 <Button
                   type="reset"
@@ -156,7 +157,7 @@ function PersonalInfoForm({ profileData, loading }: PersonalInfoFormProps) {
                   variant="outline"
                   onClick={() => form.reset()}
                 >
-                  <RotateCcw /> Reset
+                  <RotateCcw /> {t('accountSetting.form.resetBtn')}
                 </Button>
               </div>
             </form>

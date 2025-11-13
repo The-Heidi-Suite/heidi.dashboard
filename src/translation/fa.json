@@ -7,11 +7,11 @@
   "usernameOrEmail": "ایمیل خود را وارد کنید",
   "password": "رمز عبور",
   "pleaseEnterPassword": "لطفاً رمز عبور را وارد کنید",
-  "rememberMe": "مرا به خاطر بسپار",
+  "rememberMe": "به خاطر سپردن رمز عبور",
   "forgotYourPassword": "رمز عبور خود را فراموش کرده‌اید؟",
   "resetPassword": "بازیابی رمز عبور",
   "signIn": "ورود",
-  "notMember": "عضو نیستید؟",
+  "notMember": "حساب کاربری ندارید؟",
   "register": "ثبت نام",
   "signInHelp": "کمک؟",
   "invalidMail": "یک ایمیل معتبر وارد کنید",
@@ -37,10 +37,10 @@
       "listing": "فهرست کاشی‌ها"
     },
     "accounts": {
-      "title": "حساب‌ها"
+      "title": "تنظیمات حساب کاربری"
     },
     "cityAdmin": {
-      "title": "مدیر شهر"
+      "title": "مدیریت کاربران"
     }
   },
   "createAccount": "ایجاد حساب جدید",
@@ -52,6 +52,28 @@
         "uploadLabel": "آپلود تصویر",
         "uploadBtnLabel": "انتخاب تصویر",
         "uploadPlaceholder": "برای آپلود، بکشید و رها کنید یا کلیک کنید",
+        "tileName": {
+          "label": "نام کاشی",
+          "placeholder": "نام کاشی خود را وارد کنید"
+        },
+        "redirectURL": {
+          "label": "آدرس بازگشت",
+          "placeholder": "آدرس بازگشت خود را وارد کنید"
+        },
+        "titleColor": {
+          "label": "رنگ عنوان کاشی"
+        },
+        "subHeader": {
+          "label": "زیرعنوان",
+          "placeholder": "زیرعنوان خود را وارد کنید"
+        },
+        "tileDescription": {
+          "label": "توضیحات کاشی",
+          "placeholder": "توضیحات کاشی خود را وارد کنید"
+        },
+        "titleDescriptionColor": {
+          "label": "رنگ توضیحات کاشی"
+        },
         "errorName": {
           "maxFileSize": "حداکثر اندازه فایل باید ۱ مگابایت باشد",
           "supportedExtension": "فرمت فایل پشتیبانی نمی‌شود، فرمت‌های پشتیبانی شده عبارتند از:",
@@ -59,10 +81,14 @@
         }
       },
       "previewHeading": "پیش‌نمایش",
-      "previewDescription": "کاشی خود را اینجا مشاهده کنید"
+      "previewDescription": "کاشی خود را اینجا مشاهده کنید",
+      "dummyText": "نام کاشی نمونه",
+      "defaultHeader": "زیرعنوان پیش‌فرض",
+      "tilePreviewDescription": "متن توضیحات نمونه برای نشان دادن نحوه نمایش توضیحات کاشی در پیش‌نمایش کاشی. این متن به اندازه کافی طولانی است تا سرریز شدن را آزمایش کند و اطمینان حاصل شود که به درستی در محدوده اختصاص داده شده به مؤلفه کاشی نمایش داده می‌شود."
     },
     "listingHeading": "فهرست کاشی‌ها",
     "listingDescription": "فهرست همه کاشی‌های ثبت‌شده",
+    "searchPlaceholder": "جستجو",
     "tabs": {
       "allTiles": "همه کاشی‌ها",
       "pendingTiles": "در انتظار بررسی",
@@ -150,6 +176,8 @@
     },
     "form": {
       "maxSocialLinks": "حداکثر ۳ لینک اجتماعی می‌توانید اضافه کنید",
+      "saveBtn": "ذخیره تغییرات",
+      "resetBtn": "بازنشانی",
       "email": {
         "label": "ایمیل",
         "placeholder": "ایمیل خود را وارد کنید",

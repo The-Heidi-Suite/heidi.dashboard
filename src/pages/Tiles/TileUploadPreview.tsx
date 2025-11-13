@@ -20,7 +20,7 @@ type TileUploadPreviewProps = {
 };
 
 const TileUploadPreview = ({
-  tileName = 'Dummy Text',
+  tileName,
   titleColor,
   tileIcon,
   subHeader,
@@ -29,6 +29,10 @@ const TileUploadPreview = ({
   tileImage,
 }: TileUploadPreviewProps) => {
   const { t } = useTypedTranslation();
+  const displayTileName = tileName || t('tile.upload.dummyText');
+  const displaySubHeader = subHeader || t('tile.upload.defaultHeader');
+  const displayDescription =
+    tileDescription || t('tile.upload.tilePreviewDescription');
   return (
     <Card className="w-full max-h-max">
       <CardHeader>
@@ -54,7 +58,7 @@ const TileUploadPreview = ({
                   className="size-5 object-cover"
                 />
               )}
-              {tileName || 'Dummy Text'}
+              {displayTileName}
             </div>
             {/* TODO: Fix this Description CSS */}
             <div
@@ -63,9 +67,7 @@ const TileUploadPreview = ({
                 backgroundColor: tileDescriptionColor || '#3B82F6',
               }}
             >
-              <h5 className="font-semibold text-base">
-                {subHeader || 'Default Header'}
-              </h5>
+              <h5 className="font-semibold text-base">{displaySubHeader}</h5>
               <p
                 className="text-sm"
                 style={{
@@ -80,9 +82,7 @@ const TileUploadPreview = ({
                   maxHeight: '9em',
                 }}
                 dangerouslySetInnerHTML={{
-                  __html:
-                    tileDescription ||
-                    `Dummy description text to demonstrate how the tile description will appear within the tile preview. This text is intended to be sufficiently long to test the overflow handling and ensure that it displays correctly within the designated area of the tile component.`,
+                  __html: displayDescription,
                 }}
               />
             </div>
