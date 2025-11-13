@@ -3,6 +3,7 @@
   "toggleTheme": "Змінити тему",
   "signIntoAccount": "Увійдіть у свій обліковий запис",
   "email": "Електронна пошта",
+  "emailOrUsernameLabel": "Електронна пошта або ім’я користувача",
   "usernameOrEmail": "Введіть свою електронну пошту",
   "password": "Пароль",
   "pleaseEnterPassword": "Будь ласка, введіть пароль",

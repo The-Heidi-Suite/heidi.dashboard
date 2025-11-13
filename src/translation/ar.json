@@ -3,6 +3,7 @@
   "toggleTheme": "تبديل النمط",
   "signIntoAccount": "تسجيل الدخول إلى حسابك",
   "email": "البريد الإلكتروني",
+  "emailOrUsernameLabel": "البريد الإلكتروني أو اسم المستخدم",
   "usernameOrEmail": "أدخل بريدك الإلكتروني",
   "password": "كلمة المرور",
   "pleaseEnterPassword": "يرجى إدخال كلمة المرور",

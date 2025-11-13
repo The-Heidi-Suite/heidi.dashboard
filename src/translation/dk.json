@@ -3,6 +3,7 @@
   "toggleTheme": "Skift tema",
   "signIntoAccount": "Log ind på din konto",
   "email": "E-mail",
+  "emailOrUsernameLabel": "E-mail eller brugernavn",
   "usernameOrEmail": "Indtast din e-mail",
   "password": "Adgangskode",
   "pleaseEnterPassword": "Indtast venligst adgangskode",

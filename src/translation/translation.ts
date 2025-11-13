@@ -6,6 +6,7 @@ export interface TranslationSchema {
   toggleTheme: string;
   signIntoAccount: string;
   email: string;
+  emailOrUsernameLabel: string;
   usernameOrEmail: string;
   password: string;
   pleaseEnterPassword: string;
@@ -347,6 +348,7 @@ export type TranslationKey =
   | 'toggleTheme'
   | 'signIntoAccount'
   | 'email'
+  | 'emailOrUsernameLabel'
   | 'usernameOrEmail'
   | 'password'
   | 'pleaseEnterPassword'

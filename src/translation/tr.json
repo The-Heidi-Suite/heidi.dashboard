@@ -3,6 +3,7 @@
   "toggleTheme": "Temayı Değiştir",
   "signIntoAccount": "Hesabınıza giriş yapın",
   "email": "E-Posta",
+  "emailOrUsernameLabel": "E-posta veya Kullanıcı Adı",
   "usernameOrEmail": "E-postanızı girin",
   "password": "Şifre",
   "pleaseEnterPassword": "Lütfen şifre girin",

@@ -3,6 +3,7 @@
   "toggleTheme": "Bytt tema",
   "signIntoAccount": "Logg inn på kontoen din",
   "email": "E-post",
+  "emailOrUsernameLabel": "E-post eller brukernavn",
   "usernameOrEmail": "Skriv inn e-posten din",
   "password": "Passord",
   "pleaseEnterPassword": "Vennligst skriv inn passord",

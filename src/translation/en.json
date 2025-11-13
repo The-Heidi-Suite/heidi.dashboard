@@ -3,6 +3,7 @@
   "toggleTheme": "Toggle Theme",
   "signIntoAccount": "Sign in to your account",
   "email": "E-Mail",
+  "emailOrUsernameLabel": "E-mail or Username",
   "usernameOrEmail": "Enter your E-mail",
   "password": "Password",
   "pleaseEnterPassword": "Please enter password",

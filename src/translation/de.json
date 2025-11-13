@@ -3,6 +3,7 @@
   "toggleTheme": "Theme Toggle",
   "signIntoAccount": "Bei deinem Konto anmelden",
   "email": "E-Mail",
+  "emailOrUsernameLabel": "Email Adresse or Username",
   "usernameOrEmail": "Email Adresse",
   "password": "Passwort",
   "pleaseEnterPassword": "Bitte Passwort eingeben",

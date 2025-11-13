@@ -3,6 +3,7 @@
   "toggleTheme": "Переключить тему",
   "signIntoAccount": "Войдите в свой аккаунт",
   "email": "Эл. почта",
+  "emailOrUsernameLabel": "Эл. почта или имя пользователя",
   "usernameOrEmail": "Введите вашу эл. почту",
   "password": "Пароль",
   "pleaseEnterPassword": "Пожалуйста, введите пароль",

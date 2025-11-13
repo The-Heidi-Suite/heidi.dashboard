@@ -78,7 +78,7 @@ function SignIn() {
           <TextInputField
             control={form.control}
             name="email"
-            label={'E-mail or Username'}
+            label={t('emailOrUsernameLabel')}
             placeholder={t('usernameOrEmail')}
             maxLength={50}
             minLength={3}
