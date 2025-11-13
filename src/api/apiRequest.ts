@@ -70,22 +70,24 @@ axios.interceptors.response.use(
         sessionStorage.clear();
         return Promise.reject(error);
       }
-      const res = await axios.post<ApiSuccessResponse<{ newToken: string }>>(
-        API_URLS.RefreshToken,
-        { refreshToken }
-      );
-      const newToken = res?.data?.data?.newToken;
+      const res = await axios.post<
+        ApiSuccessResponse<{ accessToken: string; refreshToken: string }>
+      >(API_URLS.RefreshToken, { refreshToken });
+      const newToken = res?.data?.data;
       if (newToken) {
         // Retry the failed request with the new token
         originalRequest._retry = true;
-        originalRequest.headers.Authorization = `Bearer ${newToken}`;
-        saveDataInCookie(COOKIES_KEY_NAME.ACCESS_TOKEN, newToken);
+        originalRequest.headers.Authorization = `Bearer ${newToken.accessToken}`;
+        saveDataInCookie(COOKIES_KEY_NAME.ACCESS_TOKEN, newToken.accessToken);
+        saveDataInCookie(COOKIES_KEY_NAME.REFRESH_TOKEN, newToken.refreshToken);
         isRefreshing = false;
         return axios(originalRequest);
       } else {
         console.warn('Token refresh failed, logging out user.');
         localStorage.clear();
         sessionStorage.clear();
+        cookieStore.delete(COOKIES_KEY_NAME.ACCESS_TOKEN);
+        cookieStore.delete(COOKIES_KEY_NAME.REFRESH_TOKEN);
         window.location.href = '/login';
       }
     }

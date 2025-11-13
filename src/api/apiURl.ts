@@ -4,6 +4,8 @@ const API_URLS = {
   RefreshToken: 'auth/refresh',
   ValidateResetPasswordToken: 'auth/validate',
   Register: 'users/register',
+  Account: 'users',
+  Profile: 'users/profile/me',
 } as const;
 
 export default API_URLS;

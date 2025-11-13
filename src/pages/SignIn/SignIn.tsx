@@ -52,7 +52,6 @@ function SignIn() {
       if (signedInResponse.success) {
         const token = signedInResponse.data.accessToken;
         const refreshToken = signedInResponse.data.refreshToken;
-        // const expiresIn = signedInResponse.data.expiresIn;
         await saveDataInCookie('refreshToken', refreshToken);
         await saveDataInCookie('accessToken', token);
         dispatchUserData({

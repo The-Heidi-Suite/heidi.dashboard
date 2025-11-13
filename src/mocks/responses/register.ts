@@ -9,7 +9,7 @@ const RegisterSuccessResponse: SuccessResponse = {
   data: {
     id: '123e4567-e89b-12d3-a456-426614174000',
     email: 'user@example.com',
-    username: 'johndoe',
+    username: 'johnDoe',
     firstName: 'John',
     lastName: 'Doe',
     role: USER_ROLE_MAP.SUPER_ADMIN,

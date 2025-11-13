@@ -38,6 +38,7 @@ export const handlers = [
   fetchApi(LogIn, 'post', SuccessUserResponse, 'success'),
   fetchApi('signin/error', 'post', ErrorUserResponse, 'error'),
   fetchApi(Register, 'post', RegisterSuccessResponse, 'success'),
+  fetchApi('users/:id', 'patch', RegisterSuccessResponse, 'success'),
   fetchApi('create-admin', 'post', CreateAdminResponse, 'success'),
   fetchApi('register/error', 'post', RegisterErrorResponse, 'error'),
   fetchApi('tileListings', 'get', TileListingsResponse, 'success', 1500),
@@ -85,7 +86,7 @@ export const handlers = [
     1500
   ),
   fetchApi(LogOut, 'post', LogoutUserResponse, 'success'),
-  fetchApi('profile', 'get', ProfileSuccessData, 'success', 1000),
+  fetchApi('profile/me', 'get', ProfileSuccessData, 'success', 1000),
   // fetchApi('profile', 'get', ErrorUserResponse, 'error', 1000, 401),
   fetchApi(RefreshToken, 'get', RefreshSuccess, 'success'),
   fetchApi('profile', 'put', UpdateProfileSuccess, 'success', 1000),

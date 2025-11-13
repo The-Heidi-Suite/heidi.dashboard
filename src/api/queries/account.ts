@@ -3,9 +3,9 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import {
   deleteAccount,
   getUserProfile,
+  patchUser,
   updateUserMetadata,
   updateUserPassword,
-  updateUserProfile,
 } from '@/api/endpoints';
 import i18n from '@/i18n';
 
@@ -20,7 +20,7 @@ export const useProfileDataMutation = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: updateUserProfile,
+    mutationFn: patchUser,
     onSuccess: (data) => {
       if (data.success) {
         queryClient.invalidateQueries({ queryKey: ['userProfile'] });

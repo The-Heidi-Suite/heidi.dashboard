@@ -1,5 +1,5 @@
 import apiRequest from '@/api/apiRequest';
-
+import API_URLS from '@/api/apiURl';
 export type UserProfileData = Partial<{
   name: string;
   username: string;
@@ -22,7 +22,7 @@ export type GetUserProfileResponse = UserProfileData & {
 
 export const getUserProfile = async () => {
   return await apiRequest<GetUserProfileResponse>({
-    url: 'profile',
+    url: API_URLS.Profile,
   });
 };
 
