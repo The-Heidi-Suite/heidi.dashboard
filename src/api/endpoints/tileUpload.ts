@@ -1,4 +1,5 @@
 import apiRequest from '@/api/apiRequest';
+import API_URLS from '@/api/apiURl';
 
 export type TileUploadPayload = {
   tileName: string;
@@ -50,8 +51,8 @@ export const editTileUpload = async (
   });
 
   return await apiRequest<TileUploadResponse>({
-    url: `tileUploads/${tileId}`,
-    method: 'PUT',
+    url: API_URLS.Tiles + `/${tileId}`,
+    method: 'PATCH',
     data: formData,
   });
 };

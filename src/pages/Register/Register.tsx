@@ -9,6 +9,7 @@ import { toast } from 'sonner';
 import { registerUser } from '@/api/endpoints/register';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
+import ROUTES from '@/route/routesConstant';
 import { RegisterForm, registerSchema } from '@/schema/register';
 import {
   CheckboxField,
@@ -51,7 +52,7 @@ function Register() {
           ...registerResponse.data,
         });
         toast.success(registerResponse.message);
-        navigate('/login');
+        navigate(ROUTES.LogIn);
       } else {
         toast.error(registerResponse.error);
       }

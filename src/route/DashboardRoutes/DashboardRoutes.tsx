@@ -3,6 +3,7 @@ import { lazy } from 'react';
 import { Route } from 'react-router-dom';
 
 import ProtectedRoute from '@/route/ProtectedRoute';
+import ROUTES from '@/route/routesConstant';
 
 import { TilesRoutes } from './TilesRoute';
 
@@ -25,12 +26,12 @@ const DashboardRoutes = (
           />
         }
       >
-        <Route path="accounts" element={<AccountsPage />} />
+        <Route path={ROUTES.Accounts} element={<AccountsPage />} />
       </Route>
 
       {/* City Administrator */}
       <Route element={<ProtectedRoute allowedRoles={['SUPER_ADMIN']} />}>
-        <Route path="city-administrator" element={<CityAdminPage />} />
+        <Route path={ROUTES.CityAdmin} element={<CityAdminPage />} />
       </Route>
     </Route>
   </Route>

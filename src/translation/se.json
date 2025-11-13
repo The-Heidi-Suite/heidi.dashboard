@@ -7,11 +7,11 @@
   "usernameOrEmail": "Ange din e-postadress",
   "password": "Lösenord",
   "pleaseEnterPassword": "Ange lösenord",
-  "rememberMe": "Kom ihåg mig",
+  "rememberMe": "Kom ihåg lösenord",
   "forgotYourPassword": "Glömt ditt lösenord?",
   "resetPassword": "Återställ ditt lösenord",
   "signIn": "Logga in",
-  "notMember": "Inte medlem?",
+  "notMember": "Inget konto än?",
   "register": "Registrera dig",
   "signInHelp": "Hjälp?",
   "invalidMail": "Ange en giltig e-postadress",
@@ -37,10 +37,10 @@
       "listing": "Rutlista"
     },
     "accounts": {
-      "title": "Konton"
+      "title": "Kontoinställningar"
     },
     "cityAdmin": {
-      "title": "Stadsadministratör"
+      "title": "Användaradministration"
     }
   },
   "createAccount": "Skapa ditt nya konto",
@@ -52,6 +52,28 @@
         "uploadLabel": "Ladda upp bild",
         "uploadBtnLabel": "Välj bild",
         "uploadPlaceholder": "Dra och släpp eller klicka för att ladda upp",
+        "tileName": {
+          "label": "Ruttnamn",
+          "placeholder": "Ange ruttnamn"
+        },
+        "redirectURL": {
+          "label": "Omdirigerings-URL",
+          "placeholder": "Ange omdirigerings-URL"
+        },
+        "titleColor": {
+          "label": "Rutfärg"
+        },
+        "subHeader": {
+          "label": "Under rubrik",
+          "placeholder": "Ange under rubrik"
+        },
+        "tileDescription": {
+          "label": "Beskrivning",
+          "placeholder": "Ange din beskrivning här"
+        },
+        "titleDescriptionColor": {
+          "label": "Rutfärgbeskrivning"
+        },
         "errorName": {
           "maxFileSize": "Filstorleken får vara högst 1 MB",
           "supportedExtension": "Fel fil vald, tillåtna format är:",
@@ -59,10 +81,16 @@
         }
       },
       "previewHeading": "Förhandsvisning",
-      "previewDescription": "Förhandsgranska din ruta här"
+      "previewDescription": "Förhandsgranska din ruta här",
+      "dummyText": "Exempel på ruttnamn",
+      "defaultHeader": "Standard under rubrik",
+      "tilePreviewDescription": "Exempel beskrivningstext för att illustrera hur rutbeskrivningen visas inom rutförhandsvisningen. Denna text är utformad för att vara tillräckligt lång för att testa överflöd och säkerställa att den visas korrekt inom det område som tilldelats rutkomponenten."
     },
     "listingHeading": "Rutlista",
     "listingDescription": "Lista över alla registrerade rutor",
+    "searchPlaceholder": "Sök",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "tabs": {
       "allTiles": "Alla rutor",
       "pendingTiles": "Väntande",
@@ -150,6 +178,8 @@
     },
     "form": {
       "maxSocialLinks": "Du kan lägga till högst 3 sociala länkar",
+      "saveBtn": "Spara ändringar",
+      "resetBtn": "Återställ",
       "email": {
         "label": "E-post",
         "placeholder": "Ange din e-postadress",
@@ -173,7 +203,7 @@
         "placeholder": "Ange ditt lösenord",
         "error": {
           "required": "Ange ett giltigt lösenord",
-          "minContent": "Lösenord måste innehålla minst 3 tecken",
+          "minContent": "Lösenord måste innehålla minst 8 tecken",
           "maxContent": "Lösenord får innehålla högst 50 tecken"
         }
       },
@@ -182,7 +212,7 @@
         "placeholder": "Ange ditt nya lösenord",
         "error": {
           "required": "Ange ett giltigt lösenord",
-          "minContent": "Lösenordet måste innehålla minst 6 tecken",
+          "minContent": "Lösenordet måste innehålla minst 8 tecken",
           "maxContent": "Lösenordet får innehålla högst 50 tecken"
         }
       },
@@ -191,7 +221,7 @@
         "placeholder": "Ange ditt lösenord igen",
         "error": {
           "required": "Ange ett giltigt lösenord",
-          "minContent": "Lösenord måste innehålla minst 3 tecken",
+          "minContent": "Lösenord måste innehålla minst 8 tecken",
           "maxContent": "Lösenord får innehålla högst 50 tecken",
           "passwordMismatch": "Lösenorden matchar inte"
         }

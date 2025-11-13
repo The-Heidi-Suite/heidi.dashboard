@@ -28,7 +28,7 @@ const tr = loadTranslation(rawTr);
 const ru = loadTranslation(rawRu);
 const uk = loadTranslation(rawUk);
 
-const fallbackLng = 'en';
+const fallbackLng = 'de';
 const defaultLanguage = getDataFromBrowserStorage('i18nextLng') || fallbackLng;
 const resources: Record<SupportedLanguage, { translation: TranslationSchema }> =
   {

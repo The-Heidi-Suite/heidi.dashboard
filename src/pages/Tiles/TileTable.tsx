@@ -78,9 +78,9 @@ function TileTable({ tableRows, loading }: TileTableProps) {
                 </div>
               </TableCell>
               <TableCell className="text-center">
-                {rowData.isActive ? 'Active' : 'InActive'}
+                {rowData.isActive ? t('tile.active') : t('tile.inactive')}
               </TableCell>
-              <TableCell className="text-center max-w-8 ">
+              <TableCell className="text-center max-w-8">
                 <span
                   className="truncate block overflow-hidden text-ellipsis whitespace-nowrap"
                   dangerouslySetInnerHTML={{ __html: rowData.description }}

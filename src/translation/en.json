@@ -7,11 +7,11 @@
   "usernameOrEmail": "Enter your E-mail",
   "password": "Password",
   "pleaseEnterPassword": "Please enter password",
-  "rememberMe": "Remember Me",
+  "rememberMe": "Remember Password",
   "forgotYourPassword": "Forgot your password?",
   "resetPassword": "Reset Your Password",
   "signIn": "Sign In",
-  "notMember": "Not a member?",
+  "notMember": "No account yet?",
   "register": "Register",
   "signInHelp": "Help ?",
   "invalidMail": "Enter a valid email",
@@ -37,10 +37,10 @@
       "listing": "Tile Listing"
     },
     "accounts": {
-      "title": "Accounts"
+      "title": "Account Setting"
     },
     "cityAdmin": {
-      "title": "City Administrator"
+      "title": "User Management"
     }
   },
   "createAccount": "Create your new account",
@@ -52,6 +52,28 @@
         "uploadLabel": "Upload Image",
         "uploadBtnLabel": "Select Image",
         "uploadPlaceholder": "Drag & Drop or click to upload",
+        "tileName": {
+          "label": "Tile Name",
+          "placeholder": "Enter tile name"
+        },
+        "redirectURL": {
+          "label": "Redirect URL",
+          "placeholder": "Enter Redirect URL"
+        },
+        "titleColor": {
+          "label": "Title Color"
+        },
+        "subHeader": {
+          "label": "Subheader",
+          "placeholder": "Enter Sub Header"
+        },
+        "tileDescription": {
+          "label": "Description",
+          "placeholder": "Enter your HTML content"
+        },
+        "titleDescriptionColor": {
+          "label": "Tile Description Color"
+        },
         "errorName": {
           "maxFileSize": "File size should be max 1 MB",
           "supportedExtension": "Unsupported file selected, Supported formats are:",
@@ -59,10 +81,16 @@
         }
       },
       "previewHeading": "Preview",
-      "previewDescription": "Preview your tile here"
+      "previewDescription": "Preview your tile here",
+      "dummyText": "Dummy Text",
+      "defaultHeader": "Default Header",
+      "tilePreviewDescription": "Dummy description text to demonstrate how the tile description will appear within the tile preview. This text is intended to be sufficiently long to test the overflow handling and ensure that it displays correctly within the designated area of the tile component."
     },
     "listingHeading": "Tile Listing",
     "listingDescription": "List of all the tiles in registered",
+    "searchPlaceholder": "Search",
+    "active": "Active",
+    "inactive": "Inactive",
     "tabs": {
       "allTiles": "All Tiles",
       "pendingTiles": "Pending",
@@ -150,6 +178,8 @@
     },
     "form": {
       "maxSocialLinks": "You can add a maximum of 3 social links",
+      "saveBtn": "Save",
+      "resetBtn": "Reset",
       "email": {
         "label": "Email",
         "placeholder": "Enter your email",
@@ -173,7 +203,7 @@
         "placeholder": "Enter your password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must contain at least 3 characters",
+          "minContent": "Password must contain at least 8 characters",
           "maxContent": "Password must contain at most 50 characters"
         }
       },
@@ -182,7 +212,7 @@
         "placeholder": "Enter your new password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must be at least 6 characters",
+          "minContent": "Password must be at least 8 characters",
           "maxContent": "Password must be at most 50 characters"
         }
       },
@@ -191,7 +221,7 @@
         "placeholder": "Enter your password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must contain at least 3 characters",
+          "minContent": "Password must contain at least 8 characters",
           "maxContent": "Password must contain at most 50 characters",
           "passwordMismatch": "Password does not match"
         }

@@ -7,12 +7,12 @@
   "usernameOrEmail": "Email Adresse",
   "password": "Passwort",
   "pleaseEnterPassword": "Bitte Passwort eingeben",
-  "rememberMe": "Erinnere dich",
+  "rememberMe": "Passwort merken",
   "forgotYourPassword": "Hast du dein Passwort vergessen?",
   "resetPassword": "Setze dein Passwort zurück",
   "signIn": "Anmelden",
-  "notMember": "Noch keinen Konto ?",
-  "register": "registrieren",
+  "notMember": "Noch kein Konto?",
+  "register": "Registrieren",
   "signInHelp": "Hilfe ?",
   "invalidMail": "Geben Sie eine gültige E-Mail ein",
   "invalidMailOrUsername": "Geben Sie eine gültige E-Mail oder einen gültigen Benutzernamen ein",
@@ -37,7 +37,7 @@
       "listing": "Kachelliste"
     },
     "accounts": {
-      "title": "Konten"
+      "title": "Kontoeinstellungen"
     },
     "cityAdmin": {
       "title": "Stadtverwaltung"
@@ -52,6 +52,28 @@
         "uploadLabel": "Bild hochladen",
         "uploadBtnLabel": "Bild auswählen",
         "uploadPlaceholder": "Per Drag & Drop hochladen oder klicken",
+        "tileName": {
+          "label": "Kachelname",
+          "placeholder": "Geben Sie den Kachelnamen ein"
+        },
+        "redirectURL": {
+          "label": "Weiterleitungs-URL",
+          "placeholder": "Geben Sie die Weiterleitungs-URL ein"
+        },
+        "titleColor": {
+          "label": "Kachelfarbe"
+        },
+        "subHeader": {
+          "label": "Unterüberschrift",
+          "placeholder": "Geben Sie die Unterüberschrift ein"
+        },
+        "tileDescription": {
+          "label": "Beschreibung",
+          "placeholder": "Geben Sie Ihre HTML-Inhalte ein"
+        },
+        "titleDescriptionColor": {
+          "label": "Kachelbeschreibungsfarbe"
+        },
         "errorName": {
           "maxFileSize": "Die Dateigröße darf maximal 1 MB betragen",
           "supportedExtension": "Nicht unterstützte Datei ausgewählt, unterstützte Formate sind:",
@@ -59,10 +81,16 @@
         }
       },
       "previewHeading": "Vorschau",
-      "previewDescription": "Vorschau deiner Kachel hier"
+      "previewDescription": "Vorschau deiner Kachel hier",
+      "dummyText": "Beispiel Kachelname",
+      "defaultHeader": "Standard Unterüberschrift",
+      "tilePreviewDescription": "Beispiel-Beschreibungstext, um zu veranschaulichen, wie die Kachelbeschreibung innerhalb der Kachelvorschau angezeigt wird. Dieser Text soll lang genug sein, um das Überlaufen zu testen und sicherzustellen, dass er korrekt innerhalb des für die Kachelkomponente vorgesehenen Bereichs angezeigt wird."
     },
     "listingHeading": "Kachelübersicht",
     "listingDescription": "Liste aller registrierten Kacheln",
+    "searchPlaceholder": "Suchen",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "tabs": {
       "allTiles": "Alle Kacheln",
       "pendingTiles": "Ausstehend",
@@ -88,7 +116,7 @@
   "formMessages": {
     "uploadField": {
       "label": "Bild hochladen",
-      "btnLabel": "Bild auswahlen",
+      "btnLabel": "Bild auswählen",
       "placeholder": "Per Drag & Drop hochladen oder klicken",
       "errorName": {
         "maxFileSize": "Die Dateigröße darf maximal ",
@@ -151,6 +179,8 @@
 
     "form": {
       "maxSocialLinks": "Sie können maximal 3 Social-Links hinzufügen",
+      "saveBtn": "Änderungen speichern",
+      "resetBtn": "Zurücksetzen",
       "email": {
         "label": "E-Mail",
         "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
@@ -174,7 +204,7 @@
         "placeholder": "Geben Sie Ihr Passwort ein",
         "error": {
           "required": "Geben Sie ein gültiges Passwort ein",
-          "minContent": "Das Passwort muss mindestens 3 Zeichen enthalten",
+          "minContent": "Das Passwort muss mindestens 8 Zeichen enthalten",
           "maxContent": "Das Passwort darf höchstens 50 Zeichen enthalten"
         }
       },
@@ -183,7 +213,7 @@
         "placeholder": "Geben Sie Ihr neues Passwort ein",
         "error": {
           "required": "Geben Sie ein gültiges Passwort ein",
-          "minContent": "Das Passwort muss mindestens 6 Zeichen enthalten",
+          "minContent": "Das Passwort muss mindestens 8 Zeichen enthalten",
           "maxContent": "Das Passwort darf höchstens 50 Zeichen enthalten"
         }
       },
@@ -192,7 +222,7 @@
         "placeholder": "Bestätigen Sie Ihr Passwort",
         "error": {
           "required": "Geben Sie ein gültiges Passwort ein",
-          "minContent": "Das Passwort muss mindestens 3 Zeichen enthalten",
+          "minContent": "Das Passwort muss mindestens 8 Zeichen enthalten",
           "maxContent": "Das Passwort darf höchstens 50 Zeichen enthalten",
           "passwordMismatch": "Das Passwort stimmt nicht überein"
         }
@@ -249,8 +279,8 @@
   },
   "registration": {
     "general": {
-      "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
-      "login": "Bitte melden Sie sich hier an.",
+      "alreadyHaveAccount": "Hast Du schon ein Konto?",
+      "login": "Hier anmelden",
       "acceptPolicy": "Ich akzeptiere hiermit die",
       "privacy": "Datenschutzrichtlinie*",
       "and": "und",

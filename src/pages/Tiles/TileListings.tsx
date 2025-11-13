@@ -66,7 +66,7 @@ function TileListings() {
 
           <Input
             type="text"
-            placeholder="Search"
+            placeholder={t('tile.searchPlaceholder')}
             value={searchTerm}
             onChange={({ target: { value } }) => setSearchTerm(value)}
             className="w-full rounded-lg pl-10 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"

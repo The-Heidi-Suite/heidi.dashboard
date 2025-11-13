@@ -81,7 +81,7 @@ function TileUpload() {
       </h1>
       <p className="text-foreground">{t('tile.upload.description')}</p>
 
-      <div className="flex flex-col lg:flex-row gap-4 items-start w-full mt-8">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 w-full mt-8">
         <Card className="w-full">
           <CardHeader>
             <CardTitle>{t('tile.upload.heading')}</CardTitle>
@@ -96,21 +96,21 @@ function TileUpload() {
                 <TextInputField
                   name="tileName"
                   control={form.control}
-                  label="Tile Name"
-                  placeholder="Enter Tile Name"
+                  label={t('tile.upload.form.tileName.label')}
+                  placeholder={t('tile.upload.form.tileName.placeholder')}
                 />
 
                 <TextInputField
                   name="redirectUrl"
                   control={form.control}
-                  label="Redirect URL"
-                  placeholder="Enter Redirect URL"
+                  label={t('tile.upload.form.redirectURL.label')}
+                  placeholder={t('tile.upload.form.redirectURL.placeholder')}
                 />
 
                 <ColorPickerField
                   control={form.control}
                   name="titleColor"
-                  label="Tile Color"
+                  label={t('tile.upload.form.titleColor.label')}
                 />
 
                 <FileUploadField
@@ -122,15 +122,18 @@ function TileUpload() {
                 <TextInputField
                   name="subHeader"
                   control={form.control}
-                  label="Sub Header"
-                  placeholder="Enter Sub Header"
+                  label={t('tile.upload.form.subHeader.label')}
+                  placeholder={t('tile.upload.form.subHeader.label')}
                 />
 
                 <RichTextField
                   name="tileDescription"
                   control={form.control}
-                  label="Description"
-                  placeholder="Enter your HTML content"
+                  label={t('tile.upload.form.tileDescription.label')}
+                  className="h-32 overflow-y-auto"
+                  placeholder={t(
+                    'tile.upload.form.tileDescription.placeholder'
+                  )}
                   required
                 />
 
@@ -138,7 +141,7 @@ function TileUpload() {
                   control={form.control}
                   name="tileDescriptionColor"
                   required
-                  label="Tile Description Color"
+                  label={t('tile.upload.form.titleDescriptionColor.label')}
                 />
 
                 <FileUploadField
@@ -150,7 +153,8 @@ function TileUpload() {
 
                 <div className="flex space-x-2">
                   <Button type="submit" className="flex-1">
-                    <SaveAll className="size-7" /> Save
+                    <SaveAll className="size-7" />{' '}
+                    {t('accountSetting.form.saveBtn')}
                   </Button>
                   {/* TODO: Fix hovering */}
                   <Button

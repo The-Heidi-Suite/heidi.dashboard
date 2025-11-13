@@ -7,11 +7,11 @@
   "usernameOrEmail": "Indtast din e-mail",
   "password": "Adgangskode",
   "pleaseEnterPassword": "Indtast venligst adgangskode",
-  "rememberMe": "Husk mig",
+  "rememberMe": "Husk adgangskode",
   "forgotYourPassword": "Glemt din adgangskode?",
   "resetPassword": "Nulstil din adgangskode",
   "signIn": "Log ind",
-  "notMember": "Ikke medlem?",
+  "notMember": "Ingen konto endnu?",
   "register": "Registrér",
   "signInHelp": "Hjælp?",
   "invalidMail": "Indtast en gyldig e-mail",
@@ -37,10 +37,10 @@
       "listing": "Flise­oversigt"
     },
     "accounts": {
-      "title": "Konti"
+      "title": "Kontoeinstellungen"
     },
     "cityAdmin": {
-      "title": "Byadministrator"
+      "title": "Benutzerverwaltung"
     }
   },
   "createAccount": "Opret din nye konto",
@@ -52,6 +52,28 @@
         "uploadLabel": "Upload billede",
         "uploadBtnLabel": "Vælg billede",
         "uploadPlaceholder": "Træk & slip eller klik for at uploade",
+        "tileName": {
+          "label": "Flise navn",
+          "placeholder": "Indtast flise navn"
+        },
+        "redirectURL": {
+          "label": "Redirect URL",
+          "placeholder": "Indtast Redirect URL"
+        },
+        "titleColor": {
+          "label": "Flise farve"
+        },
+        "subHeader": {
+          "label": "Underoverskrift",
+          "placeholder": "Indtast underoverskrift"
+        },
+        "tileDescription": {
+          "label": "Beskrivelse",
+          "placeholder": "Indtast din HTML-indhold"
+        },
+        "titleDescriptionColor": {
+          "label": "Flise beskrivelse farve"
+        },
         "errorName": {
           "maxFileSize": "Filstørrelse må maksimalt være 1 MB",
           "supportedExtension": "Ukendt filtype valgt, understøttede formater er:",
@@ -59,10 +81,16 @@
         }
       },
       "previewHeading": "Forhåndsvisning",
-      "previewDescription": "Forhåndsvis din flise her"
+      "previewDescription": "Forhåndsvis din flise her",
+      "dummyText": "Eksempel flise navn",
+      "defaultHeader": "Standard underoverskrift",
+      "tilePreviewDescription": "Eksempel beskrivelse tekst for at illustrere, hvordan flise beskrivelsen vises inden for flise forhåndsvisningen. Denne tekst er designet til at være lang nok til at teste overløb og sikre, at den vises korrekt inden for det område, der er tildelt flise komponenten."
     },
     "listingHeading": "Fliseoversigt",
     "listingDescription": "Liste over alle registrerede fliser",
+    "searchPlaceholder": "Søg",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "tabs": {
       "allTiles": "Alle fliser",
       "pendingTiles": "Afventer",
@@ -150,6 +178,8 @@
     },
     "form": {
       "maxSocialLinks": "Du kan tilføje maksimalt 3 sociale links",
+      "saveBtn": "Gem ændringer",
+      "resetBtn": "Nulstil",
       "email": {
         "label": "E-mail",
         "placeholder": "Indtast din e-mail",
@@ -173,7 +203,7 @@
         "placeholder": "Indtast din adgangskode",
         "error": {
           "required": "Indtast en gyldig adgangskode",
-          "minContent": "Adgangskoden skal indeholde mindst 3 tegn",
+          "minContent": "Adgangskoden skal indeholde mindst 8 tegn",
           "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn"
         }
       },
@@ -182,7 +212,7 @@
         "placeholder": "Indtast din nye adgangskode",
         "error": {
           "required": "Indtast en gyldig adgangskode",
-          "minContent": "Adgangskoden skal være mindst 6 tegn",
+          "minContent": "Adgangskoden skal være mindst 8 tegn",
           "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn"
         }
       },
@@ -191,7 +221,7 @@
         "placeholder": "Indtast din adgangskode igen",
         "error": {
           "required": "Bekræftelse af adgangskode er påkrævet",
-          "minContent": "Adgangskoden skal indeholde mindst 3 tegn",
+          "minContent": "Adgangskoden skal indeholde mindst 8 tegn",
           "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn",
           "passwordMismatch": "Adgangskoderne stemmer ikke overens"
         }
