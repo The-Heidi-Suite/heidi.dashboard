@@ -136,7 +136,8 @@ function MetadataForm({ loading, metadata }: MetadataFormProps) {
               {/* Add new social link */}
               <div className="flex  md:flex-row gap-3 mt-5 flex-col-reverse">
                 <Button type="submit" className="w-40">
-                  <SaveAll className="size-7" /> Save
+                  <SaveAll className="size-7" />{' '}
+                  {t('accountSetting.form.saveBtn')}
                 </Button>
                 {fields.length < WEBSITE_OPTIONS.length && (
                   <Button

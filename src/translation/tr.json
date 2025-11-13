@@ -7,11 +7,11 @@
   "usernameOrEmail": "E-postanızı girin",
   "password": "Şifre",
   "pleaseEnterPassword": "Lütfen şifre girin",
-  "rememberMe": "Beni Hatırla",
+  "rememberMe": "Şifreyi Hatırla",
   "forgotYourPassword": "Şifrenizi mi unuttunuz?",
   "resetPassword": "Şifrenizi Sıfırlayın",
   "signIn": "Giriş Yap",
-  "notMember": "Üye değil misiniz?",
+  "notMember": "Hesabınız yok mu?",
   "register": "Kayıt Ol",
   "signInHelp": "Yardım ?",
   "invalidMail": "Geçerli bir e-posta girin",
@@ -37,10 +37,10 @@
       "listing": "Döşeme Listesi"
     },
     "accounts": {
-      "title": "Hesaplar"
+      "title": "Hesap Ayarları"
     },
     "cityAdmin": {
-      "title": "Şehir Yöneticisi"
+      "title": "Şehir Yönetimi"
     }
   },
   "createAccount": "Yeni hesabınızı oluşturun",
@@ -52,6 +52,28 @@
         "uploadLabel": "Görsel Yükle",
         "uploadBtnLabel": "Görsel Seç",
         "uploadPlaceholder": "Sürükleyip bırakın veya yüklemek için tıklayın",
+        "tileName": {
+          "label": "Döşeme Adı",
+          "placeholder": "Döşeme Adını Girin"
+        },
+        "redirectURL": {
+          "label": "Yönlendirme URL'si",
+          "placeholder": "Yönlendirme URL'sini Girin"
+        },
+        "titleColor": {
+          "label": "Döşeme Rengi"
+        },
+        "subHeader": {
+          "label": "Alt Başlık",
+          "placeholder": "Alt Başlığı Girin"
+        },
+        "tileDescription": {
+          "label": "Açıklama",
+          "placeholder": "HTML içeriğinizi girin"
+        },
+        "titleDescriptionColor": {
+          "label": "Döşeme Açıklama Rengi"
+        },
         "errorName": {
           "maxFileSize": "Dosya boyutu en fazla 1 MB olmalıdır",
           "supportedExtension": "Desteklenmeyen dosya seçildi. Desteklenen formatlar:",
@@ -59,10 +81,14 @@
         }
       },
       "previewHeading": "Önizleme",
-      "previewDescription": "Döşemenizi burada önizleyin"
+      "previewDescription": "Döşemenizi burada önizleyin",
+      "dummyText": "Örnek Döşeme Adı",
+      "defaultHeader": "Varsayılan Alt Başlık",
+      "tilePreviewDescription": "Döşeme açıklamasının döşeme önizlemesi içinde nasıl göründüğünü göstermek için örnek açıklama metni. Bu metin, taşmayı test etmek ve döşeme bileşenine ayrılan alan içinde doğru şekilde görüntülendiğinden emin olmak için yeterince uzun olacak şekilde tasarlanmıştır."
     },
     "listingHeading": "Döşeme Listesi",
     "listingDescription": "Kayıtlı tüm döşemelerin listesi",
+    "searchPlaceholder": "Ara",
     "tabs": {
       "allTiles": "Tüm Döşemeler",
       "pendingTiles": "Beklemede",
@@ -150,6 +176,8 @@
     },
     "form": {
       "maxSocialLinks": "En fazla 3 sosyal bağlantı ekleyebilirsiniz",
+      "saveBtn": "Değişiklikleri Kaydet",
+      "resetBtn": "Sıfırla",
       "email": {
         "label": "E-Posta",
         "placeholder": "E-postanızı girin",
