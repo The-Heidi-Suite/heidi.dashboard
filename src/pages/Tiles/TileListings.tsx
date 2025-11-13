@@ -26,7 +26,7 @@ function TileListings() {
     isLoading,
     isFetching,
   } = useGetTileListings({
-    pageNo: currentPage,
+    page: currentPage,
     pageSize: TABLE_PAGE_SIZE,
     search: searchInput,
     statusId: selectedTab.id,
@@ -82,7 +82,7 @@ function TileListings() {
         </div>
       </div>
       <TileTable
-        tableRows={tileListings?.success ? tileListings.data?.data || [] : []}
+        tableRows={tileListings?.success ? tileListings.data?.items || [] : []}
         loading={isLoading || isFetching}
       />
       <Pagination
@@ -90,7 +90,7 @@ function TileListings() {
         setCurrentPage={setCurrentPage}
         totalPages={
           tileListings?.success && !isLoading
-            ? tileListings.data?.totalPages || 0
+            ? tileListings.data?.meta.totalPages || 0
             : 0
         }
       />

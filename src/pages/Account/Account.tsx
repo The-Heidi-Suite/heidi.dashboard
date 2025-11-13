@@ -6,7 +6,6 @@ import { toast } from 'sonner';
 import { useDeleteAccount, useGetUserProfile } from '@/api/queries';
 import { Button } from '@/components/ui/button';
 import { useTypedTranslation } from '@/hooks';
-import MetadataForm from '@/pages/Account/MetadataForm';
 import { useGlobalStore } from '@/store/useGlobalStore';
 
 import PasswordForm from './PasswordForm';
@@ -62,12 +61,12 @@ function Account() {
           profileData={profileData?.success ? profileData.data : undefined}
         />
         <div className="w-full flex flex-col gap-4">
-          <MetadataForm
+          {/* <MetadataForm
             loading={isLoading || isFetching}
             metadata={
               profileData?.success ? profileData.data.metadata : undefined
             }
-          />
+          /> */}
           <PasswordForm />
         </div>
       </div>

@@ -49,10 +49,12 @@ type UpdateUserPassword = {
 };
 
 export const updateUserPassword = async (data: UpdateUserPassword) => {
+  const { confirmPassword, ...restData } = data;
+  void confirmPassword;
   return await apiRequest({
-    url: 'profile/password',
-    method: 'PUT',
-    data,
+    url: API_URLS.UpdateUserPassword,
+    method: 'POST',
+    data: restData,
   });
 };
 

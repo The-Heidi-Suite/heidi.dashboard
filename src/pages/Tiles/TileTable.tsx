@@ -14,7 +14,7 @@ import {
 import { useTypedTranslation } from '@/hooks';
 import DeleteAction from '@/pages/Tiles/DeleteAction';
 
-type TableRows = TileListingDataResponse['data'];
+type TableRows = TileListingDataResponse['items'];
 
 type TileTableProps = {
   tableRows: TableRows;
@@ -65,19 +65,21 @@ function TileTable({ tableRows, loading }: TileTableProps) {
                 <div className="flex flex-row items-center gap-5">
                   <Avatar>
                     <AvatarImage
-                      src={rowData.bgImage}
-                      alt={rowData.tileName.concat('-bg-image')}
+                      src={rowData.backgroundImageUrl}
+                      alt={rowData.slug.concat('-bg-image')}
                     />
                     <AvatarFallback>
                       <CircleUserRound className="text-primary" />
                     </AvatarFallback>
                   </Avatar>
                   <strong className="truncate block overflow-hidden text-ellipsis whitespace-nowrap">
-                    {rowData.tileName}
+                    {rowData.header}
                   </strong>
                 </div>
               </TableCell>
-              <TableCell className="text-center">{rowData.status}</TableCell>
+              <TableCell className="text-center">
+                {rowData.isActive ? 'Active' : 'InActive'}
+              </TableCell>
               <TableCell className="text-center max-w-8 ">
                 <span
                   className="truncate block overflow-hidden text-ellipsis whitespace-nowrap"
