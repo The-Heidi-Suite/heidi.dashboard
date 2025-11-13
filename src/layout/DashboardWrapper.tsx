@@ -14,6 +14,7 @@ import {
 import { COOKIES_KEY_NAME } from '@/config/cookie';
 import useSidebarConfig from '@/hooks/useSidebarConfig';
 import { deleteCookies } from '@/lib/cookieStorage';
+import ROUTES from '@/route/routesConstant';
 import { Header, Sidebar } from '@/shared/DashboardLayout';
 import { useGlobalStore } from '@/store/useGlobalStore';
 
@@ -40,7 +41,7 @@ const SidebarFooter = () => {
           COOKIES_KEY_NAME.REFRESH_TOKEN,
           COOKIES_KEY_NAME.USER_UUID,
         ]);
-        navigate('/login');
+        navigate(ROUTES.LogIn);
       }
     } catch (err) {
       console.error(err);
