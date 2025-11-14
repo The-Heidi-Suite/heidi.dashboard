@@ -5,6 +5,8 @@ const API_URLS = {
   ValidateResetPasswordToken: 'auth/validate',
   Register: 'users/register',
   GetAdminListing: 'users/',
+  Account: 'users',
+  Profile: 'users/profile/me',
 } as const;
 
 export default API_URLS;
