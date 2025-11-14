@@ -1,13 +1,16 @@
 import { RotateCcw, SaveAll } from 'lucide-react';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 import { useForm, useWatch } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'sonner';
 
+import { useUploadImage } from '@/api/queries/imageUpload';
 import {
   useCreateTileUpload,
   useEditTileUpload,
+  useGetTile,
 } from '@/api/queries/tileUpload';
 import { Button } from '@/components/ui/button';
 import {
@@ -31,47 +34,149 @@ import {
 function TileUpload() {
   const { t } = useTypedTranslation();
   const { id } = useParams();
-  const { mutate: createTile } = useCreateTileUpload();
-  const { mutate: editTile } = useEditTileUpload();
+  const createTile = useCreateTileUpload();
+  const uploadImage = useUploadImage();
+  const { data: tileData } = useGetTile(id ?? '');
+  const editTile = useEditTileUpload();
   const form = useForm<TileUploadForm>({
     resolver: zodResolver(tileUploadSchema),
     defaultValues: {
-      tileName: '',
-      redirectUrl: '',
-      titleColor: '',
-      tileIcon: null,
-      subHeader: '',
-      tileDescription: '',
-      tileDescriptionColor: '',
-      tileImage: null,
+      header: '',
+      websiteUrl: '',
+      headerBackgroundColor: '',
+      iconImageUrl: null,
+      subheader: '',
+      description: '',
+      contentBackgroundColor: '',
+      backgroundImageUrl: null,
     },
   });
-  const tileName = useWatch({ control: form.control, name: 'tileName' });
-  const titleColor = useWatch({ control: form.control, name: 'titleColor' });
-  const tileIcon = useWatch({ control: form.control, name: 'tileIcon' });
-  const subHeader = useWatch({ control: form.control, name: 'subHeader' });
+  const tileName = useWatch({ control: form.control, name: 'header' });
+  const titleColor = useWatch({
+    control: form.control,
+    name: 'headerBackgroundColor',
+  });
+  const tileIcon = useWatch({ control: form.control, name: 'iconImageUrl' });
+  const subHeader = useWatch({ control: form.control, name: 'subheader' });
   const tileDescription = useWatch({
     control: form.control,
-    name: 'tileDescription',
+    name: 'description',
   });
   const tileDescriptionColor = useWatch({
     control: form.control,
-    name: 'tileDescriptionColor',
+    name: 'contentBackgroundColor',
   });
-  const tileImage = useWatch({ control: form.control, name: 'tileImage' });
-
+  const tileImage = useWatch({
+    control: form.control,
+    name: 'backgroundImageUrl',
+  });
+  useEffect(() => {
+    async function load() {
+      if (tileData?.success) {
+        const { cities, isActive, opnInExternalBrowser, ...remTileData } =
+          tileData.data;
+        form.reset({ ...remTileData });
+        void cities;
+        void isActive;
+        void opnInExternalBrowser;
+      }
+    }
+    load();
+  }, [tileData]);
   // TODO: Fix type
   const onSubmit = useCallback(
     (data: TileUploadForm) => {
       if (id) {
         // Edit API
-        editTile({ tileId: id, payload: data });
-      } else {
-        // Create API
-        createTile(data);
+        editTile.mutate(
+          { tileId: id, payload: data },
+          {
+            onSuccess: (resp) => {
+              if (resp.success) {
+                toast.success(resp.message);
+              } else {
+                toast.error(resp.error);
+              }
+            },
+          }
+        );
+        return;
       }
+
+      // Create API
+      createTile.mutate(data, {
+        onSuccess: async (resp) => {
+          if (!resp.success) {
+            toast.error(resp.error);
+            return;
+          }
+          toast.success(resp.message);
+          // id returned from create response
+          //ToDO: fix response
+          // const Id = await resp.data?.id;
+          // // get the raw value from the form — could be string | File | null
+          // const raw = form.getValues('backgroundImageUrl');
+
+          // // convert raw -> File | null
+          // let fileToUpload: File | null = null;
+
+          // try {
+          //   if (typeof raw === 'string' && raw) {
+          //     // convert url -> File (requires CORS on the remote URL)
+          //     const response = await fetch(raw);
+          //     if (response.ok) {
+          //       const blob = await response.blob();
+          //       const ext = (blob.type.split('/')[1] ?? 'jpg').split('+')[0];
+          //       fileToUpload = new File([blob], `background.${ext}`, {
+          //         type: blob.type,
+          //       });
+          //     } else {
+          //       console.error(
+          //         'Failed to fetch image URL:',
+          //         response.status,
+          //         response.statusText
+          //       );
+          //     }
+          //   } else if (raw instanceof File) {
+          //     fileToUpload = raw;
+          //   }
+          // } catch (err) {
+          //   console.error(
+          //     'Error converting background image URL to File:',
+          //     err
+          //   );
+          // }
+
+          // // Upload image only if we have both Id and a File
+          // if (Id && fileToUpload) {
+          //   uploadImage.mutate(
+          //     {
+          //       payload: { file: fileToUpload },
+          //       id: Id,
+          //     },
+          //     {
+          //       onSuccess: (uploadResp) => {
+          //         if (uploadResp.success) {
+          //           toast.success(uploadResp.message);
+          //         } else {
+          //           toast.error(uploadResp.error ?? 'Upload failed');
+          //         }
+          //       },
+          //       onError: (err) => {
+          //         console.error('Upload error', err);
+          //         toast.error('Image upload failed');
+          //       },
+          //     }
+          //   );
+          // } else {
+          //   // still show create success even if no file to upload
+          //   toast.success(resp.message);
+          // }
+        },
+      });
     },
-    [id, createTile, editTile]
+    // include all external references used inside the callback
+    [id, createTile, editTile, form, uploadImage]
   );
 
   return (
@@ -94,14 +199,14 @@ function TileUpload() {
                 className="space-y-4"
               >
                 <TextInputField
-                  name="tileName"
+                  name="header"
                   control={form.control}
                   label={t('tile.upload.form.tileName.label')}
                   placeholder={t('tile.upload.form.tileName.placeholder')}
                 />
 
                 <TextInputField
-                  name="redirectUrl"
+                  name="websiteUrl"
                   control={form.control}
                   label={t('tile.upload.form.redirectURL.label')}
                   placeholder={t('tile.upload.form.redirectURL.placeholder')}
@@ -109,25 +214,25 @@ function TileUpload() {
 
                 <ColorPickerField
                   control={form.control}
-                  name="titleColor"
+                  name="headerBackgroundColor"
                   label={t('tile.upload.form.titleColor.label')}
                 />
 
                 <FileUploadField
                   control={form.control}
-                  name="tileIcon"
+                  name="iconImageUrl"
                   required
                 />
 
                 <TextInputField
-                  name="subHeader"
+                  name="subheader"
                   control={form.control}
                   label={t('tile.upload.form.subHeader.label')}
                   placeholder={t('tile.upload.form.subHeader.label')}
                 />
 
                 <RichTextField
-                  name="tileDescription"
+                  name="description"
                   control={form.control}
                   label={t('tile.upload.form.tileDescription.label')}
                   className="h-32 overflow-y-auto"
@@ -139,14 +244,14 @@ function TileUpload() {
 
                 <ColorPickerField
                   control={form.control}
-                  name="tileDescriptionColor"
+                  name="contentBackgroundColor"
                   required
                   label={t('tile.upload.form.titleDescriptionColor.label')}
                 />
 
                 <FileUploadField
                   control={form.control}
-                  name="tileImage"
+                  name="backgroundImageUrl"
                   required
                   maxFileSize={6}
                 />
@@ -163,7 +268,6 @@ function TileUpload() {
                     className="flex-1 border-red-500 text-red-500"
                     onClick={() => {
                       form.reset();
-                      // window.location.reload();
                     }}
                   >
                     <RotateCcw /> Reset

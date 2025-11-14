@@ -1,10 +1,12 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import {
   createTileUpload,
   editTileUpload,
+  getTile,
   TileUploadPayload,
 } from '@/api/endpoints/tileUpload';
+import i18n from '@/i18n';
 
 export const useCreateTileUpload = () => {
   const queryClient = useQueryClient();
@@ -35,5 +37,12 @@ export const useEditTileUpload = () => {
         queryClient.invalidateQueries({ queryKey: ['tileListings'] });
       }
     },
+  });
+};
+
+export const useGetTile = (id: string | number) => {
+  return useQuery({
+    queryKey: ['userGetTile', i18n.language],
+    queryFn: () => getTile(id),
   });
 };

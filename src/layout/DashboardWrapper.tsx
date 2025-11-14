@@ -58,7 +58,7 @@ const SidebarFooter = () => {
           <div className="p-2">
             <LogOut size={28} />
           </div>
-          <span className="p-2 text-lg">Log out</span>
+          <span className="p-2 text-lg">Abmelden</span>
         </div>
       </SidebarMenuButton>
     </SidebarMenuItem>

@@ -44,7 +44,15 @@ const TileUploadPreview = ({
           <div
             className="bg-background border border-border rounded-lg max-w-sm mx-auto shadow-lg overflow-hidden max-h-72 bg-center bg-cover flex flex-col justify-between"
             style={{
-              backgroundImage: `url(${tileImage ? URL.createObjectURL(tileImage) : 'https://picsum.photos/800'})`,
+              backgroundImage: `url(${
+                tileImage
+                  ? typeof tileImage === 'string'
+                    ? tileImage
+                    : tileImage
+                      ? URL.createObjectURL(tileImage)
+                      : undefined
+                  : 'https://picsum.photos/800'
+              })`,
             }}
           >
             <div
@@ -53,7 +61,13 @@ const TileUploadPreview = ({
             >
               {tileIcon && (
                 <img
-                  src={URL.createObjectURL(tileIcon)}
+                  src={
+                    typeof tileIcon === 'string'
+                      ? tileIcon
+                      : tileIcon
+                        ? URL.createObjectURL(tileIcon)
+                        : undefined
+                  }
                   alt="tileIcon"
                   className="size-5 object-cover"
                 />

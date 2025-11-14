@@ -13,6 +13,7 @@ export const TilesRoutes = (
   <Route path={ROUTES.Tiles}>
     <Route element={<ProtectedRoute allowedRoles={['SUPER_ADMIN']} />}>
       <Route path={ROUTES.UploadTile} element={<TileUploadPage />} />
+      <Route path={ROUTES.EditTile} element={<TileUploadPage />} />
     </Route>
     <Route
       element={<ProtectedRoute allowedRoles={['SUPER_ADMIN', 'CITY_ADMIN']} />}

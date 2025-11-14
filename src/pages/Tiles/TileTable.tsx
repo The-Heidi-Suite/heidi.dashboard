@@ -1,5 +1,7 @@
 import { CircleUserRound, Pencil } from 'lucide-react';
 
+import { useNavigate } from 'react-router-dom';
+
 import { TileListingDataResponse } from '@/api/endpoints/tileListings';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Spinner } from '@/components/ui/spinner';
@@ -23,6 +25,7 @@ type TileTableProps = {
 
 function TileTable({ tableRows, loading }: TileTableProps) {
   const { t } = useTypedTranslation();
+  const navigate = useNavigate();
   return (
     <ShacnTable className="border-2 my-4">
       <TableHeader className="bg-secondary rounded-full">
@@ -89,7 +92,10 @@ function TileTable({ tableRows, loading }: TileTableProps) {
               <TableCell className="text-center">
                 <div className="flex items-center justify-center gap-8">
                   {/* TODO: Add Navigation on Click to Edit */}
-                  <Pencil className="cursor-pointer text-green-500 hover:fill-green-500 hover:text-green-500 transition-colors" />
+                  <Pencil
+                    className="cursor-pointer text-green-500 hover:fill-green-500 hover:text-green-500 transition-colors"
+                    onClick={() => navigate(`/tiles/upload/${rowData.id}`)}
+                  />
                   <DeleteAction itemId={rowData.id} />
                 </div>
               </TableCell>
