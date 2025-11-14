@@ -138,6 +138,7 @@
     "createAdmin": "Yönetici Oluştur",
     "table": {
       "head": {
+        "name": "İsim",
         "email": "E-Posta",
         "role": "Kullanıcı Rolü",
         "status": "Durum",

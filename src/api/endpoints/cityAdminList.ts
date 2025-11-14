@@ -46,7 +46,7 @@ export const getAdminListings = async (
 
 export const deleteAdminListing = async (listId: number | string) => {
   return await apiRequest({
-    url: `adminListings/${listId}`,
+    url: `${API_URLS.DeleteUser}${listId}`,
     method: 'DELETE',
   });
 };

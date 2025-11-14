@@ -138,6 +138,7 @@
     "createAdmin": "Opprett administrator",
     "table": {
       "head": {
+        "name": "Navn",
         "email": "E-post",
         "role": "Brukerrolle",
         "status": "Status",
