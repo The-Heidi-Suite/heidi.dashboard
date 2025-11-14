@@ -1,33 +1,44 @@
 import apiRequest from '@/api/apiRequest';
+import API_URLS from '@/api/apiURl';
 import { RoleValue } from '@/lib/constant';
 type CityAdminList = {
-  id: number;
-  email: string;
+  id: string;
+  email: string | null;
+  username: string | null;
   role: RoleValue;
+  firstName: string | null;
+  lastName: string | null;
+  isActive: boolean;
   createdAt: string;
-  registered: boolean;
-  citiesName: string[];
+  updatedAt: string;
 };
 
 export type AdminListingDataResponse = {
-  totalPages: number;
+  success: boolean;
+  users: CityAdminList[];
+  total: number;
   page: number;
-  data: CityAdminList[];
+  limit: number;
+  pages: number;
+  message: string;
+  timestamp: string;
+  path: string;
+  statusCode: number;
 };
 
 export type AdminListingsQueryParams = {
-  pageNo: number;
-  pageSize: number;
+  page: number;
+  limit: number;
   search?: string;
-  showExternalListings?: boolean;
-  statusId: number;
+  role?: RoleValue;
+  isActive?: boolean;
 };
 
 export const getAdminListings = async (
   queryParams: AdminListingsQueryParams
 ) => {
   return await apiRequest<AdminListingDataResponse>({
-    url: 'adminListings',
+    url: API_URLS.GetAdminListing,
     method: 'GET',
     params: queryParams,
   });

@@ -40,7 +40,7 @@
       "title": "Kontoinställningar"
     },
     "cityAdmin": {
-      "title": "Användaradministration"
+      "title": "Användarhantering"
     }
   },
   "createAccount": "Skapa ditt nya konto",
@@ -133,7 +133,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "Stadsadministration",
+    "heading": "Användarhantering",
     "description": "Lista över alla registrerade städer",
     "createAdmin": "Skapa administratör",
     "table": {

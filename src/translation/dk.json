@@ -40,7 +40,7 @@
       "title": "Kontoeinstellungen"
     },
     "cityAdmin": {
-      "title": "Benutzerverwaltung"
+      "title": "Brugerstyring"
     }
   },
   "createAccount": "Opret din nye konto",
@@ -133,7 +133,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "By­administration",
+    "heading": "Brugerstyring",
     "description": "Liste over alle registrerede byer",
     "createAdmin": "Opret administrator",
     "table": {

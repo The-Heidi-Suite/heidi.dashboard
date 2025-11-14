@@ -133,7 +133,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "City Administration",
+    "heading": "User Management",
     "description": "List of all registered cities",
     "createAdmin": "Create Admin",
     "table": {

@@ -4,6 +4,7 @@ const API_URLS = {
   RefreshToken: 'auth/refresh',
   ValidateResetPasswordToken: 'auth/validate',
   Register: 'users/register',
+  GetAdminListing: 'users/',
   Account: 'users',
   Profile: 'users/profile/me',
   UpdateUserPassword: 'users/profile/me/change-password',

@@ -40,7 +40,7 @@
       "title": "تنظیمات حساب کاربری"
     },
     "cityAdmin": {
-      "title": "مدیریت کاربران"
+      "title": " مدیریت کاربر"
     }
   },
   "createAccount": "ایجاد حساب جدید",
@@ -133,7 +133,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "مدیریت شهر",
+    "heading": "مدیریت کاربر",
     "description": "فهرست همه شهرهای ثبت‌شده",
     "createAdmin": "ایجاد مدیر",
     "table": {

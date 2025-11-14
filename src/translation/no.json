@@ -133,7 +133,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "Byadministrasjon",
+    "heading": "Brukeradministrasjon",
     "description": "Liste over alle registrerte byer",
     "createAdmin": "Opprett administrator",
     "table": {
