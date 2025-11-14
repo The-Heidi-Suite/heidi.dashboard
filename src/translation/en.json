@@ -89,6 +89,8 @@
     "listingHeading": "Tile Listing",
     "listingDescription": "List of all the tiles in registered",
     "searchPlaceholder": "Search",
+    "active": "Active",
+    "inactive": "Inactive",
     "tabs": {
       "allTiles": "All Tiles",
       "pendingTiles": "Pending",
@@ -201,7 +203,7 @@
         "placeholder": "Enter your password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must contain at least 3 characters",
+          "minContent": "Password must contain at least 8 characters",
           "maxContent": "Password must contain at most 50 characters"
         }
       },
@@ -210,7 +212,7 @@
         "placeholder": "Enter your new password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must be at least 6 characters",
+          "minContent": "Password must be at least 8 characters",
           "maxContent": "Password must be at most 50 characters"
         }
       },
@@ -219,7 +221,7 @@
         "placeholder": "Enter your password",
         "error": {
           "required": "Enter a valid password",
-          "minContent": "Password must contain at least 3 characters",
+          "minContent": "Password must contain at least 8 characters",
           "maxContent": "Password must contain at most 50 characters",
           "passwordMismatch": "Password does not match"
         }

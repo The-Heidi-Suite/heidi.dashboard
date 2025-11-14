@@ -68,6 +68,8 @@ axios.interceptors.response.use(
         console.warn('No refresh token available, logging out user.');
         localStorage.clear();
         sessionStorage.clear();
+        cookieStore.delete(COOKIES_KEY_NAME.ACCESS_TOKEN);
+        cookieStore.delete(COOKIES_KEY_NAME.REFRESH_TOKEN);
         return Promise.reject(error);
       }
       const res = await axios.post<
@@ -89,6 +91,7 @@ axios.interceptors.response.use(
         cookieStore.delete(COOKIES_KEY_NAME.ACCESS_TOKEN);
         cookieStore.delete(COOKIES_KEY_NAME.REFRESH_TOKEN);
         window.location.href = '/login';
+        return Promise.reject(error);
       }
     }
 

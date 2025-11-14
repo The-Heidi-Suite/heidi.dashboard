@@ -17,16 +17,16 @@ import SupportedLanguage from '@/type/SupportedLang';
 type AllLanguage = { code: SupportedLanguage; name: string; flag: string };
 
 const ALL_LANGUAGES: AllLanguage[] = [
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'dk', name: 'Dansk', flag: '' },
-  { code: 'no', name: 'Norsk', flag: '' },
-  { code: 'se', name: 'Svenska', flag: '' },
-  { code: 'ar', name: 'العربية', flag: '' },
-  { code: 'fa', name: 'فارسی', flag: '' },
-  { code: 'tr', name: 'Türkçe', flag: '' },
-  { code: 'ru', name: 'Русский', flag: '' },
-  { code: 'uk', name: 'Українська', flag: '' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' }, // Germany
+  { code: 'en', name: 'English', flag: '🇺🇸' }, // United States
+  { code: 'dk', name: 'Dansk', flag: '🇩🇰' }, // Denmark
+  { code: 'no', name: 'Norsk', flag: '🇳🇴' }, // Norway
+  { code: 'se', name: 'Svenska', flag: '🇸🇪' }, // Sweden
+  { code: 'ar', name: 'العربية', flag: '🇸🇦' }, // Saudi Arabia (common for Arabic)
+  { code: 'fa', name: 'فارسی', flag: '🇮🇷' }, // Iran (Persian)
+  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' }, // Turkey
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' }, // Russia
+  { code: 'uk', name: 'Українська', flag: '🇺🇦' }, // Ukraine
 ];
 
 const LanguageSelector = () => {

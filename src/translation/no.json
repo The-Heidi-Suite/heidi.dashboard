@@ -89,6 +89,8 @@
     "listingHeading": "Flisliste",
     "listingDescription": "Liste over alle registrerte fliser",
     "searchPlaceholder": "Søk",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "tabs": {
       "allTiles": "Alle fliser",
       "pendingTiles": "Venter",
@@ -201,7 +203,7 @@
         "placeholder": "Skriv inn passordet ditt",
         "error": {
           "required": "Skriv inn et gyldig passord",
-          "minContent": "Passord må inneholde minst 3 tegn",
+          "minContent": "Passord må inneholde minst 8 tegn",
           "maxContent": "Passord kan maksimalt inneholde 50 tegn"
         }
       },
@@ -210,7 +212,7 @@
         "placeholder": "Skriv inn nytt passord",
         "error": {
           "required": "Skriv inn et gyldig passord",
-          "minContent": "Passord må være minst 6 tegn",
+          "minContent": "Passord må være minst 8 tegn",
           "maxContent": "Passord kan maksimalt være 50 tegn"
         }
       },
@@ -219,7 +221,7 @@
         "placeholder": "Skriv inn passordet ditt",
         "error": {
           "required": "Skriv inn et gyldig passord",
-          "minContent": "Passord må inneholde minst 3 tegn",
+          "minContent": "Passord må inneholde minst 8 tegn",
           "maxContent": "Passord kan maksimalt inneholde 50 tegn",
           "passwordMismatch": "Passordene stemmer ikke overens"
         }

@@ -89,6 +89,8 @@
     "listingHeading": "Döşeme Listesi",
     "listingDescription": "Kayıtlı tüm döşemelerin listesi",
     "searchPlaceholder": "Ara",
+    "active": "Aktif",
+    "inactive": "Pasif",
     "tabs": {
       "allTiles": "Tüm Döşemeler",
       "pendingTiles": "Beklemede",
@@ -201,7 +203,7 @@
         "placeholder": "Şifrenizi girin",
         "error": {
           "required": "Geçerli bir şifre girin",
-          "minContent": "Şifre en az 3 karakter içermelidir",
+          "minContent": "Şifre en az 8 karakter içermelidir",
           "maxContent": "Şifre en fazla 50 karakter içermelidir"
         }
       },
@@ -210,7 +212,7 @@
         "placeholder": "Yeni şifrenizi girin",
         "error": {
           "required": "Geçerli bir şifre girin",
-          "minContent": "Şifre en az 6 karakter olmalıdır",
+          "minContent": "Şifre en az 8 karakter olmalıdır",
           "maxContent": "Şifre en fazla 50 karakter olmalıdır"
         }
       },
@@ -219,7 +221,7 @@
         "placeholder": "Şifrenizi girin",
         "error": {
           "required": "Geçerli bir şifre girin",
-          "minContent": "Şifre en az 3 karakter içermelidir",
+          "minContent": "Şifre en az 8 karakter içermelidir",
           "maxContent": "Şifre en fazla 50 karakter içermelidir",
           "passwordMismatch": "Şifre eşleşmiyor"
         }

@@ -89,6 +89,8 @@
     "listingHeading": "Rutlista",
     "listingDescription": "Lista över alla registrerade rutor",
     "searchPlaceholder": "Sök",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "tabs": {
       "allTiles": "Alla rutor",
       "pendingTiles": "Väntande",
@@ -201,7 +203,7 @@
         "placeholder": "Ange ditt lösenord",
         "error": {
           "required": "Ange ett giltigt lösenord",
-          "minContent": "Lösenord måste innehålla minst 3 tecken",
+          "minContent": "Lösenord måste innehålla minst 8 tecken",
           "maxContent": "Lösenord får innehålla högst 50 tecken"
         }
       },
@@ -210,7 +212,7 @@
         "placeholder": "Ange ditt nya lösenord",
         "error": {
           "required": "Ange ett giltigt lösenord",
-          "minContent": "Lösenordet måste innehålla minst 6 tecken",
+          "minContent": "Lösenordet måste innehålla minst 8 tecken",
           "maxContent": "Lösenordet får innehålla högst 50 tecken"
         }
       },
@@ -219,7 +221,7 @@
         "placeholder": "Ange ditt lösenord igen",
         "error": {
           "required": "Ange ett giltigt lösenord",
-          "minContent": "Lösenord måste innehålla minst 3 tecken",
+          "minContent": "Lösenord måste innehålla minst 8 tecken",
           "maxContent": "Lösenord får innehålla högst 50 tecken",
           "passwordMismatch": "Lösenorden matchar inte"
         }

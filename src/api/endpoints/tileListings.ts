@@ -1,22 +1,47 @@
 import apiRequest from '@/api/apiRequest';
+import API_URLS from '@/api/apiURl';
 
 type TileData = {
-  id: number;
-  tileName: string;
-  tileIcon: string;
+  id: string;
+  slug: string;
+  backgroundImageUrl: string;
+  headerBackgroundColor: string;
+  header: string;
+  subheader: string;
   description: string;
-  bgImage: string;
-  status: string;
+  contentBackgroundColor: string;
+  websiteUrl: string;
+  openInExternalBrowser: boolean;
+  displayOrder: number;
+  isActive: true;
+  publishAt: string | null;
+  expireAt: string | null;
+  createdByUserId: string;
+  lastEditedByUserId: string;
+  createdAt: string;
+  updatedAt: string;
+  cities: [
+    {
+      id: string;
+      cityId: string;
+      isPrimary: boolean;
+      displayOrder: number;
+    },
+  ];
 };
 
 export type TileListingDataResponse = {
-  totalPages: number;
-  page: number;
-  data: TileData[];
+  items: TileData[];
+  meta: {
+    page: number;
+    pageSize: number;
+    total: number;
+    totalPages: number;
+  };
 };
 
 export type TileListingsQueryParams = {
-  pageNo: number;
+  page: number;
   pageSize: number;
   search?: string;
   showExternalListings?: boolean;
@@ -25,7 +50,7 @@ export type TileListingsQueryParams = {
 
 export const getTileListings = async (queryParams: TileListingsQueryParams) => {
   return await apiRequest<TileListingDataResponse>({
-    url: 'tileListings',
+    url: API_URLS.GetAllTiles,
     method: 'GET',
     params: queryParams,
   });

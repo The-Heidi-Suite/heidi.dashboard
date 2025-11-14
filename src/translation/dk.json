@@ -89,6 +89,8 @@
     "listingHeading": "Fliseoversigt",
     "listingDescription": "Liste over alle registrerede fliser",
     "searchPlaceholder": "Søg",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "tabs": {
       "allTiles": "Alle fliser",
       "pendingTiles": "Afventer",
@@ -201,7 +203,7 @@
         "placeholder": "Indtast din adgangskode",
         "error": {
           "required": "Indtast en gyldig adgangskode",
-          "minContent": "Adgangskoden skal indeholde mindst 3 tegn",
+          "minContent": "Adgangskoden skal indeholde mindst 8 tegn",
           "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn"
         }
       },
@@ -210,7 +212,7 @@
         "placeholder": "Indtast din nye adgangskode",
         "error": {
           "required": "Indtast en gyldig adgangskode",
-          "minContent": "Adgangskoden skal være mindst 6 tegn",
+          "minContent": "Adgangskoden skal være mindst 8 tegn",
           "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn"
         }
       },
@@ -219,7 +221,7 @@
         "placeholder": "Indtast din adgangskode igen",
         "error": {
           "required": "Bekræftelse af adgangskode er påkrævet",
-          "minContent": "Adgangskoden skal indeholde mindst 3 tegn",
+          "minContent": "Adgangskoden skal indeholde mindst 8 tegn",
           "maxContent": "Adgangskoden må maksimalt indeholde 50 tegn",
           "passwordMismatch": "Adgangskoderne stemmer ikke overens"
         }

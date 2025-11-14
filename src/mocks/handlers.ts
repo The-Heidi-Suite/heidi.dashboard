@@ -31,7 +31,14 @@ import {
   TileUploadEditSuccessResponse,
 } from './responses/tileUpload';
 
-const { LogIn, LogOut, Register, RefreshToken } = API_URLS;
+const {
+  LogIn,
+  LogOut,
+  Register,
+  RefreshToken,
+  UpdateUserPassword,
+  GetAllTiles,
+} = API_URLS;
 
 // ✅ Handlers
 export const handlers = [
@@ -41,7 +48,7 @@ export const handlers = [
   fetchApi('users/:id', 'patch', RegisterSuccessResponse, 'success'),
   fetchApi('create-admin', 'post', CreateAdminResponse, 'success'),
   fetchApi('register/error', 'post', RegisterErrorResponse, 'error'),
-  fetchApi('tileListings', 'get', TileListingsResponse, 'success', 1500),
+  fetchApi(GetAllTiles, 'get', TileListingsResponse, 'success', 1500),
   fetchApi('adminListings', 'get', AdminListingsResponse, 'success', 1500),
   fetchApi(
     'adminListings/:id',
@@ -91,7 +98,7 @@ export const handlers = [
   fetchApi(RefreshToken, 'get', RefreshSuccess, 'success'),
   fetchApi('profile', 'put', UpdateProfileSuccess, 'success', 1000),
   fetchApi('profile', 'delete', ProfileSuccessData, 'success', 2000),
-  fetchApi('profile/password', 'put', UpdateProfileSuccess, 'success', 1000),
+  fetchApi(UpdateUserPassword, 'post', UpdateProfileSuccess, 'success', 1000),
   fetchApi('profile/metadata', 'put', UpdateProfileSuccess, 'success', 1000),
   fetchApi('verify-reset-token', 'get', UpdateProfileSuccess, 'success', 6000),
 ];

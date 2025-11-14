@@ -143,20 +143,21 @@ export const passwordSchema = z
   .object({
     currentPassword: z
       .string()
-      .min(1, 'accountSetting.form.currentPassword.error.required'),
+      .min(8, 'accountSetting.form.currentPassword.error.required'),
     newPassword: z
       .string()
-      .min(6, 'accountSetting.form.newPassword.error.minContent')
+      .min(8, 'accountSetting.form.newPassword.error.minContent')
       .max(50, 'accountSetting.form.newPassword.error.maxContent'),
     confirmPassword: z
       .string()
-      .min(1, 'accountSetting.form.confirmPassword.error.required'),
+      .min(8, 'accountSetting.form.confirmPassword.error.required')
+      .max(50, 'accountSetting.form.confirmPassword.error.maxContent'),
   })
   .superRefine((values, ctx) => {
     if (values.newPassword !== values.confirmPassword) {
       ctx.addIssue({
         code: 'custom',
-        message: 'accountSetting.form.confirmPassword.error.notMatch',
+        message: 'accountSetting.form.confirmPassword.error.passwordMismatch',
         path: ['confirmPassword'], // error will be attached to confirmPassword
       });
     }

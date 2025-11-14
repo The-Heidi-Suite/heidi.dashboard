@@ -58,7 +58,22 @@ const TileUploadPreview = ({
                   className="size-5 object-cover"
                 />
               )}
-              {displayTileName}
+              <p
+                className="text-sm"
+                style={{
+                  display: '-webkit-box',
+                  WebkitBoxOrient: 'vertical',
+                  WebkitLineClamp: 2, // number of visible lines before truncation
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'normal',
+                  wordBreak: 'break-word',
+                  lineHeight: '1.5em',
+                  maxHeight: '3em',
+                }}
+              >
+                {displayTileName}
+              </p>
             </div>
             {/* TODO: Fix this Description CSS */}
             <div

@@ -92,6 +92,8 @@ export interface TranslationSchema {
     listingHeading: string;
     listingDescription: string;
     searchPlaceholder: string;
+    active: string;
+    inactive: string;
     tabs: {
       allTiles: string;
       pendingTiles: string;
@@ -407,6 +409,8 @@ export type TranslationKey =
   | 'tile.listingHeading'
   | 'tile.listingDescription'
   | 'tile.searchPlaceholder'
+  | 'tile.active'
+  | 'tile.inactive'
   | 'tile.tabs.allTiles'
   | 'tile.tabs.pendingTiles'
   | 'tile.tabs.inactiveTiles'
