@@ -141,6 +141,7 @@ export interface TranslationSchema {
     createAdmin: string;
     table: {
       head: {
+        name: string;
         email: string;
         role: string;
         status: string;
@@ -440,6 +441,7 @@ export type TranslationKey =
   | 'cityAdministration.heading'
   | 'cityAdministration.description'
   | 'cityAdministration.createAdmin'
+  | 'cityAdministration.table.head.name'
   | 'cityAdministration.table.head.email'
   | 'cityAdministration.table.head.role'
   | 'cityAdministration.table.head.status'

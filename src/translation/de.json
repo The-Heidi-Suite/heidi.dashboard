@@ -138,6 +138,7 @@
     "createAdmin": "Stadt erstellen Admin",
     "table": {
       "head": {
+        "name": "Name",
         "email": "E-Mail",
         "role": "Benutzerrolle",
         "status": "Status",

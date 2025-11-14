@@ -138,6 +138,7 @@
     "createAdmin": "Create Admin",
     "table": {
       "head": {
+        "name": "Name",
         "email": "E-Mail",
         "role": "User Role",
         "status": "Status",

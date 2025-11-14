@@ -1,13 +1,9 @@
 import { useState } from 'react';
 
-import { toast } from 'sonner';
-
 import { useGetAdminListings } from '@/api/queries/cityAdminList';
-import { useCreateAdmin } from '@/api/queries/cityAdminList';
 import { useTypedTranslation } from '@/hooks';
 import { TABLE_PAGE_SIZE } from '@/lib/constant';
 import AdminTable from '@/pages/CityAdmin/AdminTable';
-import { PopUp } from '@/pages/CityAdmin/Popup';
 import Pagination from '@/shared/Pagination';
 function CityAdmin() {
   const { t } = useTypedTranslation();
@@ -25,6 +21,8 @@ function CityAdmin() {
     adminListings?.success && adminListings.data.users
       ? adminListings.data.users.map((admin) => ({
           id: admin.id,
+          firstName: admin.firstName ?? '',
+          lastName: admin.lastName ?? '',
           email: admin.email ?? '-',
           role: admin.role,
           createdAt: admin.createdAt,
@@ -33,33 +31,33 @@ function CityAdmin() {
           citiesName: ['Kiel'],
         }))
       : [];
-  const createAdmin = useCreateAdmin();
-  function HandleCreateAdmin({
-    email,
-    cities,
-  }: {
-    email: string;
-    cities: string[];
-  }) {
-    createAdmin.mutate(
-      {
-        email,
-        cities,
-      },
-      {
-        onSuccess: (data) => {
-          if (data.success) {
-            toast.success(data.message);
-          } else {
-            toast.error(data.error);
-          }
-        },
-        onError: (error) => {
-          console.warn(error.message);
-        },
-      }
-    );
-  }
+  // const createAdmin = useCreateAdmin();
+  // function HandleCreateAdmin({
+  //   email,
+  //   cities,
+  // }: {
+  //   email: string;
+  //   cities: string[];
+  // }) {
+  //   createAdmin.mutate(
+  //     {
+  //       email,
+  //       cities,
+  //     },
+  //     {
+  //       onSuccess: (data) => {
+  //         if (data.success) {
+  //           toast.success(data.message);
+  //         } else {
+  //           toast.error(data.error);
+  //         }
+  //       },
+  //       onError: (error) => {
+  //         console.warn(error.message);
+  //       },
+  //     }
+  //   );
+  // }
   return (
     <div className="p-4">
       {/* Page Header */}
@@ -72,7 +70,7 @@ function CityAdmin() {
             {t('cityAdministration.description')}
           </p>
         </div>
-        <PopUp HandleCreateAdmin={HandleCreateAdmin} />
+        {/* <PopUp HandleCreateAdmin={HandleCreateAdmin} /> */}
         {/* <Button type="button" onClick={() => setPopupVisible(true)}>
           <Plus className="w-4 h-4 mr-2" />
           {t('cityAdministration.createAdmin')}

@@ -138,6 +138,7 @@
     "createAdmin": "ایجاد مدیر",
     "table": {
       "head": {
+        "name": "نام",
         "email": "ایمیل",
         "role": "نقش کاربر",
         "status": "وضعیت",

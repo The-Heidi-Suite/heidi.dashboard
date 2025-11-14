@@ -23,7 +23,7 @@ function AuthWrapper({
   const { t } = useTypedTranslation();
   return (
     <>
-      <div className="w-full flex justify-end p-3">
+      <div className="w-full flex justify-end p-3 space-x-4">
         {showThemeSwitcher && <ThemeSwitcher />}
         {showLanguageSelector && <LanguageSelector />}
       </div>

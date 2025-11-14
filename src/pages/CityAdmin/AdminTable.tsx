@@ -1,9 +1,6 @@
-import { Pencil } from 'lucide-react';
-
 import { format } from 'date-fns';
 
 import { Spinner } from '@/components/ui/spinner';
-import { Switch } from '@/components/ui/switch';
 import {
   Table as ShacnTable,
   TableBody,
@@ -25,6 +22,8 @@ type TableRows = {
   createdAt: string;
   isActive: boolean;
   citiesName: string[];
+  firstName: string | null;
+  lastName: string | null;
 };
 
 type AdminTableProps = {
@@ -45,21 +44,24 @@ function AdminTable({ tableRows = [], loading }: AdminTableProps) {
     <ShacnTable className="border-2 my-4">
       <TableHeader className="bg-secondary rounded-full">
         <TableRow>
+          <TableHead className="text-primary text-bold font-bold text-base">
+            {t('cityAdministration.table.head.name')}
+          </TableHead>
           <TableHead className="text-primary text-bold font-bold text-base ">
             {t('cityAdministration.table.head.email')}
           </TableHead>
           <TableHead className="text-bold font-bold text-base text-center">
             {t('cityAdministration.table.head.role')}
           </TableHead>
-          <TableHead className="text-bold font-bold text-base text-center">
+          {/* <TableHead className="text-bold font-bold text-base text-center">
             {t('cityAdministration.table.head.cities')}
-          </TableHead>
+          </TableHead> */}
           <TableHead className="text-center text-bold font-bold text-base">
             {t('cityAdministration.table.head.createdAt')}
           </TableHead>
-          <TableHead className="text-center text-bold font-bold text-base">
+          {/* <TableHead className="text-center text-bold font-bold text-base">
             {t('cityAdministration.table.head.registered')}
-          </TableHead>
+          </TableHead> */}
           <TableHead className="text-center text-bold font-bold text-base">
             {t('cityAdministration.table.head.actions')}
           </TableHead>
@@ -85,29 +87,32 @@ function AdminTable({ tableRows = [], loading }: AdminTableProps) {
         ) : (
           normalizedRows.map((rowData) => (
             <TableRow key={rowData.id}>
+              <TableCell className="">
+                {(rowData.firstName ?? '') + ' ' + (rowData.lastName ?? '')}
+              </TableCell>
               <TableCell className="">{rowData.email}</TableCell>
               <TableCell className="text-center">
                 {ROLE_USER_MAP[rowData.role]}
               </TableCell>
-              <TableCell className="text-center">
+              {/* <TableCell className="text-center">
                 {rowData.citiesName.join(', ')}
-              </TableCell>
+              </TableCell> */}
               {/* TODO: Update performance */}
               <TableCell className="text-center">
                 {format(new Date(rowData.createdAt), 'MMMM d, yyyy')}
               </TableCell>
               {/* TODO: Add Switcher Like Terminal Proj */}
 
-              <TableCell className="text-center">
+              {/* <TableCell className="text-center">
                 <Switch defaultChecked={rowData.isActive} />
-              </TableCell>
+              </TableCell> */}
 
               <TableCell className="text-center">
                 <div className="flex items-center justify-center gap-8">
-                  {PermissionsMap[userRole ?? USER_ROLE_MAP.CITIZEN]
+                  {/* {PermissionsMap[userRole ?? USER_ROLE_MAP.CITIZEN]
                     .canEdit && (
                     <Pencil className="cursor-pointer text-green-500 hover:fill-green-500 hover:text-green-500 transition-colors" />
-                  )}
+                  )} */}
                   {PermissionsMap[userRole ?? USER_ROLE_MAP.CITIZEN]
                     .canDelete && <DeleteAction itemId={rowData.id} />}
                 </div>
