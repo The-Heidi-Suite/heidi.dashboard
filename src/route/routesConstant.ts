@@ -2,8 +2,8 @@ const ROUTES = {
   LogIn: '/login',
   Register: '/register',
   ResetPasswordToken: '/reset-password/:token',
-  Accounts: 'accounts',
-  CityAdmin: 'city-administrator',
+  Accounts: '/accounts',
+  CityAdmin: '/user-management',
   Tiles: '/tiles',
   UploadTile: 'upload',
   TileListing: 'listing',
@@ -13,6 +13,7 @@ const ROUTES = {
   TermsConditions: '/terms',
   Default: '/',
   NotFound: '*',
+  Dashboard: '/dashboard',
 } as const;
 
 export default ROUTES;
