@@ -138,6 +138,7 @@
     "createAdmin": "Skapa administratör",
     "table": {
       "head": {
+        "name": "Namn",
         "email": "E-post",
         "role": "Användarroll",
         "status": "Status",

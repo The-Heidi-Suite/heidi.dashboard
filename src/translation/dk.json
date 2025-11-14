@@ -138,6 +138,7 @@
     "createAdmin": "Opret administrator",
     "table": {
       "head": {
+        "name": "Navn",
         "email": "E-mail",
         "role": "Brugerrolle",
         "status": "Status",

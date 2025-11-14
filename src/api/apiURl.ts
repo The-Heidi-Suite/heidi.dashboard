@@ -10,6 +10,7 @@ const API_URLS = {
   UpdateUserPassword: 'users/profile/me/change-password',
   GetAllTiles: 'core/tiles',
   Tiles: 'core/tiles',
+  DeleteUser: 'users/',
 } as const;
 
 export default API_URLS;
