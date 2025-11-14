@@ -10,6 +10,7 @@ import {
   UN_AUTHORIZED_STATUS,
   USER_CREATED,
 } from '@/lib/constant';
+import { deleteCookies } from '@/lib/cookieStorage';
 import { saveDataInCookie } from '@/lib/cookieStorage';
 import { getDataFromCookie } from '@/lib/cookieUtils';
 
@@ -68,8 +69,10 @@ axios.interceptors.response.use(
         console.warn('No refresh token available, logging out user.');
         localStorage.clear();
         sessionStorage.clear();
-        cookieStore.delete(COOKIES_KEY_NAME.ACCESS_TOKEN);
-        cookieStore.delete(COOKIES_KEY_NAME.REFRESH_TOKEN);
+        deleteCookies([
+          COOKIES_KEY_NAME.ACCESS_TOKEN,
+          COOKIES_KEY_NAME.REFRESH_TOKEN,
+        ]);
         return Promise.reject(error);
       }
       const res = await axios.post<
@@ -88,8 +91,10 @@ axios.interceptors.response.use(
         console.warn('Token refresh failed, logging out user.');
         localStorage.clear();
         sessionStorage.clear();
-        cookieStore.delete(COOKIES_KEY_NAME.ACCESS_TOKEN);
-        cookieStore.delete(COOKIES_KEY_NAME.REFRESH_TOKEN);
+        deleteCookies([
+          COOKIES_KEY_NAME.ACCESS_TOKEN,
+          COOKIES_KEY_NAME.REFRESH_TOKEN,
+        ]);
         window.location.href = '/login';
         return Promise.reject(error);
       }

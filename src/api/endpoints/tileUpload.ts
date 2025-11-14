@@ -8,11 +8,11 @@ export type TileUploadPayload = {
   description: string;
   contentBackgroundColor: string;
   websiteUrl: string;
-  opnInExternalBrowser?: false;
+  opnInExternalBrowser?: boolean;
   displayOrder?: number;
   isActive?: boolean;
-  backgroundImageUrl: File | null;
-  iconImageUrl: File | null;
+  backgroundImageUrl?: File | null;
+  iconImageUrl?: File | null;
   cities?: [
     {
       cityId: string;
