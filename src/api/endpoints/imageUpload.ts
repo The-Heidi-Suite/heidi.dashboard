@@ -31,41 +31,26 @@ export type TileUploadResponse = {
   } & TileUploadPayload;
 };
 
-export const createTileUpload = async (payload: TileUploadPayload) => {
+export type TileImageUpload = {
+  file: File | null;
+};
+type ImageUploadPayload = {
+  payload: TileImageUpload;
+  id: string;
+};
+export const UploadTileBgImage = async ({
+  payload,
+  id,
+}: ImageUploadPayload) => {
   const formData = new FormData();
   Object.entries(payload).forEach(([key, value]) => {
     if (value !== null) {
       formData.append(key, value as Blob | string);
     }
   });
-
   return await apiRequest<TileUploadResponse>({
-    url: API_URLS.Tiles,
+    url: API_URLS.Tiles + `/${id}` + '/background-image',
     method: 'POST',
     data: formData,
-  });
-};
-
-export const editTileUpload = async (
-  tileId: string | number,
-  payload: TileUploadPayload
-) => {
-  const formData = new FormData();
-  Object.entries(payload).forEach(([key, value]) => {
-    if (value !== null) {
-      formData.append(key, value as Blob | string);
-    }
-  });
-
-  return await apiRequest<TileUploadResponse>({
-    url: API_URLS.Tiles + `/${tileId}`,
-    method: 'PATCH',
-    data: formData,
-  });
-};
-
-export const getTile = async (tileId: string | number) => {
-  return await apiRequest<TileUploadPayload>({
-    url: API_URLS.Tiles + `/${tileId}`,
   });
 };

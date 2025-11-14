@@ -19,7 +19,6 @@ function Account() {
   const navigate = useNavigate();
   const resetStore = useGlobalStore((state) => state.reset);
   const { data: profileData, isLoading, isFetching } = useGetUserProfile();
-
   const handleDeleteAccount = () => {
     deleteAccount.mutate(undefined, {
       onSuccess: (data) => {

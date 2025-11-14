@@ -6,6 +6,7 @@ const ROUTES = {
   CityAdmin: '/user-management',
   Tiles: '/tiles',
   UploadTile: 'upload',
+  EditTile: 'upload/:id',
   TileListing: 'listing',
   Unauthorized: '/unauthorized',
   Dummy: '/dummy',
