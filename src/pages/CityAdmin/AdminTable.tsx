@@ -3,6 +3,7 @@ import { Pencil } from 'lucide-react';
 import { format } from 'date-fns';
 
 import { Spinner } from '@/components/ui/spinner';
+import { Switch } from '@/components/ui/switch';
 import {
   Table as ShacnTable,
   TableBody,
@@ -18,64 +19,28 @@ import { PermissionsMap } from '@/shared/RoleBasedPermission';
 import { selectUserRole } from '@/store/slices/userSlice';
 import { useGlobalStore } from '@/store/useGlobalStore';
 type TableRows = {
-  id: number;
+  id: string;
   email: string;
   role: RoleValue;
   createdAt: string;
-  registered: boolean;
+  isActive: boolean;
   citiesName: string[];
 };
 
-const DUMMY_DATA: TableRows[] = [
-  {
-    id: 1,
-    email: 'admin@example.com',
-    role: USER_ROLE_MAP.SUPER_ADMIN,
-    createdAt: '2022-01-01T00:00:00.000Z',
-    registered: true,
-    citiesName: ['New York', 'Los Angeles', 'Chicago'],
-  },
-  {
-    id: 2,
-    email: 'city-admin@example.com',
-    role: USER_ROLE_MAP.CITY_ADMIN,
-    createdAt: '2022-01-01T00:00:00.000Z',
-    registered: true,
-    citiesName: ['New York', 'Los Angeles'],
-  },
-  {
-    id: 3,
-    email: 'citizen@example.com',
-    role: USER_ROLE_MAP.CITIZEN,
-    createdAt: '2022-01-01T00:00:00.000Z',
-    registered: true,
-    citiesName: ['Chicago', 'Houston'],
-  },
-  {
-    id: 4,
-    email: 'citizen2@example.com',
-    role: USER_ROLE_MAP.CITIZEN,
-    createdAt: '2022-01-01T00:00:00.000Z',
-    registered: true,
-    citiesName: ['Philadelphia', 'Phoenix'],
-  },
-  {
-    id: 5,
-    email: 'citizen3@example.com',
-    role: USER_ROLE_MAP.CITIZEN,
-    createdAt: '2022-01-01T00:00:00.000Z',
-    registered: true,
-    citiesName: ['San Antonio', 'San Diego'],
-  },
-];
 type AdminTableProps = {
   tableRows?: TableRows[];
   loading: boolean;
 };
 
-function AdminTable({ tableRows = DUMMY_DATA, loading }: AdminTableProps) {
+function AdminTable({ tableRows = [], loading }: AdminTableProps) {
   const { t } = useTypedTranslation();
   const userRole = useGlobalStore(selectUserRole);
+  const normalizedRows = tableRows.map((row) => ({
+    ...row,
+    citiesName:
+      row.citiesName && row.citiesName.length > 0 ? row.citiesName : ['Kiel'],
+  }));
+
   return (
     <ShacnTable className="border-2 my-4">
       <TableHeader className="bg-secondary rounded-full">
@@ -109,7 +74,7 @@ function AdminTable({ tableRows = DUMMY_DATA, loading }: AdminTableProps) {
               </div>
             </TableCell>
           </TableRow>
-        ) : !tableRows.length ? (
+        ) : !normalizedRows.length ? (
           <TableRow>
             <TableCell colSpan={6}>
               <span className="flex justify-center items-center py-10 text-lg font-bold">
@@ -118,7 +83,7 @@ function AdminTable({ tableRows = DUMMY_DATA, loading }: AdminTableProps) {
             </TableCell>
           </TableRow>
         ) : (
-          tableRows.map((rowData) => (
+          normalizedRows.map((rowData) => (
             <TableRow key={rowData.id}>
               <TableCell className="">{rowData.email}</TableCell>
               <TableCell className="text-center">
@@ -132,8 +97,9 @@ function AdminTable({ tableRows = DUMMY_DATA, loading }: AdminTableProps) {
                 {format(new Date(rowData.createdAt), 'MMMM d, yyyy')}
               </TableCell>
               {/* TODO: Add Switcher Like Terminal Proj */}
+
               <TableCell className="text-center">
-                {rowData.registered ? 'Yes' : 'No'}
+                <Switch defaultChecked={rowData.isActive} />
               </TableCell>
 
               <TableCell className="text-center">

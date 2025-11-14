@@ -17,11 +17,22 @@ function CityAdmin() {
     isLoading,
     isFetching,
   } = useGetAdminListings({
-    pageNo: currentPage,
-    pageSize: TABLE_PAGE_SIZE,
-    statusId: 0,
+    page: currentPage,
+    limit: TABLE_PAGE_SIZE,
   });
-  const rowData = adminListings?.success ? adminListings.data.data : [];
+
+  const rowData =
+    adminListings?.success && adminListings.data.users
+      ? adminListings.data.users.map((admin) => ({
+          id: admin.id,
+          email: admin.email ?? '-',
+          role: admin.role,
+          createdAt: admin.createdAt,
+          isActive: admin.isActive,
+          //TODO: Default to “Kiel” if no city info present, remove when backend fixed
+          citiesName: ['Kiel'],
+        }))
+      : [];
   const createAdmin = useCreateAdmin();
   function HandleCreateAdmin({
     email,
@@ -75,7 +86,7 @@ function CityAdmin() {
         setCurrentPage={setCurrentPage}
         totalPages={
           adminListings?.success && !isLoading
-            ? adminListings.data?.totalPages || 0
+            ? adminListings.data?.pages || 0
             : 0
         }
       />

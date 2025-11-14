@@ -40,7 +40,7 @@
       "title": "إعدادات الحساب"
     },
     "cityAdmin": {
-      "title": "إدارة المستخدمين"
+      "title": "إدارة المستخدم"
     }
   },
   "createAccount": "أنشئ حسابك الجديد",
@@ -131,7 +131,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "إدارة المدينة",
+    "heading": "إدارة المستخدم",
     "description": "قائمة بجميع المدن المسجلة",
     "createAdmin": "إنشاء مدير",
     "table": {

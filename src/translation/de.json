@@ -40,7 +40,7 @@
       "title": "Kontoeinstellungen"
     },
     "cityAdmin": {
-      "title": "Stadtverwaltung"
+      "title": "Benutzerverwaltung"
     }
   },
   "createAccount": "Konto erstellen",
@@ -131,7 +131,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "Stadtverwaltung",
+    "heading": "Benutzerverwaltung",
     "description": "Liste aller registrierten Städte",
     "createAdmin": "Stadt erstellen Admin",
     "table": {

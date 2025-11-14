@@ -40,7 +40,7 @@
       "title": "Hesap Ayarları"
     },
     "cityAdmin": {
-      "title": "Şehir Yönetimi"
+      "title": "Kullanıcı Yönetimi"
     }
   },
   "createAccount": "Yeni hesabınızı oluşturun",
@@ -131,7 +131,7 @@
     }
   },
   "cityAdministration": {
-    "heading": "Şehir Yönetimi",
+    "heading": "Kullanıcı Yönetimi",
     "description": "Kayıtlı tüm şehirlerin listesi",
     "createAdmin": "Yönetici Oluştur",
     "table": {
